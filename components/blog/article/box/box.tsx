@@ -70,7 +70,7 @@ const ArticleBox = (props: {
       )}
 
       <div className={styles.footer}>
-        <h2>Peruki's Portfolio</h2>
+        <h2>Peruki&apos;s Portfolio</h2>
         <p>記事作成者: 多田 瑛貴 Teruki TADA</p>
         {props.article == null ? (
           <></>

@@ -26,11 +26,12 @@ const Markdown = (props: { body: string }) => {
     <>
       <ReactMarkdown
         rehypePlugins={[rehypeRaw, remarkGfm]}
-        children={props.body}
         components={{
           code: (props) => <CodeBlock {...props} />,
         }}
-      />
+      >
+        {props.body}
+      </ReactMarkdown>
     </>
   );
 };

@@ -14,7 +14,7 @@ const Header = () => {
     <div className={styles.main}>
       <div className={styles.tab_container}>
         <PlainLink href="/">
-          <Logo>Peruki's Portfolio</Logo>
+          <Logo>Peruki&apos;s Portfolio</Logo>
         </PlainLink>
         <PlainLink href="/profile">
           <Tab>Profile</Tab>
