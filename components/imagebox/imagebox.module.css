@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  margin-right: auto;
+}
+
+.image {
+  margin-bottom: auto;
+}

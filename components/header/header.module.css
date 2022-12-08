@@ -1,0 +1,44 @@
+.main {
+  width: 100%;
+  background: rgb(247, 247, 247);
+  display: flex;
+  border-bottom: solid 0.6mm rgb(213, 213, 213);
+}
+
+.tab_container {
+  font-size: 5mm;
+  display: flex;
+}
+
+.tab {
+  padding: 5mm 7mm;
+}
+
+.tab:hover {
+  background: rgb(236, 236, 236);
+  transition: 0.15s;
+}
+
+.logo {
+  text-align: left;
+  font-size: 7mm;
+  padding: 4mm 7mm;
+  flex-wrap: nowrap;
+}
+
+.logo:hover {
+  background: rgb(236, 236, 236);
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 4vw;
+    padding: auto;
+  }
+}
+
+.login-box {
+  display: flex;
+  line-height: 2.5;
+  font-size: large;
+}

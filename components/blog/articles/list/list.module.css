@@ -1,0 +1,17 @@
+.unit {
+  margin: 1vh 0;
+  padding: 1mm 10mm;
+  background: rgb(255, 255, 255);
+  border-bottom: solid 0.6mm rgb(213, 213, 213);
+  color: rgb(0, 0, 0);
+}
+
+.unit:hover {
+  border-color: rgb(125, 160, 115);
+  background: rgb(247, 247, 247);
+  transition: 0.15s;
+}
+
+.is_private {
+  color: rgb(192, 0, 0);
+}

@@ -1,0 +1,14 @@
+.main {
+  background: rgb(255, 255, 255);
+  margin: 5vh 10vw;
+  padding: 15mm 5vw;
+  border-radius: 10mm;
+  line-height: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    margin: 1vh 1vh;
+    padding: 5mm 6vw;
+  }
+}
