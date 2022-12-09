@@ -9,19 +9,18 @@ type UpdateArticle = {
 };
 
 type UpdateRequest = {
-  token: string;
+  token: string | null;
   id: string;
   article: UpdateArticle;
 };
 
-const RequestUpdateArticle = async (request: UpdateRequest): Promise<void> => {
+const RequestUpdateArticle = (request: UpdateRequest): Promise<void> => {
   const headers_ = {
-    Authorization: request.token,
-    "Accept-Encoding": "gzip,deflate,compress",
+    Authorization: request.token ? request.token : "",
   };
   return new Promise<void>(
-    async (resolve: () => void, reject: (message: string) => void) => {
-      await axios
+    (resolve: () => void, reject: (message: string) => void) => {
+      axios
         .put(
           process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
             "/article/" +

@@ -2,10 +2,12 @@ import Header from "../../components/all/header/header";
 import StyledLink from "../../components/all/link/styledlink/styledlink";
 import ImageBox from "../../components/all/imagebox/imagebox";
 import Base from "../../components/all/base/base";
+import Config from "../../components/config/config";
 
 const Profile = () => {
   return (
     <>
+      <Config title="Profile" subtitle="ぺるきのプロフィールです" />
       <Header />
       <Base>
         <ImageBox image="static/myicon.jpg">

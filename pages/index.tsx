@@ -3,10 +3,12 @@ import HeadLink from "../components/all/link/headlink/headlink";
 import ImageBox from "../components/all/imagebox/imagebox";
 import IndentBox from "../components/all/indentbox/indentbox";
 import Base from "../components/all/base/base";
+import Config from "../components/config/config";
 
 export default function Component() {
   return (
     <>
+      <Config title="welcome!" />
       <Header />
       <Base>
         <ImageBox image="/static/welcome.jpg">

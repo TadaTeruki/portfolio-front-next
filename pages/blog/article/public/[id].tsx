@@ -7,6 +7,7 @@ import RequestReadArticle from "../../../../requests/article/ReadArticle";
 import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
 import ArticleBox from "../../../../components/blog/article/box/box";
 import { QueryToken } from "../../../../packages/token/token";
+import Config from "../../../../components/config/config";
 
 type Props = {
   article: any | null;
@@ -46,6 +47,7 @@ const Index = (props: Props) => {
 
   return (
     <>
+      <Config title={props.article == null ? "":props.article.title} subtitle={props.article == null ? "":props.article.subtitle} />
       <Header />
       <Base>
         <ArticleBox

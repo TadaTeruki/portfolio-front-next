@@ -6,6 +6,7 @@ import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
 import { QueryToken } from "../../../../packages/token/token";
 import RequestReadArticle from "../../../../requests/article/ReadArticle";
 import ArticleBox from "../../../../components/blog/article/box/box";
+import Config from "../../../../components/config/config";
 
 const Index = () => {
   const router = useRouter();
@@ -24,6 +25,7 @@ const Index = () => {
 
   return (
     <>
+      <Config title={stateArticle == null ? "":stateArticle.title} subtitle={stateArticle == null ? "":stateArticle.subtitle} />
       <Header />
       <Base>
         <ArticleBox
