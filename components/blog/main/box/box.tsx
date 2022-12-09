@@ -9,15 +9,15 @@ import { QueryToken } from "../../../../packages/token/token";
 import ErrorNotify from "../../../all/error_notify/error_notify";
 
 const BlogBox = (props: { articles: any[] }) => {
-  const [stateArticles, setArticles] = useState<any>(props.articles);
+  const [stateArticles, setArticles] = useState<any>(props.articles ? props.articles: []);
   const [stateAuth, setAuth] = useState<boolean>(false);
   const [stateErr, setErr] = useState<string>("");
   const router = useRouter();
 
   useEffect(() => {
     const token_ = QueryToken();
-    if (token_) {
-      RequestCheckAuth({ token: QueryToken() }).then(() => {
+    if (token_ != "") {
+      RequestCheckAuth({ token: token_ }).then(() => {
         setAuth(true);
         RequestListArticles({ token: token_ }).then((articles) => {
           setArticles(articles);

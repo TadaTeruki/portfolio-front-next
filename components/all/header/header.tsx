@@ -1,4 +1,4 @@
-import PlainLink from "../plainlink/plainlink";
+import PlainLink from "../link/plainlink/plainlink";
 import styles from "./header.module.css";
 
 const Logo = (props: { children: React.ReactNode }) => {

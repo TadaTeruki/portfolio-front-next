@@ -1,7 +1,7 @@
 import axios from "axios";
 
 type CheckAuthRequest = {
-  token: string | null;
+  token: string;
 };
 
 type CheckAuthResponse = {
@@ -12,7 +12,7 @@ const RequestCheckAuth = (
   request: CheckAuthRequest
 ): Promise<CheckAuthResponse> => {
   const headers_ = {
-    Authorization: request.token ? request.token : "",
+    Authorization: request.token,
   };
 
   return new Promise<CheckAuthResponse>(

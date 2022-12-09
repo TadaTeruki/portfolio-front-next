@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Header from "../../../../components/header/header";
-import Base from "../../../../components/base/base";
+import Header from "../../../../components/all/header/header";
+import Base from "../../../../components/all/base/base";
 import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
 import { QueryToken } from "../../../../packages/token/token";
 import RequestReadArticle from "../../../../requests/article/ReadArticle";
@@ -30,7 +30,7 @@ const Index = () => {
           article={stateArticle}
           auth={stateAuth}
           showTimestamp={true}
-        />
+        ></ArticleBox>
       </Base>
     </>
   );

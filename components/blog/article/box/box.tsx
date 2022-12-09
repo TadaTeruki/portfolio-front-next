@@ -1,12 +1,12 @@
-import Timestamp from "../../../timestamp/timestamp";
+import Timestamp from "../../timestamp/timestamp";
 import ArticleView from "../view/view";
 import styles from "./box.module.css";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import PlainLink from "../../../plainlink/plainlink";
+import PlainLink from "../../../all/link/plainlink/plainlink";
 import { QueryToken } from "../../../../packages/token/token";
 import RequestDeleteArticle from "../../../../requests/article/DeleteArticle";
-import ErrorNotify from "../../../error_notify/error_notify";
+import ErrorNotify from "../../../all/error_notify/error_notify";
 
 const ArticleBox = (props: {
   article: any;
@@ -32,7 +32,7 @@ const ArticleBox = (props: {
 
   return (
     <>
-      {props.auth && props.article ? (
+      {props.auth && (props.article != null) ? (
         <>
           <PlainLink href={"/blog/article/edit/" + props.article.id}>
             <button>編集</button>

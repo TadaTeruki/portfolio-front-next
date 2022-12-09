@@ -1,7 +1,7 @@
-import Header from "../../components/header/header";
-import StyledLink from "../../components/styledlink/styledlink";
-import ImageBox from "../../components/imagebox/imagebox";
-import Base from "../../components/base/base";
+import Header from "../../components/all/header/header";
+import StyledLink from "../../components/all/link/styledlink/styledlink";
+import ImageBox from "../../components/all/imagebox/imagebox";
+import Base from "../../components/all/base/base";
 
 const Profile = () => {
   return (
@@ -18,16 +18,14 @@ const Profile = () => {
           Web開発 - バックエンド (Go, Rust) コンピュータグラフィックス -
           手続き的地形生成
           <h4>アクセス</h4>
-          Twitter :{" "}
+          Twitter :&nbsp;
           <StyledLink href="https://twitter.com/PerukiFUN">
-            {" "}
-            @PerukiFUN{" "}
+            &nbsp;@PerukiFUN&nbsp;
           </StyledLink>
           <br />
-          GitHub :{" "}
+          GitHub :&nbsp;
           <StyledLink href="https://github.com/TadaTeruki">
-            {" "}
-            TadaTeruki{" "}
+            &nbsp;TadaTeruki&nbsp;
           </StyledLink>
         </ImageBox>
       </Base>

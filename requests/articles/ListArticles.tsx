@@ -1,7 +1,7 @@
 import axios from "axios";
 
 type ListRequest = {
-  token: string | null;
+  token: string;
 };
 
 type ListResponse = {
@@ -17,7 +17,7 @@ type ListResponse = {
 
 const RequestListArticles = (request: ListRequest): Promise<ListResponse[]> => {
   const headers_ = {
-    Authorization: request.token ? request.token : "",
+    Authorization: request.token,
   };
 
   return new Promise<ListResponse[]>(

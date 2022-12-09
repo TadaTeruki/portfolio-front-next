@@ -1,7 +1,8 @@
-import Header from "../components/header/header";
-import PlainLink from "../components/plainlink/plainlink";
-import ImageBox from "../components/imagebox/imagebox";
-import Base from "../components/base/base";
+import Header from "../components/all/header/header";
+import HeadLink from "../components/all/link/headlink/headlink";
+import ImageBox from "../components/all/imagebox/imagebox";
+import IndentBox from "../components/all/indentbox/indentbox";
+import Base from "../components/all/base/base";
 
 export default function Component() {
   return (
@@ -15,17 +16,19 @@ export default function Component() {
             <br />
             様々な情報を共有します。
             <br />
-            <br />
           </p>
-          <PlainLink href="/profile">
-            <h3>Profile</h3>
-          </PlainLink>
-
-          <p>所属・技術スタックなど、ぺるきに関する主な情報を載せています。</p>
-          <PlainLink href="/blog">
-            <h3>Blog</h3>
-          </PlainLink>
-          <p>技術や生活に関する記事を載せています。</p>
+          <IndentBox>
+            <HeadLink href="/profile">
+              <h2>Profile</h2>
+            </HeadLink>
+            <p>所属・技術スタックなど、ぺるきに関する主な情報を載せています。</p>
+          </IndentBox>
+          <IndentBox>
+            <HeadLink href="/blog">
+              <h2>Blog</h2>
+            </HeadLink>
+            <p>技術や生活に関する記事を載せています。</p>
+          </IndentBox>
         </ImageBox>
       </Base>
     </>

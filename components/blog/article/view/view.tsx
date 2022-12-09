@@ -1,6 +1,6 @@
 import Markdown from "../../markdown/markdown";
 import TagTable from "../../tagtable/tagtable";
-import Timestamp from "../../../timestamp/timestamp";
+import Timestamp from "../../timestamp/timestamp";
 import styles from "./view.module.css";
 
 const ArticleView = (props: { article: any; showTimestamp: boolean }) => {

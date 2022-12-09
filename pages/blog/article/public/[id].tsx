@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
-import Base from "../../../../components/base/base";
-import Header from "../../../../components/header/header";
+import Base from "../../../../components/all/base/base";
+import Header from "../../../../components/all/header/header";
 import RequestListArticles from "../../../../requests/articles/ListArticles";
 import RequestReadArticle from "../../../../requests/article/ReadArticle";
 import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
@@ -13,7 +13,8 @@ type Props = {
 };
 
 export async function getStaticPaths() {
-  const responses = await RequestListArticles({ token: null });
+  const responses = await RequestListArticles({ token: "" });
+
   const paths = responses.map(
     (response) => "/blog/article/public/" + response.id
   );
@@ -21,14 +22,22 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const response = await RequestReadArticle({
-    id: params?.id as string,
-  });
-  return {
-    props: {
-      article: response,
-    },
-  };
+  try {
+    const response = await RequestReadArticle({
+      id: params?.id as string,
+    });
+    return {
+      props: {
+        article: response,
+      },
+    };
+  } catch {
+    return {
+      props: {
+        article: null,
+      },
+    };
+  }
 };
 
 const Index = (props: Props) => {
@@ -37,6 +46,8 @@ const Index = (props: Props) => {
   useEffect(() => {
     RequestCheckAuth({ token: QueryToken() }).then(() => {
       setAuth(true);
+    }).catch(() => {
+      setAuth(false);
     });
   }, []);
 
@@ -48,7 +59,7 @@ const Index = (props: Props) => {
           article={props.article}
           auth={stateAuth}
           showTimestamp={true}
-        />
+        ></ArticleBox>
       </Base>
     </>
   );

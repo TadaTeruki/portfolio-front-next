@@ -6,7 +6,7 @@ import RequestReadArticle from "../../../../requests/article/ReadArticle";
 import RequestUpdateArticle from "../../../../requests/article/UpdateArticle";
 import { QueryToken } from "../../../../packages/token/token";
 import ArticleView from "../view/view";
-import ErrorNotify from "../../../error_notify/error_notify";
+import ErrorNotify from "../../../all/error_notify/error_notify";
 
 const ArticleEdit = (props: { id: string }) => {
   const [stateErr, setErr] = useState<string>("");

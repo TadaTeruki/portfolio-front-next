@@ -9,7 +9,7 @@ type CreateArticle = {
 };
 
 type CreateRequest = {
-  token: string | null;
+  token: string;
   article: CreateArticle;
 };
 
@@ -21,7 +21,7 @@ const RequestPostArticle = (
   request: CreateRequest
 ): Promise<CreateResponse> => {
   const headers_ = {
-    Authorization: request.token ? request.token : "",
+    Authorization: request.token,
   };
 
   return new Promise<CreateResponse>(

@@ -1,13 +1,13 @@
 import axios from "axios";
 
 type DeleteRequest = {
-  token: string | null;
+  token: string;
   id: string;
 };
 
 const RequestDeleteArticle = (request: DeleteRequest): Promise<void> => {
   const headers_ = {
-    Authorization: request.token ? request.token : "",
+    Authorization: request.token,
   };
 
   return new Promise<void>(
