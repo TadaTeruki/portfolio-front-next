@@ -10,7 +10,7 @@ const RemoveToken = () => {
 
 const QueryToken = () => {
   const token = Cookies.get("portfolioToken");
-  return token;
+  return token ? token:"";
 };
 
 export { SetToken, RemoveToken, QueryToken };

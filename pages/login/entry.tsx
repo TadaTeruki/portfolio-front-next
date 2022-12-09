@@ -15,7 +15,7 @@ const Entry = () => {
   const [stateOwnership, setOwnership] = useState<string>(QueryToken());
   const updateOwnership = () => setOwnership(QueryToken());
 
-  if (stateOwnership != undefined) {
+  if (stateOwnership) {
     return (
       <div>
         <p>あなたはログイン中です。</p>

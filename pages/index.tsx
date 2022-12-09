@@ -8,8 +8,8 @@ export default function Component() {
     <>
       <Header />
       <Base>
-        <ImageBox image="static/welcome.jpg">
-          <h1>Peruki's Portfolio</h1>
+        <ImageBox image="/static/welcome.jpg">
+          <h1>Peruki&apos;s Portfolio</h1>
           <p>
             ぺるきのポートフォリオです。
             <br />

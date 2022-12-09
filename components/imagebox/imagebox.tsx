@@ -1,10 +1,14 @@
 import styles from "./imagebox.module.css";
+import Image from "next/image";
 
 const ImageBox = (props: { image: string; children: React.ReactNode }) => {
   return (
     <div className={styles.main}>
       <div className={styles.text}>{props.children}</div>
-      <img src={props.image} className={styles.image} alt="(image)" />
+      <div className={styles.image}>
+        <img src={props.image} alt=""/>
+      </div>
+      
     </div>
   );
 };
