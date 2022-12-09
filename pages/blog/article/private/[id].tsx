@@ -30,7 +30,7 @@ const Index = () => {
           article={stateArticle}
           auth={stateAuth}
           showTimestamp={true}
-        ></ArticleBox>
+        />
       </Base>
     </>
   );

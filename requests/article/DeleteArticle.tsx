@@ -5,14 +5,15 @@ type DeleteRequest = {
   id: string;
 };
 
-const RequestDeleteArticle = (request: DeleteRequest): Promise<void> => {
+const RequestDeleteArticle = async (request: DeleteRequest): Promise<void> => {
   const headers_ = {
     Authorization: request.token,
+    "Accept-Encoding": "gzip,deflate,compress",
   };
 
   return new Promise<void>(
-    (resolve: () => void, reject: (message: string) => void) => {
-      axios
+    async (resolve: () => void, reject: (message: string) => void) => {
+      await axios
         .delete(
           process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
             "/article/" +

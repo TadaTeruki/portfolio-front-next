@@ -15,17 +15,22 @@ type ReadResponse = {
   is_public: boolean;
 };
 
-const RequestReadArticle = (request: ReadRequest): Promise<ReadResponse> => {
+const RequestReadArticle = async (request: ReadRequest): Promise<ReadResponse> => {
+  const headers_ = {
+    "Accept-Encoding": "gzip,deflate,compress",
+  };
+  
   return new Promise<ReadResponse>(
-    (
+    async (
       resolve: (response: ReadResponse) => void,
       reject: (message: string) => void
     ) => {
-      axios
+      await axios
         .get(
           process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
             "/article/" +
-            request.id
+            request.id,
+          { headers: headers_ }
         )
         .then((res) => {
           const response: ReadResponse = {

@@ -22,21 +22,14 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  try {
-    const response = await RequestReadArticle({
-      id: params?.id as string,
-    });
-    return {
-      props: {
-        article: response,
-      },
-    };
-  } catch {
-    return {
-      props: {
-        article: null,
-      },
-    };
+  const response = await RequestReadArticle({
+    id: params?.id as string,
+  });
+
+  return {
+    props: {
+      article: response,
+    },
   }
 };
 
@@ -59,7 +52,7 @@ const Index = (props: Props) => {
           article={props.article}
           auth={stateAuth}
           showTimestamp={true}
-        ></ArticleBox>
+        />
       </Base>
     </>
   );

@@ -15,17 +15,18 @@ type ListResponse = {
   is_public: boolean;
 };
 
-const RequestListArticles = (request: ListRequest): Promise<ListResponse[]> => {
+const RequestListArticles = async (request: ListRequest): Promise<ListResponse[]> => {
   const headers_ = {
     Authorization: request.token,
+    "Accept-Encoding": "gzip,deflate,compress",
   };
 
   return new Promise<ListResponse[]>(
-    (
+    async (
       resolve: (responses: ListResponse[]) => void,
       reject: (message: string) => void
     ) => {
-      axios
+      await axios
         .get(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/articles", {
           headers: headers_,
         })
@@ -37,6 +38,7 @@ const RequestListArticles = (request: ListRequest): Promise<ListResponse[]> => {
           resolve(responses);
         })
         .catch((err) => {
+          console.log(err.message);
           reject(err.message);
         });
     }

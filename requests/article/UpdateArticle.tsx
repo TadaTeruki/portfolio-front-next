@@ -14,13 +14,14 @@ type UpdateRequest = {
   article: UpdateArticle;
 };
 
-const RequestUpdateArticle = (request: UpdateRequest): Promise<void> => {
+const RequestUpdateArticle = async (request: UpdateRequest): Promise<void> => {
   const headers_ = {
     Authorization: request.token,
+    "Accept-Encoding": "gzip,deflate,compress",
   };
   return new Promise<void>(
-    (resolve: () => void, reject: (message: string) => void) => {
-      axios
+    async (resolve: () => void, reject: (message: string) => void) => {
+      await axios
         .put(
           process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
             "/article/" +

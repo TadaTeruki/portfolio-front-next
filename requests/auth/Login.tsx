@@ -10,7 +10,7 @@ type LoginResponse = {
   token: string;
 };
 
-const RequestLogin = (
+const RequestLogin = async (
   name_: string,
   passwd_: string
 ): Promise<LoginResponse> => {
@@ -19,13 +19,17 @@ const RequestLogin = (
     passwd: ConvertToSha256(passwd_),
   };
 
+  const headers_ = {
+    "Accept-Encoding": "gzip,deflate,compress",
+  };
+
   return new Promise<LoginResponse>(
-    (
+    async (
       resolve: (responses: LoginResponse) => void,
       reject: (message: string) => void
     ) => {
-      axios
-        .post(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/login", request)
+      await axios
+        .post(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/login", request, { headers: headers_ })
         .then((res) => {
           resolve({
             token: res.data.token,

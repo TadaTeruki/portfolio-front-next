@@ -8,19 +8,20 @@ type CheckAuthResponse = {
   owner_id: string;
 };
 
-const RequestCheckAuth = (
+const RequestCheckAuth = async (
   request: CheckAuthRequest
 ): Promise<CheckAuthResponse> => {
   const headers_ = {
     Authorization: request.token,
+    "Accept-Encoding": "gzip,deflate,compress",
   };
 
   return new Promise<CheckAuthResponse>(
-    (
+    async (
       resolve: (responses: CheckAuthResponse) => void,
       reject: (message: string) => void
     ) => {
-      axios
+      await axios
         .get(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/auth", {
           headers: headers_,
         })

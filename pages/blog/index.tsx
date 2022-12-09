@@ -10,22 +10,15 @@ type Props = {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   
-  try {
-    const response = await RequestListArticles({
-      token: "",
-    });
-    return {
-      props: {
-        articles: response,
-      },
-    };
-  } catch {
-    return {
-      props: {
-        articles: [],
-      },
-    };
-  }
+  const response = await RequestListArticles({
+    token: "",
+  });
+
+  return {
+    props: {
+      articles: response,
+    },
+  };
 };
 
 const Blog = (props: Props) => {

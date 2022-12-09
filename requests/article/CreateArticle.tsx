@@ -17,19 +17,20 @@ type CreateResponse = {
   id: string;
 };
 
-const RequestPostArticle = (
+const RequestPostArticle = async (
   request: CreateRequest
 ): Promise<CreateResponse> => {
   const headers_ = {
     Authorization: request.token,
+    "Accept-Encoding": "gzip,deflate,compress",
   };
 
   return new Promise<CreateResponse>(
-    (
+    async (
       resolve: (response: CreateResponse) => void,
       reject: (message: string) => void
     ) => {
-      axios
+      await axios
         .post(
           process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/article",
           request.article,
