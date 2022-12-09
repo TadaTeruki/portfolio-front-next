@@ -8,7 +8,7 @@ import Config from "../components/config/config";
 export default function Component() {
   return (
     <>
-      <Config title="welcome!" />
+      <Config title="Welcome!" subtitle="ぺるきのポートフォリオです" />
       <Header />
       <Base>
         <ImageBox image="/static/welcome.jpg">
