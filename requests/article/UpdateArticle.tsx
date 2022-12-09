@@ -9,14 +9,15 @@ type UpdateArticle = {
 };
 
 type UpdateRequest = {
-  token: string | null;
+  token: string;
   id: string;
   article: UpdateArticle;
 };
 
 const RequestUpdateArticle = (request: UpdateRequest): Promise<void> => {
   const headers_ = {
-    Authorization: request.token ? request.token : "",
+    Authorization: request.token,
+    "Accept-Encoding": "gzip,deflate,compress",
   };
   return new Promise<void>(
     (resolve: () => void, reject: (message: string) => void) => {
