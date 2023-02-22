@@ -11,8 +11,6 @@ const Profile = () => {
 
   # 基本情報
   
-  <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2FPeruki2.png?alt=media&token=dd376d91-4543-4a3e-bc4f-03a3f5895aca" />
-  
   > **多田 瑛貴**, ただ てるき, Teruki TADA
   
   > 在住: 北海道函館市<br>
@@ -124,7 +122,7 @@ const Profile = () => {
 
   return (
     <>
-      <Config title="Profile" subtitle="ぺるきのプロフィールです" />
+      <Config title="Profile" subtitle="基本情報" />
       <Header />
       <Base>
         <Markdown body={context} />

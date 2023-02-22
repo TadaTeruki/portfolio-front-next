@@ -1,12 +1,13 @@
 import styles from "./edit.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
-import RequestReadArticle from "../../../../requests/article/ReadArticle";
-import RequestUpdateArticle from "../../../../requests/article/UpdateArticle";
+import RequestCheckAuth from "../../../../packages/requests/auth/Verify";
+import RequestReadArticle from "../../../../packages/requests/article/ReadArticle";
+import RequestUpdateArticle from "../../../../packages/requests/article/UpdateArticle";
 import { QueryToken } from "../../../../packages/token/token";
 import ArticleView from "../view/view";
 import ErrorNotify from "../../../all/error_notify/error_notify";
+import RequestVerify from "../../../../packages/requests/auth/Verify";
 
 const ArticleEdit = (props: { id: string }) => {
   const [stateErr, setErr] = useState<string>("");
@@ -28,7 +29,8 @@ const ArticleEdit = (props: { id: string }) => {
   const router = useRouter();
 
   useEffect(() => {
-    RequestCheckAuth({ token: QueryToken() })
+    
+    RequestVerify(QueryToken())
       .then(() => {
         RequestReadArticle({ id: props.id })
           .then((article) => {
@@ -54,20 +56,21 @@ const ArticleEdit = (props: { id: string }) => {
       .catch((err) => {
         setErr(err);
       });
+      
   }, [props.id]);
 
   const updateArticle = () => {
-    RequestUpdateArticle({
-      token: QueryToken(),
-      id: props.id,
-      article: {
-        title: stateNewTitle,
-        subtitle: stateNewSubtitle,
-        body: stateNewBody,
-        tags: stateNewTags.split(" "),
-        is_public: stateNewIsPublic,
-      },
-    })
+      RequestUpdateArticle(
+        {
+          id: props.id,
+          title: stateNewTitle,
+          subtitle: stateNewSubtitle,
+          body: stateNewBody,
+          tags: stateNewTags.split(" "),
+          is_public: stateNewIsPublic,
+        },
+        QueryToken()
+      )
       .then(() => {
         router.push("/blog");
       })

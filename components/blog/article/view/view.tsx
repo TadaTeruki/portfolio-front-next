@@ -8,7 +8,7 @@ const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
     <>
       <div className={styles.header}>
         <p className={styles.credit}>Peruki&apos;s Blog</p>
-        <p className={styles.title}>{props.article.title}</p>
+        <h1>{props.article.title}</h1>
         <p className={styles.subtitle}>{props.article.subtitle}</p>
         <br />
         {props.showTimestamp ? (

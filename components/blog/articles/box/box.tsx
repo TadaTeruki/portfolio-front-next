@@ -1,48 +1,32 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./box.module.css";
 import ArticleList from "../list/list";
-import RequestListArticles from "../../../../requests/articles/ListArticles";
-import RequestCreateArticle from "../../../../requests/article/CreateArticle";
-import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
 import { QueryToken } from "../../../../packages/token/token";
 import ErrorNotify from "../../../all/error_notify/error_notify";
+import RequestPostArticle from "../../../../packages/requests/article/PostArticle";
 
-const BlogBox = (props: { articles: any[] }) => {
-  const [stateArticles, setArticles] = useState<any>(props.articles);
-  const [stateAuth, setAuth] = useState<boolean>(false);
+const BlogBox = (props: { articles: any[], verified: boolean }) => {
   const [stateErr, setErr] = useState<string>("");
   const router = useRouter();
 
-  useEffect(() => {
-    const token_ = QueryToken();
-    if (token_) {
-      RequestCheckAuth({ token: QueryToken() }).then(() => {
-        setAuth(true);
-        RequestListArticles({ token: token_ }).then((articles) => {
-          setArticles(articles);
-        });
-      });
-    }
-  }, []);
-
-  const createArticle = () => {
-    RequestCreateArticle({
-      token: QueryToken(),
-      article: {
+  const createArticle = async () => {
+    
+    RequestPostArticle(
+      {
         title: "新しい記事",
         subtitle: "",
         body: "",
         tags: [""],
         is_public: false,
-      },
+      }, QueryToken())
+    .then(({ id }) => {
+      router.push("/blog/article/edit/" + id);
     })
-      .then(({ id }) => {
-        router.push("/blog/article/edit/" + id);
-      })
-      .catch((err) => {
-        setErr(err);
-      });
+    .catch(() => {
+      setErr("failed to load");
+    });
+    
   };
 
   return (
@@ -50,14 +34,14 @@ const BlogBox = (props: { articles: any[] }) => {
       <h2>Blog</h2>
       <p>技術や生活に関する記事を載せています</p>
       <div className={styles.main}>
-        {stateAuth ? (
+        {props.verified ? (
           <>
             <button onClick={createArticle}>+ 新規作成</button>
           </>
         ) : (
           <></>
         )}
-        <ArticleList articles={stateArticles} />
+        <ArticleList articles={props.articles} />
         <ErrorNotify>{stateErr}</ErrorNotify>
       </div>
     </>

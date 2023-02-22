@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "./box.module.css";
 import ArticleList from "../list/list";
-import RequestListArticles from "../../../../requests/articles/ListArticles";
-import RequestCreateArticle from "../../../../requests/article/CreateArticle";
-import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
+import RequestListArticles from "../../../../packages/requests/articles/ListArticles";
+import RequestCreateArticle from "../../../../packages/requests/article/PostArticle";
+import RequestCheckAuth from "../../../../packages/requests/auth/Verify";
 import { QueryToken } from "../../../../packages/token/token";
 import ErrorNotify from "../../../all/error_notify/error_notify";
 
@@ -17,9 +17,9 @@ const BlogBox = (props: { articles: any[] }) => {
   useEffect(() => {
     const token_ = QueryToken();
     if (token_ != "") {
-      RequestCheckAuth({ token: token_ }).then(() => {
+      RequestCheckAuth(token_).then(() => {
         setAuth(true);
-        RequestListArticles({ token: token_ }).then((articles) => {
+        RequestListArticles(true).then((articles) => {
           setArticles(articles);
         });
       });
@@ -27,16 +27,16 @@ const BlogBox = (props: { articles: any[] }) => {
   }, []);
 
   const createArticle = () => {
-    RequestCreateArticle({
-      token: QueryToken(),
-      article: {
+    RequestCreateArticle(
+      {
         title: "新しい記事",
         subtitle: "",
         body: "",
         tags: [""],
         is_public: false,
       },
-    })
+      QueryToken(),
+    )
       .then(({ id }) => {
         router.push("/blog/article/edit/" + id);
       })
@@ -47,7 +47,7 @@ const BlogBox = (props: { articles: any[] }) => {
 
   return (
     <>
-      <h2>Blog</h2>
+      <h1>Blog</h1>
       <p>技術や生活に関する記事を載せています</p>
       <div className={styles.main}>
         {stateAuth ? (

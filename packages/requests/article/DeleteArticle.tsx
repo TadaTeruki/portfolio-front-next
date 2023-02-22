@@ -1,13 +1,10 @@
+
 import axios from "axios";
+import { DeleteRequest } from "../../../model/article";
 
-type DeleteRequest = {
-  token: string;
-  id: string;
-};
-
-const RequestDeleteArticle = async (request: DeleteRequest): Promise<void> => {
+const RequestDeleteArticle = async (request: DeleteRequest, token: string): Promise<void> => {
   const headers_ = {
-    Authorization: request.token,
+    Authorization: token,
     "Accept-Encoding": "gzip,deflate,compress",
   };
 
@@ -15,12 +12,7 @@ const RequestDeleteArticle = async (request: DeleteRequest): Promise<void> => {
     async (resolve: () => void, reject: (message: string) => void) => {
       await axios
         .delete(
-          process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
-            "/article/" +
-            request.id,
-          {
-            headers: headers_,
-          }
+          process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL+ "/api/article/"+ request.id, { headers: headers_ }
         )
         .then((_) => {
           resolve();

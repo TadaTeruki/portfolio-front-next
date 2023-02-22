@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap');
+
 body {
   margin: 0;
-  font-family: "M PLUS 1", sans-serif;
-  background: rgb(247, 247, 247);
-  color: rgb(57, 57, 57);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: large;
+  background-color: rgb(242, 242, 242);
+  background-image: linear-gradient(rgb(230, 230, 230) 0.5mm, transparent 0mm), linear-gradient(to right, rgb(230, 230, 230) 0.5mm, transparent 0mm);
+  background-size: 30mm 30mm;
+  color: rgb(87, 87, 87);
 }
 
 button {
@@ -13,11 +18,14 @@ button {
   padding: 2mm 4mm;
   border-radius: 1mm;
   border: 0;
+
+  box-shadow: 1mm 1mm rgb(242, 242, 242);
 }
 
 button:hover {
   background: rgb(197, 197, 197);
   transition: 0.15s;
+  box-shadow: 1.2mm 1.2mm rgb(242, 242, 242);
 }
 
 img {

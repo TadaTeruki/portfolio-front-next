@@ -1,37 +1,37 @@
 import Header from "../components/all/header/header";
-import HeadLink from "../components/all/link/headlink/headlink";
-import ImageBox from "../components/all/imagebox/imagebox";
-import IndentBox from "../components/all/indentbox/indentbox";
 import Base from "../components/all/base/base";
 import Config from "../components/config/config";
+import TabLinkBox from "../components/toppage/tablinkbox/tablinkbox";
+import CenteringBox from "../components/all/centeringbox/centeringbox";
+import FlexListBox from "../components/all/flexlistbox/flexlistbox";
 
 export default function Component() {
   return (
     <>
-      <Config title="Welcome!" subtitle="ぺるきのポートフォリオです" />
+      <Config title="Welcome!" subtitle="ぺるきのポートフォリオ" />
       <Header />
       <Base>
-        <ImageBox image="/static/welcome.jpg">
-          <h1>Peruki&apos;s Portfolio</h1>
+
+        <CenteringBox>
+
+          <h1>~ Peruki&apos;s Portfolio ~</h1>
           <p>
             ぺるきのポートフォリオです。
             <br />
             様々な情報を共有します。
             <br />
           </p>
-          <IndentBox>
-            <HeadLink href="/profile">
-              <h2>Profile</h2>
-            </HeadLink>
-            <p>所属・技術スタックなど、ぺるきに関する主な情報を載せています。</p>
-          </IndentBox>
-          <IndentBox>
-            <HeadLink href="/blog">
-              <h2>Blog</h2>
-            </HeadLink>
-            <p>技術や生活に関する記事を載せています。</p>
-          </IndentBox>
-        </ImageBox>
+
+          <h2>目次</h2>
+
+          <FlexListBox>
+            <TabLinkBox href="/profile" tabname="Profile" description="基本情報"></TabLinkBox>
+            <TabLinkBox href="/activity" tabname="Activities" description="活動成果"></TabLinkBox>
+            <TabLinkBox href="/blog" tabname="Blog" description="技術や生活に関する記事"></TabLinkBox>
+          </FlexListBox>
+
+        </CenteringBox>
+
       </Base>
     </>
   );

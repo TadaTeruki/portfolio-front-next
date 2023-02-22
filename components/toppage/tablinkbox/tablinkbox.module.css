@@ -1,0 +1,12 @@
+.main {
+  border: solid rgb(210, 210, 210);
+  border-width: 1mm 1mm 1mm 1mm;
+  border-radius: 2mm;
+  margin: 5mm auto;
+  min-width: 20em;
+}
+
+.main:hover {
+  border-color: rgb(129, 203, 238);
+  transition: 0.15s;
+}

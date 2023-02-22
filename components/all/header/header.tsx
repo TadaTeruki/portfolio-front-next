@@ -19,6 +19,9 @@ const Header = () => {
         <PlainLink href="/profile">
           <Tab>Profile</Tab>
         </PlainLink>
+        <PlainLink href="/activity">
+          <Tab>Activity</Tab>
+        </PlainLink>
         <PlainLink href="/blog">
           <Tab>Blog</Tab>
         </PlainLink>

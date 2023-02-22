@@ -1,49 +1,38 @@
-import { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import Base from "../../../../components/all/base/base";
 import Header from "../../../../components/all/header/header";
-import RequestListArticles from "../../../../requests/articles/ListArticles";
-import RequestReadArticle from "../../../../requests/article/ReadArticle";
-import RequestCheckAuth from "../../../../requests/auth/CheckAuth";
+import RequestReadArticle from "../../../../packages/requests/article/ReadArticle";
+import RequestVerify from "../../../../packages/requests/auth/Verify";
 import ArticleBox from "../../../../components/blog/article/box/box";
-import { QueryToken } from "../../../../packages/token/token";
 import Config from "../../../../components/config/config";
 
 type Props = {
   article: any | null;
+  verified: boolean;
 };
 
-export async function getStaticPaths() {
-  const responses = await RequestListArticles({ token: "" });
+export const getServerSideProps: GetServerSideProps<Props> = async (context) => { 
+  var verified = false;
+  var cookie = require("cookie");
+  if(context.req.headers.cookie) {
+    const cookieData = cookie.parse(context.req.headers.cookie);
+    if (cookieData.portfolioToken) {
+      await RequestVerify(cookieData.portfolioToken).then(() => {
+        verified = true;
+      });
+    }
+  }
 
-  const paths = responses.map(
-    (response) => "/blog/article/public/" + response.id
-  );
-  return { paths, fallback: false };
-}
-
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const response = await RequestReadArticle({
-    id: params?.id as string,
-  });
-
+  const response = await RequestReadArticle({ id: context.params?.id as string, });
   return {
     props: {
       article: response,
+      verified: verified,
     },
-  }
+  };
 };
 
 const Index = (props: Props) => {
-  const [stateAuth, setAuth] = useState<boolean>(false);
-
-  useEffect(() => {
-    RequestCheckAuth({ token: QueryToken() }).then(() => {
-      setAuth(true);
-    }).catch(() => {
-      setAuth(false);
-    });
-  }, []);
 
   return (
     <>
@@ -52,7 +41,7 @@ const Index = (props: Props) => {
       <Base>
         <ArticleBox
           article={props.article}
-          auth={stateAuth}
+          auth={props.verified}
           showTimestamp={true}
         />
       </Base>

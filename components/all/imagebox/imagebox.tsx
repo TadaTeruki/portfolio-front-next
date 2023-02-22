@@ -1,5 +1,4 @@
 import styles from "./imagebox.module.css";
-import Image from "next/image";
 
 const ImageBox = (props: { image: string; children: React.ReactNode }) => {
   return (
@@ -8,7 +7,6 @@ const ImageBox = (props: { image: string; children: React.ReactNode }) => {
       <div className={styles.image}>
         <img src={props.image} alt=""/>
       </div>
-      
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import PlainLink from "../../../all/link/plainlink/plainlink";
 import { QueryToken } from "../../../../packages/token/token";
-import RequestDeleteArticle from "../../../../requests/article/DeleteArticle";
+import RequestDeleteArticle from "../../../../packages/requests/article/DeleteArticle";
 import ErrorNotify from "../../../all/error_notify/error_notify";
 
 const ArticleBox = (props: {
@@ -18,10 +18,12 @@ const ArticleBox = (props: {
   const router = useRouter();
 
   const deleteArticle = () => {
-    RequestDeleteArticle({
-      token: QueryToken(),
-      id: props.article.id,
-    })
+    RequestDeleteArticle(
+      {
+        id: props.article.id
+      },
+      QueryToken(),
+    )
       .then(() => {
         router.push("/blog");
       })
