@@ -1,14 +1,13 @@
 import axios from "axios";
 import { sha256 } from "js-sha256";
-import { LoginRequest, LoginResponse } from "../../../pages/api/auth/login";
+import { LoginRequest, LoginResponse } from "../../../model/auth";
 
 const RequestLogin = async (
-  name_: string,
+  owner_id_: string,
   passwd_: string
 ): Promise<LoginResponse> => {
-
   const request: LoginRequest = {
-    owner_id: ConvertToSha256(name_),
+    owner_id: ConvertToSha256(owner_id_),
     passwd: ConvertToSha256(passwd_),
   };
 
@@ -22,7 +21,7 @@ const RequestLogin = async (
       reject: (message: string) => void
     ) => {
       await axios
-        .post(process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL + "/api/auth/login", request, { headers: headers_ })
+        .post(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/login", request, { headers: headers_ })
         .then((res) => {
           resolve({
             token: res.data.token,

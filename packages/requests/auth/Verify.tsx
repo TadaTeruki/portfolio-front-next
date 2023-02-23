@@ -1,23 +1,22 @@
 import axios from "axios";
-import { VerifyResponse } from "../../../pages/api/auth/verify";
+import { VerifyResponse } from "../../../model/auth";
 
 const RequestVerify = async (
   token: string,
 ): Promise<VerifyResponse> => {
+
+  const headers_ = {
+    Authorization: token,
+    "Accept-Encoding": "gzip,deflate,compress",
+  };
 
   return new Promise<VerifyResponse>(
     async (
       resolve: (responses: VerifyResponse) => void,
       reject: (message: string) => void
     ) => {
-
-      const headers_ = {
-        Authorization: token,
-        "Accept-Encoding": "gzip,deflate,compress",
-      };
-
       await axios
-        .get(process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL + "/api/auth/verify", {
+        .get(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/auth", {
           headers: headers_,
         })
         .then((res) => {

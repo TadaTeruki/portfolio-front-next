@@ -4,7 +4,7 @@ import Config from "../components/config/config";
 import TabLinkBox from "../components/toppage/tablinkbox/tablinkbox";
 import FlexListBox from "../components/all/flexlistbox/flexlistbox";
 import ArticleList from "../components/blog/articles/list/list";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import RequestListArticles from "../packages/requests/articles/ListArticles";
 import BlogContainer from "../components/blog/articles/container/container";
 import JustifyBox from "../components/all/justifybox/justifybox";
@@ -18,9 +18,9 @@ type Props = {
   articles: any[];
 };
 
-export const getServerSideProps: GetServerSideProps<Props> = async (context) => { 
+export const getStaticProps: GetStaticProps<Props> = async () => {
 
-  const response = await RequestListArticles(false);
+  const response = await RequestListArticles("");
 
   return {
     props: {

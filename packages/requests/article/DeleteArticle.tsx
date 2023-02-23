@@ -12,7 +12,12 @@ const RequestDeleteArticle = async (request: DeleteRequest, token: string): Prom
     async (resolve: () => void, reject: (message: string) => void) => {
       await axios
         .delete(
-          process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL+ "/api/article/"+ request.id, { headers: headers_ }
+          process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
+            "/article/" +
+            request.id,
+          {
+            headers: headers_,
+          }
         )
         .then((_) => {
           resolve();

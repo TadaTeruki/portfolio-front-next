@@ -10,7 +10,10 @@ const RequestUpdateArticle = async (request: UpdateRequest, token: string): Prom
   return new Promise<void>(
     async (resolve: () => void, reject: (message: string) => void) => {
       await axios
-        .put(process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL+ "/api/article/"+ request.id,
+        .put(
+          process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL +
+            "/article/" +
+            request.id,
           request,
           { headers: headers_ }
         )

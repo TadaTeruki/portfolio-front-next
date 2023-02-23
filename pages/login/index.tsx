@@ -23,9 +23,9 @@ const LoginEntry = () => {
     }
   }, [router]);
 
-  const login = () => {
+  const login = async () => {
     setErr("");
-    RequestLogin(stateName, statePasswd)
+    await RequestLogin(stateName, statePasswd)
       .then((response) => {
         setErr("");
         SetToken(response.token);

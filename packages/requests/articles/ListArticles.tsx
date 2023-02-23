@@ -1,4 +1,4 @@
-import QueryFirestoreDB from "../firebase";
+import axios from "axios";
 
 type ListResponse = {
   id: string;
@@ -11,30 +11,34 @@ type ListResponse = {
   is_public: boolean;
 };
 
-// TODO: axios経由にする
-const RequestListArticles = async (verified: boolean): Promise<ListResponse[]> => {
-  const db = QueryFirestoreDB()
-  const docRef = await db.collection("articles").get();
+const RequestListArticles = async (token: string): Promise<ListResponse[]> => {
+  const headers_ = {
+    Authorization: token,
+    "Accept-Encoding": "gzip,deflate,compress",
+  };
 
-  var responses: ListResponse[] = [];
-  docRef.forEach((doc: any) => {
-    const data = doc.data();
-    if (verified || data.is_public == true) {
-      responses.push(doc.data())
+  return new Promise<ListResponse[]>(
+    async (
+      resolve: (responses: ListResponse[]) => void,
+      reject: (message: string) => void
+    ) => {
+      await axios
+        .get(process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/articles", {
+          headers: headers_,
+        })
+        .then((res) => {
+          var responses: ListResponse[] = [];
+          for (let i = 0; i < res.data.articles.length; i++) {
+            responses.push(res.data.articles[i]);
+          }
+          resolve(responses);
+        })
+        .catch((err) => {
+          console.log(err.message);
+          reject(err.message);
+        });
     }
-  }) 
-    
-  responses.sort((a, b) => {
-    if(a.created_at < b.created_at) {
-      return 1;
-    } else if(a.created_at > b.created_at) {
-      return -1;
-    } else {
-      return 0;
-    }
-  })
-
-  return responses;
+  );
 };
 
 export default RequestListArticles;

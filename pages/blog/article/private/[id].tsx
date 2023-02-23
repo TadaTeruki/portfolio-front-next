@@ -4,54 +4,35 @@ import RequestReadArticle from "../../../../packages/requests/article/ReadArticl
 import ArticleBox from "../../../../components/blog/article/box/box";
 import Config from "../../../../components/config/config";
 import RequestVerify from "../../../../packages/requests/auth/Verify";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
+import { QueryToken } from "../../../../packages/token/token";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
-type Props = {
-  article: any | null;
-  verified: boolean;
-};
+const Index = () => {
 
-export const getServerSideProps: GetServerSideProps<Props> = async (context) => { 
-  var verified = false;
-  var cookie = require("cookie");
-  if(context.req.headers.cookie) {
-    const cookieData = cookie.parse(context.req.headers.cookie);
-    if (cookieData.portfolioToken) {
-      await RequestVerify(cookieData.portfolioToken).then(() => {
-        verified = true;
-      });
-    }
-  }
+  const router = useRouter();
 
-  if(verified == false) {
-    // TODO: 404ページを表示
-    return {
-      props: {
-        article: null,
-        verified: verified,
-      },
-    };
-  }
+  const [stateArticle, setArticle] = useState<any>(null);
+  const [stateVerified, setVerfied] = useState<boolean>(false);
 
-  const response = await RequestReadArticle({ id: context.params?.id as string, });
-  return {
-    props: {
-      article: response,
-      verified: verified,
-    },
-  };
-};
+  useEffect(() => {
+    RequestVerify(QueryToken()).then(() => {
+      setVerfied(true);
+    });
+    RequestReadArticle({ id: router.query.id as string }).then((article) => {
+      setArticle(article);
+    });
+  }, [router.query.id]);
 
-
-const Index = (props: Props) => {
   return (
     <>
-      <Config title={props.article == null ? "":props.article.title} subtitle={props.article == null ? "":props.article.subtitle} />
+      <Config title={stateArticle == null ? "":stateArticle.title} subtitle={stateArticle == null ? "":stateArticle.subtitle} />
       <Header />
       <Base>
         <ArticleBox
-          article={props.article}
-          auth={props.verified}
+          article={stateArticle}
+          auth={stateVerified}
           showTimestamp={true}
         />
       </Base>

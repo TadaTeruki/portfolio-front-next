@@ -1,5 +1,6 @@
 .main {
-  margin: 5vh 15vw;
+  margin: 5vh auto;
+  width: 70%;
   padding: 15mm 5vw;
   border-radius: 10mm;
   line-height: 2;
@@ -27,7 +28,8 @@
 
 @media screen and (max-width: 600px) {
   .main {
-    margin: 1vh 1vh;
+    width: fit-content;
+    margin: 0;
     padding: 5mm 6vw;
   }
 }

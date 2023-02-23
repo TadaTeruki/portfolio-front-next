@@ -14,7 +14,9 @@ const RequestPostArticle = async (request: PostRequest, token: string): Promise<
     ) => {
       await axios
         .post(
-          process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL+ "/api/article/", request, { headers: headers_ }
+          process.env.NEXT_PUBLIC_PORTFOLIO_SERVER_URL + "/article",
+          request,
+          { headers: headers_ }
         )
         .then((res) => {
           resolve({

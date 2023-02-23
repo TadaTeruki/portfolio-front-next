@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 
 const SetToken = (token: string) => {
-  Cookies.set("portfolioToken", "Bearer " + token, { sameSite: "lax" });
+  Cookies.set("portfolioToken", "Bearer " + token, { sameSite: "Lax", expires: 7 });
 };
 
 const RemoveToken = () => {

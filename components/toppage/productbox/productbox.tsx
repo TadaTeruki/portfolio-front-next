@@ -30,7 +30,7 @@ const ProductBox = (props: { name: string, description: string, skills: string[]
     if (props.skills[i] === "") continue;
     awards_item.push(
       <div className={styles.award} key={i}>
-        🏅&nbsp;{props.awards[i]}
+        {props.awards[i]}
       </div>
     );
   }
