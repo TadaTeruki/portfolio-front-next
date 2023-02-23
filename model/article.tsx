@@ -4,6 +4,7 @@ export type Article = {
   title: string;
   subtitle: string;
   body: string;
+  thumbnail: string;
   tags: string[];
   created_at: string;
   updated_at: string;
@@ -19,6 +20,7 @@ export type ReadResponse = {
   title: string;
   subtitle: string;
   body: string;
+  thumbnail: string;
   tags: string[];
   created_at: string;
   updated_at: string;
@@ -29,6 +31,7 @@ export type PostRequest = {
   title: string;
   subtitle: string;
   body: string;
+  thumbnail: string;
   tags: string[];
   is_public: boolean;
 };
@@ -46,6 +49,7 @@ export type UpdateRequest = {
   title: string;
   subtitle: string;
   body: string;
+  thumbnail: string;
   tags: string[];
   is_public: boolean;
 };

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import styles from "./box.module.css";
 import ArticleList from "../list/list";
 import { QueryToken } from "../../../../packages/token/token";
 import ErrorNotify from "../../../all/error_notify/error_notify";
 import RequestPostArticle from "../../../../packages/requests/article/PostArticle";
+import BlogContainer from "../container/container";
 
 const BlogBox = (props: { articles: any[], verified: boolean }) => {
   const [stateErr, setErr] = useState<string>("");
@@ -18,6 +18,7 @@ const BlogBox = (props: { articles: any[], verified: boolean }) => {
         subtitle: "",
         body: "",
         tags: [""],
+        thumbnail: "",
         is_public: false,
       }, QueryToken())
     .then(({ id }) => {
@@ -31,9 +32,10 @@ const BlogBox = (props: { articles: any[], verified: boolean }) => {
 
   return (
     <>
-      <h2>Blog</h2>
+      <h1>Blog</h1>
       <p>技術や生活に関する記事を載せています</p>
-      <div className={styles.main}>
+      
+      <BlogContainer>
         {props.verified ? (
           <>
             <button onClick={createArticle}>+ 新規作成</button>
@@ -41,9 +43,9 @@ const BlogBox = (props: { articles: any[], verified: boolean }) => {
         ) : (
           <></>
         )}
-        <ArticleList articles={props.articles} />
+        <ArticleList articles={props.articles} size={-1} />
         <ErrorNotify>{stateErr}</ErrorNotify>
-      </div>
+      </BlogContainer>
     </>
   );
 };

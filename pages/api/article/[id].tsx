@@ -20,7 +20,15 @@ export default async function handler(req: any, res: any) {
       case "PUT":{
         await RequestVerify(req.headers.authorization).then(async () => {
           const body = req.body as UpdateRequest;
-          await db.collection("articles").doc(query.id).update(body);
+          await db.collection("articles").doc(query.id).update({
+            title: body.title,
+            subtitle: body.subtitle,
+            body: body.body,
+            thumbnail: body.thumbnail,
+            tags: body.tags,
+            updated_at: new Date().toISOString(),
+            is_public: body.is_public,
+          });
           res.status(200).end();
         }).catch((err) => {
           res.status(401).json({ message:err });

@@ -12,7 +12,15 @@
 }
 
 .tab {
-  padding: 5.5mm 7mm;
+  padding-right: 7mm;
+  padding-left: 7mm;
+  display: flex;
+  align-items: center;
+  height: 3.5em;
+}
+
+.tab img{
+  height: 1.2em;
 }
 
 .tab:hover {
@@ -23,8 +31,9 @@
 .logo {
   font-size: 7mm;
   font-weight: bold;
-  padding: 4mm 7mm;
   flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .logo:hover {

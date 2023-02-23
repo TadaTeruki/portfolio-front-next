@@ -2,7 +2,7 @@ import IndentBox from "../../all/indentbox/indentbox";
 import PlainLink from "../../all/link/plainlink/plainlink";
 import styles from "./tablinkbox.module.css";
 
-const TabLinkBox = (props: { href: string; tabname: string; description: string }) => {
+const TabLinkBox = (props: { href: string; tabname: string; description: string}) => {
   return (
     <div className={styles.main}>
       <PlainLink href={props.href}>

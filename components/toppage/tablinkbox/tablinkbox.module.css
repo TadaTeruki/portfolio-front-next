@@ -2,8 +2,11 @@
   border: solid rgb(210, 210, 210);
   border-width: 1mm 1mm 1mm 1mm;
   border-radius: 2mm;
-  margin: 5mm auto;
-  min-width: 20em;
+  margin: 5mm 5mm;
+  min-width: 18em;
+  width: 40%;
+  line-height: 1.2;
+  box-shadow: 1.5mm 1.5mm rgb(238, 238, 238);
 }
 
 .main:hover {

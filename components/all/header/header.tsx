@@ -6,7 +6,7 @@ const Logo = (props: { children: React.ReactNode }) => {
 };
 
 const Tab = (props: { children: React.ReactNode }) => {
-  return <div className={styles.tab}>{props.children}</div>;
+  return <div><div className={styles.tab}>{props.children}</div></div>;
 };
 
 const Header = () => {
@@ -14,13 +14,19 @@ const Header = () => {
     <div className={styles.main}>
       <div className={styles.tab_container}>
         <PlainLink href="/">
-          <Logo>Peruki&apos;s Portfolio</Logo>
+          <Tab>
+            <Logo>Peruki&apos;s Portfolio</Logo>
+          </Tab>
         </PlainLink>
-        <PlainLink href="/profile">
-          <Tab>Profile</Tab>
+        <PlainLink href="https://twitter.com/PerukiFUN">
+          <Tab>
+            <img alt="twitter logo" src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Flogo%2FLogo%20black.svg?alt=media&token=fd5dee03-e276-41ac-96d2-2b9d203aea49"></img>
+          </Tab>
         </PlainLink>
-        <PlainLink href="/activity">
-          <Tab>Activity</Tab>
+        <PlainLink href="https://github.com/TadaTeruki">
+          <Tab>
+            <img alt="github logo" src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Flogo%2Fgithub-mark.svg?alt=media&token=9d486992-c57e-49a7-bccc-1bb5c408d252"></img>  
+          </Tab>
         </PlainLink>
         <PlainLink href="/blog">
           <Tab>Blog</Tab>

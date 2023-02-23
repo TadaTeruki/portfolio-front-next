@@ -1,6 +1,5 @@
 .main {
-  
-  margin: 5vh 10vw;
+  margin: 5vh 15vw;
   padding: 15mm 5vw;
   border-radius: 10mm;
   line-height: 2;
@@ -19,6 +18,11 @@
 
 .main h2 {
   text-shadow: 1mm 1mm rgb(240, 240, 240);
+}
+
+.main img {
+  box-shadow: 1.5mm 1.5mm rgb(238, 238, 238);
+  border-radius: 1mm;
 }
 
 @media screen and (max-width: 600px) {

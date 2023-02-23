@@ -1,7 +1,6 @@
 import styles from "./edit.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import RequestCheckAuth from "../../../../packages/requests/auth/Verify";
 import RequestReadArticle from "../../../../packages/requests/article/ReadArticle";
 import RequestUpdateArticle from "../../../../packages/requests/article/UpdateArticle";
 import { QueryToken } from "../../../../packages/token/token";
@@ -22,7 +21,10 @@ const ArticleEdit = (props: { id: string }) => {
 
   const [stateNewTags, setNewTags] = useState<string>("");
   const updateNewTags = (event: any) => setNewTags(event.target.value);
-
+  
+  const [stateNewThumbnail, setNewThumbnail] = useState<string>("");
+  const updateNewThumbnail = (event: any) => setNewThumbnail(event.target.value);
+  
   const [stateNewIsPublic, setNewIsPublic] = useState<boolean>(false);
   const updateNewIsPublic = () => setNewIsPublic(!stateNewIsPublic);
 
@@ -38,6 +40,7 @@ const ArticleEdit = (props: { id: string }) => {
             setNewTitle(article.title);
             setNewSubtitle(article.subtitle);
             setNewBody(article.body);
+            setNewThumbnail(article.thumbnail);
             setNewIsPublic(article.is_public);
 
             var newTags = "";
@@ -66,6 +69,7 @@ const ArticleEdit = (props: { id: string }) => {
           title: stateNewTitle,
           subtitle: stateNewSubtitle,
           body: stateNewBody,
+          thumbnail: stateNewThumbnail,
           tags: stateNewTags.split(" "),
           is_public: stateNewIsPublic,
         },
@@ -78,7 +82,7 @@ const ArticleEdit = (props: { id: string }) => {
         setErr(err);
       });
   };
-
+  
   return (
     <div className={styles.main}>
       <div className={styles.layout}>
@@ -111,6 +115,16 @@ const ArticleEdit = (props: { id: string }) => {
               className={styles.text_entry}
               value={stateNewTags}
               onChange={updateNewTags}
+            />
+          </p>
+
+          <p className={styles.edit_label}>
+            サムネイル画像URL
+            <input
+              type="text"
+              className={styles.text_entry}
+              value={stateNewThumbnail}
+              onChange={updateNewThumbnail}
             />
           </p>
 

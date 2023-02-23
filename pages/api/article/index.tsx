@@ -18,6 +18,7 @@ export default async function handler(req: any, res: any) {
               title: body.title,
               subtitle: body.subtitle,
               body: body.body,
+              thumbnail: body.thumbnail,
               tags: body.tags,
               created_at: new Date().toISOString(),
               updated_at: new Date().toISOString(),

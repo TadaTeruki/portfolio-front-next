@@ -7,16 +7,15 @@
   margin-top: auto;
   margin-bottom: auto;
   margin-right: auto;
-  padding-bottom: 1em;
 }
 
-.image {
+.content {
   margin-top: auto;
   margin-bottom: auto;
 }
 
 @media screen and (max-width: 600px) {
-  .image {
+  .content {
     margin-left: auto;
     margin-right: auto;
   } 
