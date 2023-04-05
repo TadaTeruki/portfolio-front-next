@@ -10,7 +10,7 @@
     border-radius: 10mm;
     box-shadow: 1mm 1mm rgb(210, 210, 210);
     font-family: monospace;
-    background-image: linear-gradient(0deg, rgb(80, 80, 80), rgb(105, 105, 105));
+    background-color: rgb(80, 80, 80);
     color: rgb(130, 200, 120);
     border-width: 50mm 50mm 50mm 50mm;
 
