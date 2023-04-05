@@ -40,10 +40,7 @@ const Component = (props: Props) => {
 
           <h1>~ Peruki&apos;s Portfolio ~</h1>
           <p>
-            ぺるきのポートフォリオです。
-            <br />
-            様々な情報を共有します。
-            <br />
+            ぺるきのポートフォリオ
           </p>
           <FlexListBox>
             <TabLinkBox href="#profile" tabname="Profile" description="プロフィール"></TabLinkBox>
@@ -60,28 +57,18 @@ const Component = (props: Props) => {
             <IndentBox>
               <h2>基本情報</h2>
               <IndentBox>
-                <ImageBox height="80mm" image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Ftadateruki.jpeg?alt=media&token=ec946aa8-efc3-4a6c-bc07-bf0bd17086ab">
+                
                   <strong>本名 :</strong> 多田 瑛貴, ただ てるき, Teruki TADA<br />
                   <strong>在住 :</strong> 北海道函館市<br />
-                  <strong>出身 :</strong> 京都府京都市, 広島県福山市<br />
                   <strong>生年月日 :</strong> 2002年8月14日<br />
                   <br />
-
-                </ImageBox>
               </IndentBox>
               <h2>経歴</h2>
               <IndentBox>
-                <ImageBox height="60mm" image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fhakodate.jpeg?alt=media&token=e7cb7931-55bf-4869-961a-c83e5a1a4495">
-                  現在<br />&emsp;
-                  公立はこだて未来大学 システム情報科学部 在学中<br />
-                  <br />
-                  2022年3月<br />&emsp;
-                  京都府立清明高等学校 (昼間定時制・4年卒コース) 卒業<br />
-                  2021年3月<br />&emsp;
-                  国立情報学研究所 情報科学の達人プログラム(第一期) 第二段階修了<br />
-                  2018年3月<br />&emsp;
-                  龍谷大学付属平安中学校 卒業 
-                </ImageBox>
+                  現在 : 公立はこだて未来大学 システム情報科学部 在学中<br />
+                  2022年3月 : 京都府立清明高等学校 (昼間定時制・4年卒コース) 卒業<br />
+                  2021年3月 : 国立情報学研究所 情報科学の達人プログラム(第一期) 第二段階修了<br />
+                  2018年3月 : 龍谷大学付属平安中学校 卒業 
               </IndentBox>
               <h2>キャリア</h2>
               
@@ -171,7 +158,7 @@ const Component = (props: Props) => {
                           情報処理学会 第3回中高生情報学研究コンテストにて掲載<br />
                         </IndentBox>
                         <br />
-                        <strong>論文: CurtainRail:多層の線形構造に基づいた動的空間データ構造</strong><br />
+                        <strong>論文(査読無): CurtainRail:多層の線形構造に基づいた動的空間データ構造</strong><br />
                         ( CurtainRail: A linear-structure-based kinetic data structure for spatial searching )
                         <IndentBox>
                         情報科学技術フォーラム(FIT2022)にて講演・掲載<br />

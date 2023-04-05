@@ -1,9 +1,9 @@
 .main {
   border: solid rgb(210, 210, 210) 0.7mm;
-  border-radius: 2mm;
-  line-height: 1.3;
-  padding: 5mm;
-  margin: 2mm 2mm;
+  border-radius: 0.5em;
+  line-height: 1.2;
+  padding: 2mm;
+  margin: 2mm;
 }
 
 .main .fadeImage{

@@ -70,7 +70,7 @@ const ProductBox = (props: { name: string, description: string, skills: string[]
   } else if (props.image != "") {
     return(
       <Container link={props.link}>
-        <ImageBox height="50mm" image={props.image}>
+        <ImageBox height="6em" image={props.image}>
           <IndentBox>
             {info}
           </IndentBox>

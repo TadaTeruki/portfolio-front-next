@@ -1,24 +1,22 @@
 .main {
   margin: 5vh auto;
-  width: 70%;
+  width: 60%;
+  min-width: 600px;
   padding: 15mm 5vw;
   border-radius: 10mm;
   line-height: 2;
   box-shadow: 1mm 1mm rgb(210, 210, 210);
 
   background-color: rgb(252, 252, 252);
-  background-image: linear-gradient(rgb(250, 250, 250) 1.5mm, transparent 0mm), linear-gradient(to right, rgb(250, 250, 250) 1.5mm, transparent 0mm);
-  background-size: 30mm 30mm;
-
   border-width: 50mm 50mm 50mm 50mm;
 }
 
 .main h1 {
-  text-shadow: 1.5mm 1.5mm rgb(238, 238, 238);
+  font-size: 1.8em;
 }
 
 .main h2 {
-  text-shadow: 1mm 1mm rgb(240, 240, 240);
+  font-size: 1.2em;
 }
 
 .main img {
@@ -29,6 +27,7 @@
 @media screen and (max-width: 600px) {
   .main {
     width: fit-content;
+    min-width: 0px;
     margin: 0;
     padding: 5mm 6vw;
   }

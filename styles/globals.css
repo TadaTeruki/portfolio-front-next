@@ -3,7 +3,6 @@
 body {
   margin: 0;
   font-family: 'Zen Kaku Gothic New', sans-serif;
-  font-size: large;
   background-color: rgb(242, 242, 242);
   background-image: linear-gradient(rgb(230, 230, 230) 0.5mm, transparent 0mm), linear-gradient(to right, rgb(230, 230, 230) 0.5mm, transparent 0mm);
   background-size: 30mm 30mm;
