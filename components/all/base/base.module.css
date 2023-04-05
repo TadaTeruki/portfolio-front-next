@@ -1,12 +1,11 @@
 .main {
   margin: 5vh auto;
   width: 60%;
-  min-width: 600px;
-  padding: 15mm 5vw;
+  min-width: 500px;
+  padding: 12mm;
   border-radius: 10mm;
   line-height: 2;
   box-shadow: 1mm 1mm rgb(210, 210, 210);
-
   background-color: rgb(252, 252, 252);
   border-width: 50mm 50mm 50mm 50mm;
 }
@@ -26,9 +25,10 @@
 
 @media screen and (max-width: 600px) {
   .main {
-    width: fit-content;
+    width: inherit;
     min-width: 0px;
     margin: 0;
     padding: 5mm 6vw;
+    border-radius: 3mm;
   }
 }

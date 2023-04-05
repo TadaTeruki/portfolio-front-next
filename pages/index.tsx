@@ -13,6 +13,7 @@ import IndentBox from "../components/all/indentbox/indentbox";
 import ImageBox from "../components/all/imagebox/imagebox";
 import ProductBox from "../components/toppage/productbox/productbox";
 import StyledLink from "../components/all/link/styledlink/styledlink";
+import Perufetch from "../components/toppage/perufetch/perufetch";
 
 type Props = {
   articles: any[];
@@ -34,9 +35,10 @@ const Component = (props: Props) => {
     <>
       <Config title="Welcome!" subtitle="ぺるきのポートフォリオ" />
       <Header />
+      <Perufetch/>
       <Base>
-
         <JustifyBox type="center">
+
 
           <h1>~ Peruki&apos;s Portfolio ~</h1>
           <p>

@@ -2,12 +2,12 @@
   width: 100%;
   background: rgb(247, 247, 247);
   display: flex;
-  border-bottom: solid 1mm rgb(220, 220, 220);
+  border-bottom: solid 0.8mm rgb(220, 220, 220);
   border-radius: 1mm;
 }
 
 .tab_container {
-  font-size: 5mm;
+  font-size: 4mm;
   display: flex;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .tab img{
-  height: 1.2em;
+  height: 1.5em;
 }
 
 .tab:hover {
@@ -29,9 +29,9 @@
 }
 
 .logo {
-  font-size: 7mm;
-  font-weight: bold;
+  font-size: 6mm;
   flex-wrap: nowrap;
+  white-space: nowrap;
   display: flex;
   align-items: center;
 }

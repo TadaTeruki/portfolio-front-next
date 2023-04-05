@@ -1,0 +1,34 @@
+
+.main {
+    margin: 5vh auto;
+    width: 60%;
+    min-width: 500px;
+    padding: 12mm;
+    font-weight: bolder;
+    font-size: large;
+    line-height: 1.4;
+    border-radius: 10mm;
+    box-shadow: 1mm 1mm rgb(210, 210, 210);
+    font-family: monospace;
+    background-image: linear-gradient(0deg, rgb(80, 80, 80), rgb(105, 105, 105));
+    color: rgb(130, 200, 120);
+    border-width: 50mm 50mm 50mm 50mm;
+
+}
+
+.container {
+    white-space: pre;
+    overflow-x: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    .main {
+        width: inherit;
+        min-width: 0px;
+        margin: 0;
+        padding: 5mm 6vw;
+        border-radius: 3mm;
+    }
+  }
+  
