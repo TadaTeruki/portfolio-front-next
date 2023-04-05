@@ -60,9 +60,9 @@ const Component = (props: Props) => {
               <h2>基本情報</h2>
               <IndentBox>
                 
-                  <strong>本名 :</strong> 多田 瑛貴, ただ てるき, Teruki TADA<br />
-                  <strong>在住 :</strong> 北海道函館市<br />
-                  <strong>生年月日 :</strong> 2002年8月14日<br />
+                  本名 : 多田 瑛貴, ただ てるき, Teruki TADA<br />
+                  在住 : 北海道函館市<br />
+                  生年月 : 2002年8月 (26卒)<br />
                   <br />
               </IndentBox>
               <h2>経歴</h2>
@@ -77,8 +77,8 @@ const Component = (props: Props) => {
               <IndentBox>
                 <h3>インターンシップ</h3>
                 <IndentBox>
-                  2022年3月<br />&emsp;
-                  株式会社メルカリ&emsp;
+                  2022年3月 : 
+                  株式会社メルカリ&nbsp;
                   <StyledLink href="https://mercan.mercari.com/articles/31914/">
                   Online Spring Internship for Gophers 2022
                   </StyledLink>

@@ -29,8 +29,8 @@
 }
 
 .logo {
-  font-size: 6mm;
   flex-wrap: nowrap;
+  font-size: 6mm;
   white-space: nowrap;
   display: flex;
   align-items: center;
