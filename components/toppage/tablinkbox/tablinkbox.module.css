@@ -1,8 +1,8 @@
 .main {
   border: solid rgb(210, 210, 210) 0.8mm;
   border-radius: 2mm;
-  margin: 2mm 5mm;
-  min-width: 18em;
+  margin: 2mm 4mm;
+  min-width: 15em;
   width: 40%;
   line-height: 1.2;
   box-shadow: 1.5mm 1.5mm rgb(238, 238, 238);

@@ -1,7 +1,7 @@
 .main {
   margin: 2vh auto;
   width: 60%;
-  min-width: 500px;
+  min-width: 600px;
   padding: 12mm;
   border-radius: 10mm;
   line-height: 2;
@@ -23,7 +23,7 @@
   border-radius: 1mm;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .main {
     width: inherit;
     min-width: 0px;

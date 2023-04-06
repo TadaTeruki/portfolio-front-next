@@ -221,7 +221,6 @@ const Component = (props: Props) => {
             <br />
             <a id="blog"><h1>Blog</h1></a>
             <BlogContainer>
-              
               <h2>
                 最新3件&emsp;
               </h2>

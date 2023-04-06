@@ -1,11 +1,10 @@
 
 .main {
-    margin: 2vh auto;
-    width: 60%;
+    margin: auto;
+    width: 100%;
     min-width: 500px;
-    padding: 12mm;
+    padding-bottom: 8mm;
     line-height: 1.4;
-    border-radius: 10mm;
     box-shadow: 1mm 1mm rgb(210, 210, 210);
     font-family: monospace;
     background-color: rgb(70, 70, 70);
@@ -13,18 +12,26 @@
 }
 
 .container {
+    margin: 0% 20%;
+    padding: 8mm 0mm;
+    min-width: 500px;
     white-space: pre;
     overflow-x: auto;
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .main {
         width: inherit;
         min-width: 0px;
         margin: 0;
         padding: 5mm 6vw;
-        border-radius: 3mm;
     }
-  }
+
+    .container {
+        min-width: 0px;
+        padding: 0mm;
+        margin: 0%;
+    }
+}
   

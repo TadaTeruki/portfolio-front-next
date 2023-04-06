@@ -27,7 +27,8 @@
 
 .skill {
   background: rgb(232, 232, 232);
-  padding: 1mm 4mm;
+  padding: 1mm 3mm;
+  font-size: smaller;
   border-radius: 1mm;
   margin: 1.2mm
 }

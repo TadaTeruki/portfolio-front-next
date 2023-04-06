@@ -14,7 +14,7 @@
   margin-bottom: auto;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .content {
     display: none;
   } 

@@ -25,7 +25,7 @@ $ perufetch
     return (
         <p className={styles.main}>
             <div className={styles.container}>
-            {context}
+                {context}
             </div>
             
         </p>

@@ -1,7 +1,7 @@
 .main {
   width: 100%;
   background: rgb(247, 247, 247);
-  display: flex;
+ 
   border-bottom: solid 0.8mm rgb(220, 220, 220);
   border-radius: 1mm;
 }
@@ -9,6 +9,7 @@
 .tab_container {
   font-size: 4mm;
   display: flex;
+  overflow-x: scroll;
 }
 
 .tab {
@@ -20,7 +21,8 @@
 }
 
 .tab img{
-  height: 1.5em;
+  width: 1.5em;
+  min-width: 1.5em;
 }
 
 .tab:hover {
@@ -40,15 +42,28 @@
   background: rgb(236, 236, 236);
 }
 
-@media screen and (max-width: 600px) {
-  .logo {
-    font-size: 4vw;
-    padding: auto;
-  }
-}
-
 .login-box {
   display: flex;
   line-height: 2.5;
   font-size: large;
+}
+
+@media screen and (max-width: 800px) {
+
+  .tab_container {
+    font-size: 4mm;
+  }
+
+  .tab {
+    padding-right: 5mm;
+    padding-left: 5mm;
+  }
+
+  .logo {
+    font-size: 5mm;
+  }
+
+  .login-box {
+    font-size: medium;
+  }
 }
