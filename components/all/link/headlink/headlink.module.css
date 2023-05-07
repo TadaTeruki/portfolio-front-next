@@ -1,8 +1,8 @@
 .main {
-  color: rgb(80, 80, 80);
-  text-decoration: underline rgb(198, 198, 198);
+    color: rgb(80, 80, 80);
+    text-decoration: underline rgb(198, 198, 198);
 }
 
 .main:hover {
-  color: rgb(169, 169, 169);
+    color: rgb(169, 169, 169);
 }

@@ -1,40 +1,66 @@
 .main {
-  border: solid rgb(210, 210, 210) 0.7mm;
-  border-radius: 0.5em;
-  line-height: 1.2;
-  padding: 2mm;
-  margin: 2mm;
+    border: solid rgb(210, 210, 210) 0.7mm;
+    border-radius: 0.5em;
+    line-height: 1;
+    padding: 2mm;
+    margin: 2mm;
 }
 
 .main .fadeImage{
-  opacity: 0;
+    opacity: 0;
 }
 
 .main:hover {
-  background-color: rgb(247, 247, 247);
-  transition: 0.15s;
+    background-color: rgb(247, 247, 247);
+    transition: 0.15s;
 }
 
 .main:hover .fadeImage{
-  opacity: 1.0;
-  transition: 0.3s;
+    opacity: 1.0;
+    transition: 0.3s;
 }
 
 .skilltable {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .skill {
-  background: rgb(232, 232, 232);
-  padding: 1mm 3mm;
-  font-size: smaller;
-  border-radius: 1mm;
-  margin: 1.2mm
+    background: rgb(232, 232, 232);
+    padding: 1mm 3mm;
+    font-size: smaller;
+    border-radius: 1mm;
+    margin-bottom: 1.2mm;
+    margin-left: 1.2mm;
 }
 
 .award {
-  color: rgb(134, 134, 134);
-  font-size: smaller;
-  margin-bottom: 3mm;
+    color: rgb(134, 134, 134);
+    font-size: small;
+    margin-bottom: 1em;
+}
+
+.flex {
+    display: flex;
+}
+
+.info {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.thumbnail {
+    height: 40mm;
+    width: 40mm;
+    object-fit: cover;
+    object-position: 25% 25%; 
+
+    margin: auto 1mm auto auto;
+}
+
+@media screen and (max-width: 800px) {
+    .thumbnail {
+        display: none;
+    } 
 }

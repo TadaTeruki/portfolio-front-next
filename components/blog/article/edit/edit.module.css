@@ -1,50 +1,50 @@
 .main {
-  background: rgb(255, 255, 255);
-  margin: 0mm 5mm;
-  padding: 5mm;
-  border-radius: 5mm;
+    background: rgb(255, 255, 255);
+    margin: 0mm 5mm;
+    padding: 5mm;
+    border-radius: 5mm;
 }
 
 .layout {
-  line-height: 2;
-  display: flex;
-  width: 100%;
-  height: 90vh;
+    line-height: 2;
+    display: flex;
+    width: 100%;
+    height: 90vh;
 }
 
 .edit_box {
-  width: 50%;
-  min-width: 10%;
-  max-width: 70%;
-  height: 100%;
-  padding: 0 5%;
-  overflow-y: scroll;
-  border: solid 0.5mm rgb(213, 213, 213);
-  border-radius: 2mm;
-  resize: horizontal;
+    width: 50%;
+    min-width: 10%;
+    max-width: 70%;
+    height: 100%;
+    padding: 0 5%;
+    overflow-y: scroll;
+    border: solid 0.5mm rgb(213, 213, 213);
+    border-radius: 2mm;
+    resize: horizontal;
 }
 
 .preview_box {
-  flex-grow: 1;
-  margin: 0;
-  overflow-y: scroll;
-  border-bottom: solid 0.5mm rgb(213, 213, 213);
-  padding: 0 5mm;
-  width: 0;
+    flex-grow: 1;
+    margin: 0;
+    overflow-y: scroll;
+    border-bottom: solid 0.5mm rgb(213, 213, 213);
+    padding: 0 5mm;
+    width: 0;
 }
 
 .text_entry {
-  width: 100%;
-  color: rgb(57, 57, 57);
-  padding: 1mm;
+    width: 100%;
+    color: rgb(57, 57, 57);
+    padding: 1mm;
 }
 
 .edit_label {
-  font-size: large;
+    font-size: large;
 }
 
 .text_area {
-  width: 100%;
-  display: block;
-  height: 50vh;
+    width: 100%;
+    display: block;
+    height: 50vh;
 }

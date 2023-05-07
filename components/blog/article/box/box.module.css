@@ -1,15 +1,15 @@
 .danger {
-  color: rgb(247, 247, 247);
-  background: rgb(231, 80, 80);
+    color: rgb(247, 247, 247);
+    background: rgb(231, 80, 80);
 }
 
 .danger:hover {
-  background: rgb(213, 56, 56);
+    background: rgb(213, 56, 56);
 }
 
 .footer {
-  margin: 15mm 0mm 0mm 0mm;
-  padding: 15mm 0mm;
-  line-height: 1;
-  border-top: solid 0.3mm rgb(213, 213, 213);
+    margin: 15mm 0mm 0mm 0mm;
+    padding: 15mm 0mm;
+    line-height: 1;
+    border-top: solid 0.3mm rgb(213, 213, 213);
 }

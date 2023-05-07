@@ -9,48 +9,48 @@ import { QueryToken } from "../../packages/token/token";
 import { useEffect, useState } from "react";
 
 type Props = {
-  articles: any[];
+    articles: any[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const articles = await RequestListArticles("");
+    const articles = await RequestListArticles("");
 
-  return {
-    props: {
-      articles: articles,
-    },
-  };
+    return {
+        props: {
+            articles: articles,
+        },
+    };
 };
 
 const Blog = (props: Props) => {
 
-  const [stateArticles, setArticles] = useState<any[]>(props.articles);
-  const [stateVerified, setVerified] = useState<boolean>(false);
+    const [stateArticles, setArticles] = useState<any[]>(props.articles);
+    const [stateVerified, setVerified] = useState<boolean>(false);
 
-  useEffect(() => {
-    const token = QueryToken();
-    
-    if(token) {
-      RequestVerify(token).then((res) => {
-        if(res.owner_id != "") {
-          setVerified(true);
+    useEffect(() => {
+        const token = QueryToken();
+
+        if (token) {
+            RequestVerify(token).then((res) => {
+                if (res.owner_id != "") {
+                    setVerified(true);
+                }
+            });
+            RequestListArticles(token).then((res) => {
+                setArticles(res);
+            });
         }
-      });
-      RequestListArticles(token).then((res) => {
-        setArticles(res);
-      });
-    }
-  },[])
+    }, []);
 
-  return (
-    <>
-      <Config title="Blogs" subtitle="技術や生活に関する記事" />
-      <Header />
-      <Base>
-        <BlogBox articles={stateArticles} verified={stateVerified}/>
-      </Base>
-    </>
-  );
+    return (
+        <>
+            <Config title="Blogs" subtitle="技術や生活に関する記事" />
+            <Header />
+            <Base>
+                <BlogBox articles={stateArticles} verified={stateVerified} />
+            </Base>
+        </>
+    );
 };
 
 export default Blog;
