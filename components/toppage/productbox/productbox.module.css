@@ -6,18 +6,9 @@
     margin: 2mm;
 }
 
-.main .fadeImage{
-    opacity: 0;
-}
-
 .main:hover {
     background-color: rgb(247, 247, 247);
     transition: 0.15s;
-}
-
-.main:hover .fadeImage{
-    opacity: 1.0;
-    transition: 0.3s;
 }
 
 .skilltable {

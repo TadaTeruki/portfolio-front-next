@@ -72,7 +72,10 @@ const ProductBox = (props: { name: string, description: string, skills: string[]
                             {info}
                         </IndentBox>
                     </div>
-                    <img src={props.image} className={styles.thumbnail} />
+                    {
+                        props.image == ""  ? <></>: <img src={props.image} className={styles.thumbnail} />
+                    }
+                    
                 </div>
             </Container>
         );
