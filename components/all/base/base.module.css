@@ -2,20 +2,20 @@
     margin: 2vh auto;
     width: 60%;
     min-width: 600px;
-    padding: 10mm 18mm;
+    padding: 12mm;
     border-radius: 10mm;
     line-height: 2;
-    box-shadow: 2mm 2mm rgb(220, 220, 220);
+    box-shadow: 1mm 1mm rgb(220, 220, 220);
     background-color: rgb(252, 252, 252);
     border-width: 50mm 50mm 50mm 50mm;
 }
 
 .main h1 {
-    font-size: 2.0em;
+    font-size: 1.8em;
 }
 
 .main h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .main img {
