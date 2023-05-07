@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap');
 
 body {
-  margin: 0;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-  background-color: rgb(242, 242, 242);
-  background-image: linear-gradient(rgb(230, 230, 230) 0.5mm, transparent 0mm), linear-gradient(to right, rgb(230, 230, 230) 0.5mm, transparent 0mm);
-  background-size: 18mm 18mm;
-  color: rgb(87, 87, 87);
+    margin: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    background-color: rgb(242, 242, 242);
+    background-image: linear-gradient(rgb(230, 230, 230) 0.5mm, transparent 0mm), linear-gradient(to right, rgb(230, 230, 230) 0.5mm, transparent 0mm);
+    background-size: 18mm 18mm;
+    color: rgb(87, 87, 87);
 }
 
 button {
-  color: rgb(57, 57, 57);
-  background: rgb(232, 232, 232);
-  font-size: normal;
-  font-weight: normal;
-  padding: 2mm 4mm;
-  border-radius: 1mm;
-  border: 0;
+    color: rgb(57, 57, 57);
+    background: rgb(232, 232, 232);
+    font-size: normal;
+    font-weight: normal;
+    padding: 2mm 4mm;
+    border-radius: 1mm;
+    border: 0;
 
-  box-shadow: 1mm 1mm rgb(242, 242, 242);
+    box-shadow: 1mm 1mm rgb(242, 242, 242);
 }
 
 button:hover {
-  background: rgb(197, 197, 197);
-  transition: 0.15s;
-  box-shadow: 1.2mm 1.2mm rgb(242, 242, 242);
+    background: rgb(197, 197, 197);
+    transition: 0.15s;
+    box-shadow: 1.2mm 1.2mm rgb(242, 242, 242);
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }

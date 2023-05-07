@@ -7,6 +7,7 @@ import PlainLink from "../../../all/link/plainlink/plainlink";
 import { QueryToken } from "../../../../packages/token/token";
 import RequestDeleteArticle from "../../../../packages/requests/article/DeleteArticle";
 import ErrorNotify from "../../../all/error_notify/error_notify";
+import JustifyBox from "../../../all/justifybox/justifybox";
 
 const ArticleBox = (props: {
     article: any;

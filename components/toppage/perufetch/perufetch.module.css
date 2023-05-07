@@ -4,16 +4,19 @@
     width: 100%;
     min-width: 500px;
     padding-bottom: 8mm;
-    line-height: 1.4;
-    box-shadow: 1mm 1mm rgb(210, 210, 210);
+    line-height: 1.35;
+    box-shadow: 0mm 2mm rgb(220, 220, 220);
     font-family: monospace;
     background-color: rgb(70, 70, 70);
+
+    border-top: 3mm solid rgb(50, 50, 50);
     color: rgb(130, 200, 120);
+    font-weight: bolder;
 }
 
 .container {
     margin: 0% 20%;
-    padding: 8mm 0mm;
+    padding: 2mm 0mm;
     min-width: 500px;
     white-space: pre;
     overflow-x: auto;

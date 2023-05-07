@@ -112,20 +112,20 @@ const Component = (props: Props) => {
                         <IndentBox>
                             <h2>情報表現</h2>
                             <IndentBox>
-                                - 地形生成
+                               ・地形生成
                                 <br />
-                                - ジェネレーティブアート
+                               ・アート活動
                                 <br />
-                                - ゲーム開発
+                               ・ゲーム開発
                                 <br />
-                                <h3>主な成果</h3>
+                                <h3></h3>
                                 <IndentBox>
                                     <ProductBox
                                         name="RDGL"
                                         description="地形生成ライブラリ"
                                         link="https://github.com/TadaTeruki/RDGL"
                                         skills={["Go", "個人開発"]}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fterrain2.png?alt=media&token=133e7fa3-9495-460e-9a5f-3abef24f4b68"
+                                        image="https://user-images.githubusercontent.com/57752033/144703530-7a11bd6b-ef2f-4f66-bf7f-e2b42098eedc.png"
                                         awards={[]}
                                     />
                                     <ProductBox
@@ -146,15 +146,23 @@ const Component = (props: Props) => {
                                         image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fspellhunter.png?alt=media&token=67b1c917-3588-4075-b09e-16e33e140f18"
                                         awards={["いわしジャム#1 投票1位"]}
                                     />
+                                    <ProductBox
+                                        name="TransportNetworkSimulator"
+                                        description="探索アルゴリズムを用いた交通網の再現シミュレーション"
+                                        link="https://github.com/Perukii/TransportNetworkSimulator"
+                                        skills={["Go", "個人開発"]}
+                                        image="https://user-images.githubusercontent.com/57752033/131674598-3f096d48-1b9f-45d2-9d17-067218a0c2a3.png"
+                                        awards={[]}
+                                    />
                                 </IndentBox>
                             </IndentBox>
                             <h2>GUI</h2>
                             <IndentBox>
-                                - ウインドウマネージャ
+                               ・ウインドウマネージャ
                                 <br />
-                                - ウインドウアプリケーションフレームワーク
+                               ・ウインドウアプリケーションフレームワーク
                                 <br />
-                                <h3>主な成果</h3>
+                                <h3></h3>
                                 <IndentBox>
                                     <ProductBox
                                         name="MiteWM"
@@ -170,35 +178,35 @@ const Component = (props: Props) => {
                             </IndentBox>
                             <h2>情報科学研究</h2>
                             <IndentBox>
-                                - 空間的データ構造
+                               ・空間的データ構造
                                 <br />
-                                - コンピュータグラフィックス
+                               ・コンピュータグラフィックス
                                 <br />
-                                <h3>主な成果</h3>
+                                <h3></h3>
                                 <IndentBox>
                                     <h3>CurtainRail構造 (2020-2022)</h3>
                                     <p>
                                         <IndentBox>
-                                            <strong>分野 :</strong>{" "}
+                                            分野 :{" "}
                                             空間データ構造
                                             <br />
-                                            <strong>期間 :</strong> 2020-2022
+                                            期間 : 2020-2022
                                             <br />
                                             <br />
-                                            <strong>
+                                            
                                                 ポスター発表: CurtainRail 構造 –
                                                 空間インデックス 新手法の提案
-                                            </strong>
+                                            
                                             <IndentBox>
                                                 情報処理学会
                                                 第3回中高生情報学研究コンテストにて掲載
                                                 <br />
                                             </IndentBox>
                                             <br />
-                                            <strong>
+                                            
                                                 論文(査読無):
                                                 CurtainRail:多層の線形構造に基づいた動的空間データ構造
-                                            </strong>
+                                            
                                             <br />( CurtainRail: A
                                             linear-structure-based kinetic data
                                             structure for spatial searching )
@@ -224,11 +232,11 @@ const Component = (props: Props) => {
                             </IndentBox>
                             <h2>Web開発</h2>
                             <IndentBox>
-                                - Webアプリケーション
+                               ・Webアプリケーション
                                 <br />
-                                - フロントエンド
+                               ・フロントエンド
                                 <br />
-                                <h3>主な成果</h3>
+                                <h3></h3>
                                 <IndentBox>
                                     <ProductBox
                                         name="Peruki's Portfolio"
@@ -261,6 +269,72 @@ const Component = (props: Props) => {
                                     />
                                 </IndentBox>
                             </IndentBox>
+
+                            <h2>基礎実装</h2>
+                            <IndentBox>
+                               ・グラフィックス領域<br />
+                               ・データ構造
+                                <br />
+                                <h3></h3>
+                                <IndentBox>
+                                    <ProductBox
+                                        name="NoiseGo"
+                                        description="パーリンノイズのGo言語実装"
+                                        link="https://github.com/TadaTeruki/portfolio-front-next"
+                                        skills={[
+                                            "Go",
+                                            "グラフィックス",
+                                            "個人開発",
+                                        ]}
+                                        image="https://user-images.githubusercontent.com/69315285/150670142-3a5530cf-30f3-4dd7-9d34-36e9aec0c988.png"
+                                        awards={[]}
+                                    />
+                                    <ProductBox
+                                        name="priority_queue"
+                                        description="優先度つきキューの表現"
+                                        link="https://github.com/TadaTeruki/go-priority-queue"
+                                        skills={[
+                                            "Go",
+                                            "データ構造",
+                                            "個人開発"]
+                                        }
+                                        image=""
+                                        awards={[]}
+                                    />
+                                    <ProductBox
+                                        name="graph"
+                                        description="隣接リスト表現によるグラフの表現"
+                                        link="https://github.com/TadaTeruki/graph"
+                                        skills={[
+                                            "Go",
+                                            "データ構造",
+                                            "個人開発"]
+                                        }
+                                        image=""
+                                        awards={[]}
+                                    />
+                                </IndentBox>
+                            </IndentBox>
+
+                            <h2>コミュニティ活動</h2>
+                            <IndentBox>
+                               ・技術コミュニティ運営<br />
+                               ・技術イベント主催
+                                <br />
+                                <h3></h3>
+                                <IndentBox>
+                                    <ProductBox
+                                        name="Mariners' Conference LT '23 Spring"
+                                        description="LTイベント in 函館市亀田交流プラザ 企画・運営"
+                                        link="https://mariconf.connpass.com/event/276729/"
+                                        skills={[
+                                            "LT",
+                                        ]}
+                                        image="https://connpass-tokyo.s3.amazonaws.com/thumbs/74/ae/74ae2fdd51bdc282b595a4c41aa46bc7.png"
+                                        awards={[]}
+                                    />
+                                </IndentBox>
+                            </IndentBox>
                         </IndentBox>
                         <br />
                         <a id="blog">
@@ -269,12 +343,13 @@ const Component = (props: Props) => {
                         <BlogContainer>
                             <h2>最新3件&emsp;</h2>
                             <ArticleList articles={props.articles} size={3} />
-
-                            <PlainLink href={"/blog"}>
-                                <button>
-                                    <strong>&gt;&gt; もっと見る</strong>
-                                </button>
-                            </PlainLink>
+                            <JustifyBox type="center">
+                                <PlainLink href={"/blog"}>
+                                    <button style={{margin:"5mm"}}>
+                                        もっと見る
+                                    </button>
+                                </PlainLink>
+                            </JustifyBox>
                         </BlogContainer>
 
                         <br />
@@ -287,12 +362,12 @@ const Component = (props: Props) => {
                                 image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fkamakura.jpeg?alt=media&token=f17eb89f-330d-43ee-93a4-fbade342044d"
                             >
                                 <p>
-                                    <strong>Email :</strong>{" "}
+                                    Email :{" "}
                                     tadateruki.public@gmail.com
                                     <br />
-                                    <strong>Twitter :</strong> @PerukiFUN
+                                    Twitter : @PerukiFUN
                                     <br />
-                                    <strong>GitHub :</strong> TadaTeruki
+                                    GitHub : TadaTeruki
                                     <br />
                                 </p>
                             </ImageBox>
