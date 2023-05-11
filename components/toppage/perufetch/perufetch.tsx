@@ -1,36 +1,15 @@
 import styles from './perufetch.module.css'
 
-const Perufetch = () => {
-
-
-    var context = `
-$ perufetch
-                                         Peruki@future-university-hakodate
-   .                                     ---------------------------------
-  ##########==  =#                       Name: Teruki TADA
-   ##===####==###==#==.                  Shell: Japanese
-   ##==####==##        ===               Location: Hakodate, Japan
-    ########=             #=             Affiliation: Future University Hakodate
-     ####=            ##   .#.           Mascot: Perukun
-      #         ##    ##     #           Twitter: @PerukiFUN
-      #         ##         .#=           GitHub: TadaTeruki
-      =#               ====              Native Language: Go
-        =====.    ====                   Languages: C, C++, Go, (Rust)
-       =#=#########.                     Fields: Procedural Generation (CG)
-     #######=######=                           : Backend Web Development
-        ===  #     =   
-        
-  See : https://github.com/TadaTeruki/perufetch
-`
+const Perufetch = (props: {context: string}) => {
     return (
-        <p className={styles.main}>
+        <div className={styles.main}>
             <div className={styles.container}>
-                {context}
+                $ perufetch
+                {props.context} <br />
+                See: https://github.com/TadaTeruki/perufetch
             </div>
-            
-        </p>
-    )
-}
+        </div>
+    );
+};
 
-
-export default Perufetch
+export default Perufetch;

@@ -17,13 +17,24 @@ import Perufetch from "../components/toppage/perufetch/perufetch";
 
 type Props = {
     articles: any[];
+    perufetch: string;
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
     const response = await RequestListArticles("");
+    let perufetch = "";
+    try {
+        const response = await fetch("https://portfolio-server-eitx.onrender.com/");
+        if (response.ok) {
+            perufetch = await response.text();
+        }
+    } catch (error) {
+        console.error("Failed to load perufetch:", error);
+    }
     return {
         props: {
             articles: response,
+            perufetch: perufetch,
         },
     };
 };
@@ -33,7 +44,7 @@ const Component = (props: Props) => {
         <>
             <Config title="Welcome!" subtitle="ぺるきのポートフォリオ" />
             <Header />
-            <Perufetch />
+            <Perufetch context={props.perufetch} />
             <Base>
                 <JustifyBox type="center">
                     <h1>~ Peruki&apos;s Portfolio ~</h1>
