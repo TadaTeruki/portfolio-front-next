@@ -14,6 +14,7 @@ import ImageBox from "../components/all/imagebox/imagebox";
 import ProductBox from "../components/toppage/productbox/productbox";
 import StyledLink from "../components/all/link/styledlink/styledlink";
 import Perufetch from "../components/toppage/perufetch/perufetch";
+import RequestPerufetch from "../packages/requests/Perufetch";
 
 type Props = {
     articles: any[];
@@ -22,15 +23,7 @@ type Props = {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
     const response = await RequestListArticles("");
-    let perufetch = "";
-    try {
-        const response = await fetch("https://portfolio-server-eitx.onrender.com/");
-        if (response.ok) {
-            perufetch = await response.text();
-        }
-    } catch (error) {
-        console.error("Failed to load perufetch:", error);
-    }
+    const perufetch = await RequestPerufetch();
     return {
         props: {
             articles: response,
