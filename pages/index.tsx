@@ -284,7 +284,7 @@ const Component = (props: Props) => {
                                     <ProductBox
                                         name="NoiseGo"
                                         description="パーリンノイズのGo言語実装"
-                                        link="https://github.com/TadaTeruki/portfolio-front-next"
+                                        link="https://github.com/TadaTeruki/NoiseGo"
                                         skills={[
                                             "Go",
                                             "グラフィックス",
