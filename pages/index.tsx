@@ -15,6 +15,7 @@ import ProductBox from "../components/toppage/productbox/productbox";
 import StyledLink from "../components/all/link/styledlink/styledlink";
 import Perufetch from "../components/toppage/perufetch/perufetch";
 import RequestPerufetch from "../packages/requests/Perufetch";
+import ScrollBox from "../components/all/scrollbox/scrollbox";
 
 type Props = {
     articles: any[];
@@ -72,32 +73,37 @@ const Component = (props: Props) => {
                         <a id="profile">
                             <h1>Profile</h1>
                         </a>
+                        
                         <IndentBox>
                             <h2>基本情報</h2>
-                            <IndentBox>
-                                本名 : 多田 瑛貴, ただ てるき, Teruki TADA
-                                <br />
-                                在住 : 北海道函館市
-                                <br />
-                                生年月 : 2002年8月 (26卒)
-                                <br />
-                                <br />
-                            </IndentBox>
+                            <ScrollBox>
+                                <IndentBox>
+                                    本名 : 多田 瑛貴, ただ てるき, Teruki TADA
+                                    <br />
+                                    在住 : 北海道函館市
+                                    <br />
+                                    生年月 : 2002年8月 (26卒)
+                                    <br />
+                                    <br />
+                                </IndentBox>
+                            </ScrollBox>
                             <h2>経歴</h2>
-                            <IndentBox>
-                                現在 : 公立はこだて未来大学 システム情報科学部
-                                在学中
-                                <br />
-                                2022年3月 : 京都府立清明高等学校
-                                (昼間定時制・4年卒コース) 卒業
-                                <br />
-                                2021年3月 : 国立情報学研究所
-                                情報科学の達人プログラム(第一期) 第二段階修了
-                                <br />
-                                2018年3月 : 龍谷大学付属平安中学校 卒業
-                            </IndentBox>
+                            <ScrollBox>
+                                <IndentBox>
+                                    現在 : 公立はこだて未来大学 システム情報科学部
+                                    在学中
+                                    <br />
+                                    2022年3月 : 京都府立清明高等学校
+                                    (昼間定時制・4年卒コース) 卒業
+                                    <br />
+                                    2021年3月 : 国立情報学研究所
+                                    情報科学の達人プログラム(第一期) 第二段階修了
+                                    <br />
+                                    2018年3月 : 龍谷大学付属平安中学校 卒業
+                                </IndentBox>
+                            </ScrollBox>
                             <h2>キャリア</h2>
-
+                            <ScrollBox>
                             <IndentBox>
                                 <h3>インターンシップ</h3>
                                 <IndentBox>
@@ -108,6 +114,7 @@ const Component = (props: Props) => {
                                     </StyledLink>
                                 </IndentBox>
                             </IndentBox>
+                            </ScrollBox>
                         </IndentBox>
                         <br />
                         <a id="activity">
@@ -181,59 +188,61 @@ const Component = (props: Props) => {
                                 </IndentBox>
                             </IndentBox>
                             <h2>情報科学研究</h2>
-                            <IndentBox>
-                               ・空間的データ構造
-                                <br />
-                               ・コンピュータグラフィックス
-                                <br />
-                                <h3></h3>
+                            
                                 <IndentBox>
-                                    <h3>CurtainRail構造 (2020-2022)</h3>
-                                    <p>
-                                        <IndentBox>
-                                            分野 :{" "}
-                                            空間データ構造
-                                            <br />
-                                            期間 : 2020-2022
-                                            <br />
-                                            <br />
-                                            
-                                                ポスター発表: CurtainRail 構造 –
-                                                空間インデックス 新手法の提案
-                                            
+                                ・空間的データ構造
+                                    <br />
+                                ・コンピュータグラフィックス
+                                    <br />
+                                    <h3></h3>
+                                    <IndentBox>
+                                        <h3>CurtainRail構造 (2020-2022)</h3>
+                                        <ScrollBox>
                                             <IndentBox>
-                                                情報処理学会
-                                                第3回中高生情報学研究コンテストにて掲載
+                                                分野 :{" "}
+                                                空間データ構造
                                                 <br />
+                                                期間 : 2020-2022
+                                                <br />
+                                                <br />
+                                                
+                                                    ポスター発表: CurtainRail 構造 –
+                                                    空間インデックス 新手法の提案
+                                                
+                                                <IndentBox>
+                                                    情報処理学会
+                                                    第3回中高生情報学研究コンテストにて掲載
+                                                    <br />
+                                                </IndentBox>
+                                                <br />
+                                                
+                                                    論文(査読無):
+                                                    CurtainRail:多層の線形構造に基づいた動的空間データ構造
+                                                
+                                                <br />( CurtainRail: A
+                                                linear-structure-based kinetic data
+                                                structure for spatial searching )
+                                                <IndentBox>
+                                                    情報科学技術フォーラム(FIT2022)にて講演・掲載
+                                                    <br />
+                                                    情報科学技術フォーラム講演論文集,
+                                                    21巻, 第1分冊, pp.123-126 (2022)
+                                                    <br />
+                                                </IndentBox>
                                             </IndentBox>
-                                            <br />
-                                            
-                                                論文(査読無):
-                                                CurtainRail:多層の線形構造に基づいた動的空間データ構造
-                                            
-                                            <br />( CurtainRail: A
-                                            linear-structure-based kinetic data
-                                            structure for spatial searching )
-                                            <IndentBox>
-                                                情報科学技術フォーラム(FIT2022)にて講演・掲載
-                                                <br />
-                                                情報科学技術フォーラム講演論文集,
-                                                21巻, 第1分冊, pp.123-126 (2022)
-                                                <br />
-                                            </IndentBox>
-                                        </IndentBox>
-                                    </p>
+                                        </ScrollBox>
 
-                                    <ProductBox
-                                        name="総合資料 (英語)"
-                                        description=""
-                                        link="https://github.com/TadaTeruki/CurtainRail-2022"
-                                        skills={[]}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fcr.png?alt=media&token=b4262300-97a4-4308-b06c-6b0d6ece28e9"
-                                        awards={[]}
-                                    />
+                                        <ProductBox
+                                            name="総合資料 (英語)"
+                                            description=""
+                                            link="https://github.com/TadaTeruki/CurtainRail-2022"
+                                            skills={[]}
+                                            image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fcr.png?alt=media&token=b4262300-97a4-4308-b06c-6b0d6ece28e9"
+                                            awards={[]}
+                                        />
+                                    </IndentBox>
                                 </IndentBox>
-                            </IndentBox>
+                            
                             <h2>Web開発</h2>
                             <IndentBox>
                                ・Webアプリケーション
@@ -369,10 +378,9 @@ const Component = (props: Props) => {
                                     Email :{" "}
                                     tadateruki.public@gmail.com
                                     <br />
-                                    Twitter : @PerukiFUN
+                                    Twitter : <StyledLink href="https://twitter.com/PerukiFUN">@PerukiFUN</StyledLink>
                                     <br />
-                                    GitHub : TadaTeruki
-                                    <br />
+                                    GitHub : <StyledLink href="https://github.com/TadaTeruki">TadaTeruki</StyledLink>
                                 </p>
                             </ImageBox>
                         </IndentBox>

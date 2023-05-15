@@ -35,7 +35,7 @@ const Unit = (props: { article: any }) => {
                         />
                         <TagTable tags={props.article.tags} />
                     </div>
-                    <img src={props.article.thumbnail} className={styles.thumbnail} />
+                    <img src={props.article.thumbnail} alt={props.article.title} className={styles.thumbnail} />
                 </div>
             </div>
         </PlainLink>

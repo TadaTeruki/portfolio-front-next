@@ -1,7 +1,6 @@
 .main {
     margin: 2vh auto;
-    width: 60%;
-    min-width: 600px;
+    max-width: 1000px;
     padding: 12mm;
     border-radius: 10mm;
     line-height: 2;

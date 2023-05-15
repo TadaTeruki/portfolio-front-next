@@ -6,7 +6,7 @@ const Perufetch = (props: {context: string}) => {
             <div className={styles.container}>
                 $ perufetch
                 {props.context} <br />
-                See: https://github.com/TadaTeruki/perufetch
+                See: <a className={styles.link} href="https://github.com/TadaTeruki/perufetch">https://github.com/TadaTeruki/perufetch</a>
             </div>
         </div>
     );
