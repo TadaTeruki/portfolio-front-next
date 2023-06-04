@@ -15,7 +15,7 @@ import StyledLink from '../components/all/link/styledlink/styledlink'
 import Perufetch from '../components/home/perufetch/perufetch'
 import RequestPerufetch from '../packages/requests/Perufetch'
 import ScrollBox from '../components/all/scrollbox/scrollbox'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Component.module.css'
 
 type Props = {
     articles: any[]
@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     }
 }
 
-const Home = (props: Props) => {
+const Component = (props: Props) => {
     return (
         <>
             <Config title="Welcome!" subtitle="ぺるきのポートフォリオ" />
@@ -315,4 +315,4 @@ const Home = (props: Props) => {
     )
 }
 
-export default Home
+export default Component
