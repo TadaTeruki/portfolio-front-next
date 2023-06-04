@@ -1,0 +1,70 @@
+.main {
+    width: 100%;
+    background: rgb(247, 247, 247);
+    border-bottom: solid 3px rgb(220, 220, 220);
+}
+
+.header_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab_container {
+    margin: auto 0;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 3.5em;
+}
+
+.twitter_logo{
+    width: 1.7em;
+    min-width: 1.7em;
+    height: 1.4em;
+}
+
+.github_logo{
+    width: 1.5em;
+    min-width: 1.5em;
+    height: 1.5em;
+}
+
+.tab:hover {
+    background: rgb(236, 236, 236);
+    transition: 0.15s;
+}
+
+.logo {
+    flex-wrap: nowrap;
+    font-size: 20px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.logo:hover {
+    background: rgb(236, 236, 236);
+}
+
+.login-box {
+    display: flex;
+    line-height: 2.5;
+    font-size: large;
+}
+
+@media screen and ((max-width: 1000px) or (orientation: portrait)) {
+    .tab_container {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+}
+  

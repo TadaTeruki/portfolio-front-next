@@ -1,0 +1,44 @@
+.unit {
+    margin: 10px 0;
+    padding: 5px 10px 15px 40px;
+    border-bottom: solid 1px rgb(213, 213, 213);
+}
+
+.unit:hover {
+    border-color: rgb(125, 160, 115);
+    background: rgb(247, 247, 247);
+    transition: 0.15s;
+}
+
+.is_private {
+    color: rgb(192, 0, 0);
+}
+
+.flex {
+    display: flex;
+    
+}
+
+.info {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.thumbnail {
+    position: relative;
+    height: 150px;
+    min-width: 150px;
+    width: max-content;
+    object-fit: cover;
+    object-position: 25% 25%; 
+}
+
+.thumbnail_container {
+    margin: auto 2px auto auto;
+}
+
+@media screen and ((max-width: 1000px) or (orientation: portrait)) {
+    .thumbnail {
+        display: none;
+    } 
+}

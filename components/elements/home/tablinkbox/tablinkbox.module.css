@@ -1,0 +1,14 @@
+.main {
+    border: solid rgb(210, 210, 210) 2.5px;
+    border-radius: 6px;
+    margin: 6px 15px;
+    min-width: 15em;
+    width: 40%;
+    line-height: 1.2;
+    box-shadow: 5px 5px rgb(238, 238, 238);
+}
+
+.main:hover {
+    border-color: rgb(129, 203, 238);
+    transition: 0.15s;
+}

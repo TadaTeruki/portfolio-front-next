@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import ArticleEdit from '../../../../components/blog/article/edit/edit';
+import ArticleEdit from '../../../../components/elements/blog/article/edit/edit';
 
 const BlogEdit = () => {
     const router = useRouter();

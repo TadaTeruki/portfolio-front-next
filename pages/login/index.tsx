@@ -1,7 +1,7 @@
-import Base from '../../components/all/base/base';
+import Base from '../../components/layout/base/base';
 import { useState, useEffect } from 'react';
 import RequestLogin from '../../packages/requests/auth/Login';
-import ErrorNotify from '../../components/all/error_notify/error_notify';
+import ErrorNotify from '../../components/elements/general/error_notify/error_notify';
 import { SetToken, QueryToken } from '../../packages/token/token';
 import { useRouter } from 'next/router';
 

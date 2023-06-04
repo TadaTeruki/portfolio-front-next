@@ -1,20 +1,19 @@
-import Base from '../components/all/base/base';
+import Base from '../components/layout/base/base';
 import Config from '../components/headinfo/headinfo';
-import TabLinkBox from '../components/home/tablinkbox/tablinkbox';
-import FlexListBox from '../components/all/flexlistbox/flexlistbox';
-import ArticleList from '../components/blog/articles/list/list';
+import TabLinkBox from '../components/elements/home/tablinkbox/tablinkbox';
+import FlexListBox from '../components/layout/container/flexlistbox/flexlistbox';
+import ArticleList from '../components/elements/blog/articles/list/list';
 import { GetStaticProps } from 'next';
 import RequestListArticles from '../packages/requests/articles/ListArticles';
-import BlogContainer from '../components/blog/articles/container/container';
-import JustifyBox from '../components/all/justifybox/justifybox';
-import PlainLink from '../components/all/link/plainlink/plainlink';
-import IndentBox from '../components/all/indentbox/indentbox';
-import ImageBox from '../components/all/imagebox/imagebox';
-import ProductBox from '../components/home/productbox/productbox';
-import StyledLink from '../components/all/link/styledlink/styledlink';
-import Perufetch from '../components/home/perufetch/perufetch';
+import BlogContainer from '../components/elements/blog/articles/container/container';
+import JustifyBox from '../components/layout/container/justifybox/justifybox';
+import PlainLink from '../components/layout/link/plainlink/plainlink';
+import IndentBox from '../components/layout/container/indentbox/indentbox';
+import ProductBox from '../components/elements/home/productbox/productbox';
+import StyledLink from '../components/layout/link/styledlink/styledlink';
+import Perufetch from '../components/elements/home/perufetch/perufetch';
 import RequestPerufetch from '../packages/requests/Perufetch';
-import ScrollBox from '../components/all/scrollbox/scrollbox';
+import ScrollBox from '../components/layout/container/scrollbox/scrollbox';
 import styles from '../styles/Home.module.css';
 
 type Props = {
@@ -272,7 +271,7 @@ const Home = (props: Props) => {
                                         description="LTイベント in 函館市亀田交流プラザ 企画・運営"
                                         link="https://mariconf.connpass.com/event/276729/"
                                         skills={['LT']}
-                                        image="https://connpass-tokyo.s3.amazonaws.com/thumbs/74/ae/74ae2fdd51bdc282b595a4c41aa46bc7.png"
+                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Farticles%2F4975dc09-2020-47f6-8d1f-78b0e762a2ca%2Fmariconf.webp?alt=media&token=d214cb19-8096-46a1-a929-c0fdf9ef3cb7&_gl=1*qnywgl*_ga*NDUwOTM1NzM2LjE2Njk3Njk4NzE.*_ga_CW55HF8NVT*MTY4NTg5MDU0Ni4zNC4xLjE2ODU4OTIxMzUuMC4wLjA."
                                         awards={[]}
                                     />
                                 </IndentBox>
@@ -295,18 +294,13 @@ const Home = (props: Props) => {
                             <h1 className={styles.category}>Contact</h1>
                         </div>
                         <IndentBox>
-                            <ImageBox
-                                height="200mm"
-                                image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fkamakura.jpeg?alt=media&token=f17eb89f-330d-43ee-93a4-fbade342044d"
-                            >
-                                <p>
-                                    Email : tadateruki.public@gmail.com
-                                    <br />
-                                    Twitter : <StyledLink href="https://twitter.com/PerukiFUN">@PerukiFUN</StyledLink>
-                                    <br />
-                                    GitHub : <StyledLink href="https://github.com/TadaTeruki">TadaTeruki</StyledLink>
-                                </p>
-                            </ImageBox>
+                            <p>
+                                Email : tadateruki.public@gmail.com
+                                <br />
+                                Twitter : <StyledLink href="https://twitter.com/PerukiFUN">@PerukiFUN</StyledLink>
+                                <br />
+                                GitHub : <StyledLink href="https://github.com/TadaTeruki">TadaTeruki</StyledLink>
+                            </p>
                         </IndentBox>
                     </JustifyBox>
                 </JustifyBox>

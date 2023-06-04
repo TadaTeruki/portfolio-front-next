@@ -1,0 +1,11 @@
+.main {
+    margin: 0 12px;
+    padding: 0 12px;
+}
+
+@media screen and ((max-width: 1000px) or (orientation: portrait)) {
+    .main {
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,6 @@
+.main {
+    overflow-x: scroll;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 1em;
+}

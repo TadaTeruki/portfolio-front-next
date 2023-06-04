@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
-import Base from '../../components/all/base/base';
+import Base from '../../components/layout/base/base';
 import RequestListArticles from '../../packages/requests/articles/ListArticles';
-import BlogBox from '../../components/blog/articles/box/box';
+import BlogBox from '../../components/elements/blog/articles/box/box';
 import Config from '../../components/headinfo/headinfo';
 import RequestVerify from '../../packages/requests/auth/Verify';
 import { QueryToken } from '../../packages/token/token';

@@ -1,6 +1,6 @@
 import { RemoveToken } from '../../../packages/token/token';
 import { useRouter } from 'next/router';
-import Base from '../../../components/all/base/base';
+import Base from '../../../components/layout/base/base';
 
 const LoginInfo = () => {
     const router = useRouter();
