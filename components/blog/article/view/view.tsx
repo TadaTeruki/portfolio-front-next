@@ -1,7 +1,7 @@
-import Markdown from "../../markdown/markdown";
-import TagTable from "../../tagtable/tagtable";
-import Timestamp from "../../timestamp/timestamp";
-import styles from "./view.module.css";
+import Markdown from '../../markdown/markdown'
+import TagTable from '../../tagtable/tagtable'
+import Timestamp from '../../timestamp/timestamp'
+import styles from './view.module.css'
 
 const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
     return (
@@ -13,17 +13,9 @@ const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
                 <br />
                 {props.showTimestamp ? (
                     <>
-                        <Timestamp
-                            raw={props.article.created_at}
-                            withTime={true}
-                            label={"記事作成日"}
-                        />
+                        <Timestamp raw={props.article.created_at} withTime={true} label={'記事作成日'} />
                         <br />
-                        <Timestamp
-                            raw={props.article.updated_at}
-                            withTime={true}
-                            label={"最終更新日"}
-                        />
+                        <Timestamp raw={props.article.updated_at} withTime={true} label={'最終更新日'} />
                         <br />
                     </>
                 ) : (
@@ -34,7 +26,7 @@ const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
             </div>
             <Markdown body={props.article.body} />
         </>
-    );
-};
+    )
+}
 
-export default ArticleView;
+export default ArticleView

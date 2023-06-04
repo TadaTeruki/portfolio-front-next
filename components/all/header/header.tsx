@@ -1,21 +1,21 @@
-import PlainLink from "../link/plainlink/plainlink";
-import styles from "./header.module.css";
+import PlainLink from '../link/plainlink/plainlink'
+import styles from './header.module.css'
 
 const Logo = (props: { children: React.ReactNode }) => {
-    return <div className={styles.logo}>{props.children}</div>;
-};
+    return <div className={styles.logo}>{props.children}</div>
+}
 
 const Tab = (props: { children: React.ReactNode }) => {
     return (
         <div>
             <div className={styles.tab}>{props.children}</div>
         </div>
-    );
-};
+    )
+}
 
 const Header = () => {
     return (
-        <header className={styles.main+" "+styles.tab_container}>
+        <header className={styles.main + ' ' + styles.tab_container}>
             <PlainLink href="/">
                 <Tab>
                     <Logo>Peruki&apos;s Portfolio</Logo>
@@ -41,7 +41,7 @@ const Header = () => {
                 <Tab>Blog</Tab>
             </PlainLink>
         </header>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

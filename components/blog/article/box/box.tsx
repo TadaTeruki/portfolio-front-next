@@ -1,50 +1,43 @@
-import Timestamp from "../../timestamp/timestamp";
-import ArticleView from "../view/view";
-import styles from "./box.module.css";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import PlainLink from "../../../all/link/plainlink/plainlink";
-import { QueryToken } from "../../../../packages/token/token";
-import RequestDeleteArticle from "../../../../packages/requests/article/DeleteArticle";
-import ErrorNotify from "../../../all/error_notify/error_notify";
-import JustifyBox from "../../../all/justifybox/justifybox";
+import Timestamp from '../../timestamp/timestamp'
+import ArticleView from '../view/view'
+import styles from './box.module.css'
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import PlainLink from '../../../all/link/plainlink/plainlink'
+import { QueryToken } from '../../../../packages/token/token'
+import RequestDeleteArticle from '../../../../packages/requests/article/DeleteArticle'
+import ErrorNotify from '../../../all/error_notify/error_notify'
+import JustifyBox from '../../../all/justifybox/justifybox'
 
-const ArticleBox = (props: {
-    article: any;
-    auth: boolean;
-    showTimestamp: boolean;
-}) => {
-    const [stateCheckDelete, setCheckDelete] = useState<boolean>(false);
-    const [stateErr, setErr] = useState<string>("");
-    const router = useRouter();
+const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean }) => {
+    const [stateCheckDelete, setCheckDelete] = useState<boolean>(false)
+    const [stateErr, setErr] = useState<string>('')
+    const router = useRouter()
 
     const deleteArticle = () => {
         RequestDeleteArticle(
             {
-                id: props.article.id,
+                id: props.article.id
             },
             QueryToken()
         )
             .then(() => {
-                router.push("/blog");
+                router.push('/blog')
             })
             .catch((err) => {
-                setErr(err);
-            });
-    };
+                setErr(err)
+            })
+    }
 
     return (
         <>
             {props.auth && props.article != null ? (
                 <>
-                    <PlainLink href={"/blog/article/edit/" + props.article.id}>
+                    <PlainLink href={'/blog/article/edit/' + props.article.id}>
                         <button>編集</button>
                     </PlainLink>
                     &emsp;
-                    <button
-                        className={styles.danger}
-                        onClick={() => setCheckDelete(true)}
-                    >
+                    <button className={styles.danger} onClick={() => setCheckDelete(true)}>
                         削除
                     </button>
                     {stateCheckDelete ? (
@@ -53,16 +46,11 @@ const ArticleBox = (props: {
                             <br />
                             本当に削除しますか？
                             <br />
-                            <button
-                                className={styles.danger}
-                                onClick={deleteArticle}
-                            >
+                            <button className={styles.danger} onClick={deleteArticle}>
                                 はい
                             </button>
                             &emsp;
-                            <button onClick={() => setCheckDelete(false)}>
-                                いいえ
-                            </button>
+                            <button onClick={() => setCheckDelete(false)}>いいえ</button>
                         </>
                     ) : (
                         <></>
@@ -84,17 +72,9 @@ const ArticleBox = (props: {
                     <></>
                 ) : (
                     <>
-                        <Timestamp
-                            raw={props.article.created_at}
-                            withTime={true}
-                            label={"記事作成日"}
-                        />
+                        <Timestamp raw={props.article.created_at} withTime={true} label={'記事作成日'} />
                         <br />
-                        <Timestamp
-                            raw={props.article.updated_at}
-                            withTime={true}
-                            label={"最終更新日"}
-                        />
+                        <Timestamp raw={props.article.updated_at} withTime={true} label={'最終更新日'} />
                         <br />
                     </>
                 )}
@@ -104,7 +84,7 @@ const ArticleBox = (props: {
             </PlainLink>
             <ErrorNotify>{stateErr}</ErrorNotify>
         </>
-    );
-};
+    )
+}
 
-export default ArticleBox;
+export default ArticleBox

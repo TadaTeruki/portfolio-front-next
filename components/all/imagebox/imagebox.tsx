@@ -1,4 +1,4 @@
-import styles from "./imagebox.module.css";
+import styles from './imagebox.module.css'
 
 const ImageBox = (props: { image: string; children: React.ReactNode; height: string }) => {
     return (
@@ -10,13 +10,13 @@ const ImageBox = (props: { image: string; children: React.ReactNode; height: str
                     alt=""
                     style={{
                         maxHeight: props.height,
-                        width: "auto",
-                        height: "auto",
+                        width: 'auto',
+                        height: 'auto'
                     }}
                 />
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default ImageBox;
+export default ImageBox

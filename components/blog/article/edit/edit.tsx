@@ -1,66 +1,64 @@
-import styles from "./edit.module.css";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import RequestReadArticle from "../../../../packages/requests/article/ReadArticle";
-import RequestUpdateArticle from "../../../../packages/requests/article/UpdateArticle";
-import { QueryToken } from "../../../../packages/token/token";
-import ArticleView from "../view/view";
-import ErrorNotify from "../../../all/error_notify/error_notify";
-import RequestVerify from "../../../../packages/requests/auth/Verify";
+import styles from './edit.module.css'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import RequestReadArticle from '../../../../packages/requests/article/ReadArticle'
+import RequestUpdateArticle from '../../../../packages/requests/article/UpdateArticle'
+import { QueryToken } from '../../../../packages/token/token'
+import ArticleView from '../view/view'
+import ErrorNotify from '../../../all/error_notify/error_notify'
+import RequestVerify from '../../../../packages/requests/auth/Verify'
 
 const ArticleEdit = (props: { id: string }) => {
-    const [stateErr, setErr] = useState<string>("");
-    const [stateNewTitle, setNewTitle] = useState<string>("");
-    const updateNewTitle = (event: any) => setNewTitle(event.target.value);
+    const [stateErr, setErr] = useState<string>('')
+    const [stateNewTitle, setNewTitle] = useState<string>('')
+    const updateNewTitle = (event: any) => setNewTitle(event.target.value)
 
-    const [stateNewSubtitle, setNewSubtitle] = useState<string>("");
-    const updateNewSubtitle = (event: any) =>
-        setNewSubtitle(event.target.value);
+    const [stateNewSubtitle, setNewSubtitle] = useState<string>('')
+    const updateNewSubtitle = (event: any) => setNewSubtitle(event.target.value)
 
-    const [stateNewBody, setNewBody] = useState<string>("");
-    const updateNewBody = (event: any) => setNewBody(event.target.value);
+    const [stateNewBody, setNewBody] = useState<string>('')
+    const updateNewBody = (event: any) => setNewBody(event.target.value)
 
-    const [stateNewTags, setNewTags] = useState<string>("");
-    const updateNewTags = (event: any) => setNewTags(event.target.value);
+    const [stateNewTags, setNewTags] = useState<string>('')
+    const updateNewTags = (event: any) => setNewTags(event.target.value)
 
-    const [stateNewThumbnail, setNewThumbnail] = useState<string>("");
-    const updateNewThumbnail = (event: any) =>
-        setNewThumbnail(event.target.value);
+    const [stateNewThumbnail, setNewThumbnail] = useState<string>('')
+    const updateNewThumbnail = (event: any) => setNewThumbnail(event.target.value)
 
-    const [stateNewIsPublic, setNewIsPublic] = useState<boolean>(false);
-    const updateNewIsPublic = () => setNewIsPublic(!stateNewIsPublic);
+    const [stateNewIsPublic, setNewIsPublic] = useState<boolean>(false)
+    const updateNewIsPublic = () => setNewIsPublic(!stateNewIsPublic)
 
-    const router = useRouter();
+    const router = useRouter()
 
     useEffect(() => {
         RequestVerify(QueryToken())
             .then(() => {
                 RequestReadArticle({ id: props.id })
                     .then((article) => {
-                        setErr("");
-                        setNewTitle(article.title);
-                        setNewSubtitle(article.subtitle);
-                        setNewBody(article.body);
-                        setNewThumbnail(article.thumbnail);
-                        setNewIsPublic(article.is_public);
+                        setErr('')
+                        setNewTitle(article.title)
+                        setNewSubtitle(article.subtitle)
+                        setNewBody(article.body)
+                        setNewThumbnail(article.thumbnail)
+                        setNewIsPublic(article.is_public)
 
-                        var newTags = "";
+                        var newTags = ''
                         if (article.tags.length >= 0) {
-                            newTags = article.tags[0];
+                            newTags = article.tags[0]
                             for (let i = 1; i < article.tags.length; i++) {
-                                newTags += " " + article.tags[i];
+                                newTags += ' ' + article.tags[i]
                             }
                         }
-                        setNewTags(newTags);
+                        setNewTags(newTags)
                     })
                     .catch((err) => {
-                        setErr(err);
-                    });
+                        setErr(err)
+                    })
             })
             .catch((err) => {
-                setErr(err);
-            });
-    }, [props.id]);
+                setErr(err)
+            })
+    }, [props.id])
 
     const updateArticle = () => {
         RequestUpdateArticle(
@@ -70,18 +68,18 @@ const ArticleEdit = (props: { id: string }) => {
                 subtitle: stateNewSubtitle,
                 body: stateNewBody,
                 thumbnail: stateNewThumbnail,
-                tags: stateNewTags.split(" "),
-                is_public: stateNewIsPublic,
+                tags: stateNewTags.split(' '),
+                is_public: stateNewIsPublic
             },
             QueryToken()
         )
             .then(() => {
-                router.push("/blog");
+                router.push('/blog')
             })
             .catch((err) => {
-                setErr(err);
-            });
-    };
+                setErr(err)
+            })
+    }
 
     return (
         <div className={styles.main}>
@@ -131,9 +129,7 @@ const ArticleEdit = (props: { id: string }) => {
                     <p className={styles.edit_label}>
                         本文
                         <textarea
-                            className={
-                                styles.text_entry + " " + styles.text_area
-                            }
+                            className={styles.text_entry + ' ' + styles.text_area}
                             value={stateNewBody}
                             onChange={updateNewBody}
                         />
@@ -145,7 +141,7 @@ const ArticleEdit = (props: { id: string }) => {
                             title: stateNewTitle,
                             subtitle: stateNewSubtitle,
                             body: stateNewBody,
-                            tags: stateNewTags.split(" "),
+                            tags: stateNewTags.split(' ')
                         }}
                         showTimestamp={false}
                     />
@@ -153,14 +149,9 @@ const ArticleEdit = (props: { id: string }) => {
             </div>
             <ErrorNotify>{stateErr}</ErrorNotify>
             <button onClick={updateArticle}>更新</button>
-            <input
-                type="checkbox"
-                checked={stateNewIsPublic}
-                onChange={updateNewIsPublic}
-            />{" "}
-            公開する
+            <input type="checkbox" checked={stateNewIsPublic} onChange={updateNewIsPublic} /> 公開する
         </div>
-    );
-};
+    )
+}
 
-export default ArticleEdit;
+export default ArticleEdit

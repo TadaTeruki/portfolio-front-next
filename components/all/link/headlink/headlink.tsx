@@ -1,5 +1,5 @@
-import styles from "./headlink.module.css";
-import Link from "next/link";
+import styles from './headlink.module.css'
+import Link from 'next/link'
 
 const HeadLink = (props: { href: string; children: React.ReactNode }) => {
     return (
@@ -8,7 +8,7 @@ const HeadLink = (props: { href: string; children: React.ReactNode }) => {
                 {props.children}
             </Link>
         </div>
-    );
-};
+    )
+}
 
-export default HeadLink;
+export default HeadLink

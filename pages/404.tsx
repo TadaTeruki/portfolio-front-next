@@ -1,22 +1,19 @@
-import Base from "../components/all/base/base";
-import Header from "../components/all/header/header";
-import JustifyBox from "../components/all/justifybox/justifybox";
-import PlainLink from "../components/all/link/plainlink/plainlink";
-import Config from "../components/config/config";
+import Base from '../components/all/base/base'
+import JustifyBox from '../components/all/justifybox/justifybox'
+import PlainLink from '../components/all/link/plainlink/plainlink'
+import Config from '../components/headinfo/headinfo'
 
-
-const Index = () => {
+const Page404 = () => {
     return (
         <>
             <Config title="404 Not Found" subtitle="ページが見つかりません" />
-            <Header />
             <Base>
                 <JustifyBox type="center">
                     <h1>404 Not Found</h1>
                     <p>
                         お探しのページは見つかりませんでした。
                         <br />
-                        <span style={{ fontSize: "small" }}>
+                        <span style={{ fontSize: 'small' }}>
                             無効となったページにアクセスを試みたか、URLが間違っているようです。
                         </span>
                         <br />
@@ -35,7 +32,7 @@ const Index = () => {
                 </JustifyBox>
             </Base>
         </>
-    );
+    )
 }
 
-export default Index;
+export default Page404

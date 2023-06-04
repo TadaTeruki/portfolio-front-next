@@ -3,13 +3,12 @@
     margin: auto;
     width: 100%;
     min-width: 500px;
+    padding-top: 6mm;
     padding-bottom: 8mm;
     line-height: 1.35;
-    box-shadow: 0mm 2mm rgb(220, 220, 220);
     font-family: monospace;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(80, 80, 80);
 
-    border-top: 5mm solid rgb(60, 60, 60);
     color: rgb(130, 200, 120);
     font-weight: bolder;
 }
