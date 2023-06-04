@@ -30,3 +30,17 @@ button:hover {
 img {
     max-width: 100%;
 }
+
+.home_category {
+    margin-top: 75px;
+}
+
+.home_page_title {
+    margin-bottom: 0px;
+}
+
+.home_page_subtitle {
+    margin-bottom: 40px;
+    font-weight: normal;
+    font-size: medium;
+}

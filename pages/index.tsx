@@ -15,7 +15,6 @@ import StyledLink from '../components/all/link/styledlink/styledlink'
 import Perufetch from '../components/home/perufetch/perufetch'
 import RequestPerufetch from '../packages/requests/Perufetch'
 import ScrollBox from '../components/all/scrollbox/scrollbox'
-import styles from '../styles/Home.module.css'
 
 type Props = {
     articles: any[]
@@ -41,8 +40,8 @@ const Home = (props: Props) => {
             <Base>
                 <JustifyBox type="center">
                     <h1>
-                        <div className={styles.page_title}>Peruki&apos;s Portfolio</div>
-                        <div className={styles.page_subtitle}>ぺるきのポートフォリオ</div>
+                        <div className="home_page_title">Peruki&apos;s Portfolio</div>
+                        <div className="home_page_subtitle">ぺるきのポートフォリオ</div>
                     </h1>
 
                     <FlexListBox>
@@ -56,7 +55,7 @@ const Home = (props: Props) => {
 
                     <JustifyBox type="left">
                         <div id="profile">
-                            <h1 className={styles.category}>Profile</h1>
+                            <h1 className="home_category">Profile</h1>
                         </div>
                         <IndentBox>
                             <h2>基本情報</h2>
@@ -96,7 +95,7 @@ const Home = (props: Props) => {
                         </IndentBox>
                         <br />
                         <div id="activity">
-                            <h1 className={styles.category}>Activities</h1>
+                            <h1 className="home_category">Activities</h1>
                         </div>
                         <IndentBox>
                             <h2>情報表現</h2>
@@ -279,7 +278,7 @@ const Home = (props: Props) => {
                             </IndentBox>
                         </IndentBox>
                         <div id="blog">
-                            <h1 className={styles.category}>Blog</h1>
+                            <h1 className="home_category">Blog</h1>
                         </div>
                         <BlogContainer>
                             <h2>最新3件&emsp;</h2>
@@ -292,7 +291,7 @@ const Home = (props: Props) => {
                         </BlogContainer>
 
                         <div id="access">
-                            <h1 className={styles.category}>Contact</h1>
+                            <h1 className="home_category">Contact</h1>
                         </div>
                         <IndentBox>
                             <ImageBox
