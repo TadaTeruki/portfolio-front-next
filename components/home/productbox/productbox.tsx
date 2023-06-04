@@ -1,41 +1,41 @@
-import IndentBox from '../../all/indentbox/indentbox'
-import PlainLink from '../../all/link/plainlink/plainlink'
-import styles from './productbox.module.css'
+import IndentBox from '../../all/indentbox/indentbox';
+import PlainLink from '../../all/link/plainlink/plainlink';
+import styles from './productbox.module.css';
 
 const Container = (props: { children: React.ReactNode; link: string }) => {
     return (
         <PlainLink href={props.link}>
             <div className={styles.main}>{props.children}</div>
         </PlainLink>
-    )
-}
+    );
+};
 
 const ProductBox = (props: {
-    name: string
-    description: string
-    skills: string[]
-    link: string
-    image: string
-    awards: string[]
+    name: string;
+    description: string;
+    skills: string[];
+    link: string;
+    image: string;
+    awards: string[];
 }) => {
-    var skills_item: any = []
+    var skills_item: any = [];
     for (let i = 0; i < props.skills.length; i++) {
-        if (props.skills[i] === '') continue
+        if (props.skills[i] === '') continue;
         skills_item.push(
             <div className={styles.skill} key={i}>
                 {props.skills[i]}
             </div>
-        )
+        );
     }
 
-    var awards_item: any = []
+    var awards_item: any = [];
     for (let i = 0; i < props.awards.length; i++) {
-        if (props.skills[i] === '') continue
+        if (props.skills[i] === '') continue;
         awards_item.push(
             <div className={styles.award} key={i}>
                 {props.awards[i]}
             </div>
-        )
+        );
     }
 
     const info = (
@@ -67,7 +67,7 @@ const ProductBox = (props: {
             <div className={styles.skilltable}>{skills_item.length !== 0 ? <>{skills_item}</> : <></>}</div>
             <br />
         </>
-    )
+    );
 
     return (
         <Container link={props.link}>
@@ -78,7 +78,7 @@ const ProductBox = (props: {
                 {props.image == '' ? <></> : <img src={props.image} className={styles.thumbnail} />}
             </div>
         </Container>
-    )
-}
+    );
+};
 
-export default ProductBox
+export default ProductBox;

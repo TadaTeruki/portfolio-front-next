@@ -1,11 +1,11 @@
-import axios from 'axios'
-import { DeleteRequest } from '../../dto/article'
+import axios from 'axios';
+import { DeleteRequest } from '../../dto/article';
 
 const RequestDeleteArticle = async (request: DeleteRequest, token: string): Promise<void> => {
     const headers_ = {
         Authorization: token,
         'Accept-Encoding': 'gzip,deflate,compress'
-    }
+    };
 
     return new Promise<void>(async (resolve: () => void, reject: (message: string) => void) => {
         await axios
@@ -13,12 +13,12 @@ const RequestDeleteArticle = async (request: DeleteRequest, token: string): Prom
                 headers: headers_
             })
             .then((_) => {
-                resolve()
+                resolve();
             })
             .catch((err) => {
-                reject(err.message)
-            })
-    })
-}
+                reject(err.message);
+            });
+    });
+};
 
-export default RequestDeleteArticle
+export default RequestDeleteArticle;

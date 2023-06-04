@@ -1,7 +1,7 @@
-import Markdown from '../../markdown/markdown'
-import TagTable from '../../tagtable/tagtable'
-import Timestamp from '../../timestamp/timestamp'
-import styles from './view.module.css'
+import Markdown from '../../markdown/markdown';
+import TagTable from '../../tagtable/tagtable';
+import Timestamp from '../../timestamp/timestamp';
+import styles from './view.module.css';
 
 const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
     return (
@@ -26,7 +26,7 @@ const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
             </div>
             <Markdown body={props.article.body} />
         </>
-    )
-}
+    );
+};
 
-export default ArticleView
+export default ArticleView;

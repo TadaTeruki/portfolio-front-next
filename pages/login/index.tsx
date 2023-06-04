@@ -1,38 +1,38 @@
-import Base from '../../components/all/base/base'
-import { useState, useEffect } from 'react'
-import RequestLogin from '../../packages/requests/auth/Login'
-import ErrorNotify from '../../components/all/error_notify/error_notify'
-import { SetToken, QueryToken } from '../../packages/token/token'
-import { useRouter } from 'next/router'
+import Base from '../../components/all/base/base';
+import { useState, useEffect } from 'react';
+import RequestLogin from '../../packages/requests/auth/Login';
+import ErrorNotify from '../../components/all/error_notify/error_notify';
+import { SetToken, QueryToken } from '../../packages/token/token';
+import { useRouter } from 'next/router';
 
 const LoginEntry = () => {
-    const [stateErr, setErr] = useState<string>('')
+    const [stateErr, setErr] = useState<string>('');
 
-    const [stateName, setName] = useState<string>('')
-    const updateName = (event: any) => setName(event.target.value)
+    const [stateName, setName] = useState<string>('');
+    const updateName = (event: any) => setName(event.target.value);
 
-    const [statePasswd, setPasswd] = useState<string>('')
-    const updatePasswd = (event: any) => setPasswd(event.target.value)
-    const router = useRouter()
+    const [statePasswd, setPasswd] = useState<string>('');
+    const updatePasswd = (event: any) => setPasswd(event.target.value);
+    const router = useRouter();
 
     useEffect(() => {
         if (QueryToken() != '') {
-            router.push('/login/info')
+            router.push('/login/info');
         }
-    }, [router])
+    }, [router]);
 
     const login = async () => {
-        setErr('')
+        setErr('');
         await RequestLogin(stateName, statePasswd)
             .then((response) => {
-                setErr('')
-                SetToken(response.token)
-                router.push('/login/info')
+                setErr('');
+                SetToken(response.token);
+                router.push('/login/info');
             })
             .catch((err) => {
-                setErr(err)
-            })
-    }
+                setErr(err);
+            });
+    };
 
     return (
         <>
@@ -57,7 +57,7 @@ const LoginEntry = () => {
                 <ErrorNotify>{stateErr}</ErrorNotify>
             </Base>
         </>
-    )
-}
+    );
+};
 
-export default LoginEntry
+export default LoginEntry;

@@ -1,6 +1,6 @@
-import IndentBox from '../../all/indentbox/indentbox'
-import PlainLink from '../../all/link/plainlink/plainlink'
-import styles from './tablinkbox.module.css'
+import IndentBox from '../../all/indentbox/indentbox';
+import PlainLink from '../../all/link/plainlink/plainlink';
+import styles from './tablinkbox.module.css';
 
 const TabLinkBox = (props: { href: string; tabname: string; description: string }) => {
     return (
@@ -12,7 +12,7 @@ const TabLinkBox = (props: { href: string; tabname: string; description: string 
                 </IndentBox>
             </PlainLink>
         </div>
-    )
-}
+    );
+};
 
-export default TabLinkBox
+export default TabLinkBox;

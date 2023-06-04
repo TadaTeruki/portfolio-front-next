@@ -1,4 +1,4 @@
-import styles from './perufetch.module.css'
+import styles from './perufetch.module.css';
 
 const Perufetch = (props: { context: string }) => {
     return (
@@ -12,7 +12,7 @@ const Perufetch = (props: { context: string }) => {
                 </a>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Perufetch
+export default Perufetch;

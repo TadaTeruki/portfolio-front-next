@@ -1,10 +1,10 @@
-import axios from 'axios'
-import { ReadRequest, ReadResponse } from '../../dto/article'
+import axios from 'axios';
+import { ReadRequest, ReadResponse } from '../../dto/article';
 
 const RequestReadArticle = async (request: ReadRequest): Promise<ReadResponse> => {
     const headers_ = {
         'Accept-Encoding': 'gzip,deflate,compress'
-    }
+    };
 
     return new Promise<ReadResponse>(
         async (resolve: (response: ReadResponse) => void, reject: (message: string) => void) => {
@@ -21,14 +21,14 @@ const RequestReadArticle = async (request: ReadRequest): Promise<ReadResponse> =
                         created_at: res.data.created_at,
                         updated_at: res.data.updated_at,
                         is_public: res.data.is_public
-                    }
-                    resolve(response)
+                    };
+                    resolve(response);
                 })
                 .catch((err) => {
-                    reject(err.message)
-                })
+                    reject(err.message);
+                });
         }
-    )
-}
+    );
+};
 
-export default RequestReadArticle
+export default RequestReadArticle;

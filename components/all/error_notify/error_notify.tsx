@@ -1,7 +1,7 @@
-import styles from './error_notify.module.css'
+import styles from './error_notify.module.css';
 
 const ErrorNotify = (props: { children: React.ReactNode }) => {
-    return <div className={styles.main}>{props.children}</div>
-}
+    return <div className={styles.main}>{props.children}</div>;
+};
 
-export default ErrorNotify
+export default ErrorNotify;

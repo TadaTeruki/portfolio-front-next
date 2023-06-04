@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const HeadInfo = (props: { title: string; subtitle: string }) => {
-    const ogpimage = process.env.NEXT_PUBLIC_OGP_IMAGE
+    const ogpimage = process.env.NEXT_PUBLIC_OGP_IMAGE;
 
     return (
         <Head>
@@ -15,7 +15,7 @@ const HeadInfo = (props: { title: string; subtitle: string }) => {
             <meta name="twitter:description" content={props.subtitle} />
             <meta name="twitter:image" content={ogpimage} />
         </Head>
-    )
-}
+    );
+};
 
-export default HeadInfo
+export default HeadInfo;

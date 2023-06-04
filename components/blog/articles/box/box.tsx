@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import ArticleList from '../list/list'
-import { QueryToken } from '../../../../packages/token/token'
-import ErrorNotify from '../../../all/error_notify/error_notify'
-import RequestPostArticle from '../../../../packages/requests/article/PostArticle'
-import BlogContainer from '../container/container'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import ArticleList from '../list/list';
+import { QueryToken } from '../../../../packages/token/token';
+import ErrorNotify from '../../../all/error_notify/error_notify';
+import RequestPostArticle from '../../../../packages/requests/article/PostArticle';
+import BlogContainer from '../container/container';
 
 const BlogBox = (props: { articles: any[]; verified: boolean }) => {
-    const [stateErr, setErr] = useState<string>('')
-    const router = useRouter()
+    const [stateErr, setErr] = useState<string>('');
+    const router = useRouter();
 
     const createArticle = async () => {
         RequestPostArticle(
@@ -23,12 +23,12 @@ const BlogBox = (props: { articles: any[]; verified: boolean }) => {
             QueryToken()
         )
             .then(({ id }) => {
-                router.push('/blog/article/edit/' + id)
+                router.push('/blog/article/edit/' + id);
             })
             .catch(() => {
-                setErr('failed to load')
-            })
-    }
+                setErr('failed to load');
+            });
+    };
 
     return (
         <>
@@ -47,7 +47,7 @@ const BlogBox = (props: { articles: any[]; verified: boolean }) => {
                 <ErrorNotify>{stateErr}</ErrorNotify>
             </BlogContainer>
         </>
-    )
-}
+    );
+};
 
-export default BlogBox
+export default BlogBox;

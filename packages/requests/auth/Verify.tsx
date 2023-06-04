@@ -1,11 +1,11 @@
-import axios from 'axios'
-import { VerifyResponse } from '../../dto/auth'
+import axios from 'axios';
+import { VerifyResponse } from '../../dto/auth';
 
 const RequestVerify = async (token: string): Promise<VerifyResponse> => {
     const headers_ = {
         Authorization: token,
         'Accept-Encoding': 'gzip,deflate,compress'
-    }
+    };
 
     return new Promise<VerifyResponse>(
         async (resolve: (responses: VerifyResponse) => void, reject: (message: string) => void) => {
@@ -15,18 +15,18 @@ const RequestVerify = async (token: string): Promise<VerifyResponse> => {
                 })
                 .then((res) => {
                     if (res.data.owner_id === '' || res.data.owner_id === null) {
-                        reject('not allowed')
+                        reject('not allowed');
                     } else {
                         resolve({
                             owner_id: res.data.owner_id
-                        })
+                        });
                     }
                 })
                 .catch((err) => {
-                    reject(err.message)
-                })
+                    reject(err.message);
+                });
         }
-    )
-}
+    );
+};
 
-export default RequestVerify
+export default RequestVerify;

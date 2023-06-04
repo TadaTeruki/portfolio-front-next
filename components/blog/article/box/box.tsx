@@ -1,18 +1,18 @@
-import Timestamp from '../../timestamp/timestamp'
-import ArticleView from '../view/view'
-import styles from './box.module.css'
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import PlainLink from '../../../all/link/plainlink/plainlink'
-import { QueryToken } from '../../../../packages/token/token'
-import RequestDeleteArticle from '../../../../packages/requests/article/DeleteArticle'
-import ErrorNotify from '../../../all/error_notify/error_notify'
-import JustifyBox from '../../../all/justifybox/justifybox'
+import Timestamp from '../../timestamp/timestamp';
+import ArticleView from '../view/view';
+import styles from './box.module.css';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import PlainLink from '../../../all/link/plainlink/plainlink';
+import { QueryToken } from '../../../../packages/token/token';
+import RequestDeleteArticle from '../../../../packages/requests/article/DeleteArticle';
+import ErrorNotify from '../../../all/error_notify/error_notify';
+import JustifyBox from '../../../all/justifybox/justifybox';
 
 const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean }) => {
-    const [stateCheckDelete, setCheckDelete] = useState<boolean>(false)
-    const [stateErr, setErr] = useState<string>('')
-    const router = useRouter()
+    const [stateCheckDelete, setCheckDelete] = useState<boolean>(false);
+    const [stateErr, setErr] = useState<string>('');
+    const router = useRouter();
 
     const deleteArticle = () => {
         RequestDeleteArticle(
@@ -22,12 +22,12 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
             QueryToken()
         )
             .then(() => {
-                router.push('/blog')
+                router.push('/blog');
             })
             .catch((err) => {
-                setErr(err)
-            })
-    }
+                setErr(err);
+            });
+    };
 
     return (
         <>
@@ -84,7 +84,7 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
             </PlainLink>
             <ErrorNotify>{stateErr}</ErrorNotify>
         </>
-    )
-}
+    );
+};
 
-export default ArticleBox
+export default ArticleBox;

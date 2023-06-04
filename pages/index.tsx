@@ -1,37 +1,37 @@
-import Base from '../components/all/base/base'
-import Config from '../components/headinfo/headinfo'
-import TabLinkBox from '../components/home/tablinkbox/tablinkbox'
-import FlexListBox from '../components/all/flexlistbox/flexlistbox'
-import ArticleList from '../components/blog/articles/list/list'
-import { GetStaticProps } from 'next'
-import RequestListArticles from '../packages/requests/articles/ListArticles'
-import BlogContainer from '../components/blog/articles/container/container'
-import JustifyBox from '../components/all/justifybox/justifybox'
-import PlainLink from '../components/all/link/plainlink/plainlink'
-import IndentBox from '../components/all/indentbox/indentbox'
-import ImageBox from '../components/all/imagebox/imagebox'
-import ProductBox from '../components/home/productbox/productbox'
-import StyledLink from '../components/all/link/styledlink/styledlink'
-import Perufetch from '../components/home/perufetch/perufetch'
-import RequestPerufetch from '../packages/requests/Perufetch'
-import ScrollBox from '../components/all/scrollbox/scrollbox'
-import styles from '../styles/Home.module.css'
+import Base from '../components/all/base/base';
+import Config from '../components/headinfo/headinfo';
+import TabLinkBox from '../components/home/tablinkbox/tablinkbox';
+import FlexListBox from '../components/all/flexlistbox/flexlistbox';
+import ArticleList from '../components/blog/articles/list/list';
+import { GetStaticProps } from 'next';
+import RequestListArticles from '../packages/requests/articles/ListArticles';
+import BlogContainer from '../components/blog/articles/container/container';
+import JustifyBox from '../components/all/justifybox/justifybox';
+import PlainLink from '../components/all/link/plainlink/plainlink';
+import IndentBox from '../components/all/indentbox/indentbox';
+import ImageBox from '../components/all/imagebox/imagebox';
+import ProductBox from '../components/home/productbox/productbox';
+import StyledLink from '../components/all/link/styledlink/styledlink';
+import Perufetch from '../components/home/perufetch/perufetch';
+import RequestPerufetch from '../packages/requests/Perufetch';
+import ScrollBox from '../components/all/scrollbox/scrollbox';
+import styles from '../styles/Home.module.css';
 
 type Props = {
-    articles: any[]
-    perufetch: string
-}
+    articles: any[];
+    perufetch: string;
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-    const response = await RequestListArticles('')
-    const perufetch = await RequestPerufetch()
+    const response = await RequestListArticles('');
+    const perufetch = await RequestPerufetch();
     return {
         props: {
             articles: response,
             perufetch: perufetch
         }
-    }
-}
+    };
+};
 
 const Home = (props: Props) => {
     return (
@@ -312,7 +312,7 @@ const Home = (props: Props) => {
                 </JustifyBox>
             </Base>
         </>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;

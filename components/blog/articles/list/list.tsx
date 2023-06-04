@@ -1,8 +1,8 @@
-import styles from './list.module.css'
-import Timestamp from '../../timestamp/timestamp'
-import TagTable from '../../tagtable/tagtable'
-import PlainLink from '../../../all/link/plainlink/plainlink'
-import ImageBox from '../../../all/imagebox/imagebox'
+import styles from './list.module.css';
+import Timestamp from '../../timestamp/timestamp';
+import TagTable from '../../tagtable/tagtable';
+import PlainLink from '../../../all/link/plainlink/plainlink';
+import ImageBox from '../../../all/imagebox/imagebox';
 
 const Unit = (props: { article: any }) => {
     return (
@@ -27,19 +27,19 @@ const Unit = (props: { article: any }) => {
                 </div>
             </div>
         </PlainLink>
-    )
-}
+    );
+};
 
 const ArticleList = (props: { articles: any[]; size: number }) => {
-    var items = []
-    var length = props.articles.length
-    if (props.size >= 0 && length > props.size) length = props.size
+    var items = [];
+    var length = props.articles.length;
+    if (props.size >= 0 && length > props.size) length = props.size;
 
     for (let i = 0; i < length; i++) {
-        items.push(<Unit article={props.articles[i]} key={i} />)
+        items.push(<Unit article={props.articles[i]} key={i} />);
     }
 
-    return <>{items}</>
-}
+    return <>{items}</>;
+};
 
-export default ArticleList
+export default ArticleList;

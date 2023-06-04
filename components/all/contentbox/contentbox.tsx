@@ -1,4 +1,4 @@
-import styles from './contentbox.module.css'
+import styles from './contentbox.module.css';
 
 const ContentBox = (props: { children: React.ReactNode; content: any; height: string }) => {
     return (
@@ -15,7 +15,7 @@ const ContentBox = (props: { children: React.ReactNode; content: any; height: st
                 {props.content}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default ContentBox
+export default ContentBox;

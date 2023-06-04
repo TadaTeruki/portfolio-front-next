@@ -1,7 +1,7 @@
-import Base from '../components/all/base/base'
-import JustifyBox from '../components/all/justifybox/justifybox'
-import PlainLink from '../components/all/link/plainlink/plainlink'
-import Config from '../components/headinfo/headinfo'
+import Base from '../components/all/base/base';
+import JustifyBox from '../components/all/justifybox/justifybox';
+import PlainLink from '../components/all/link/plainlink/plainlink';
+import Config from '../components/headinfo/headinfo';
 
 const Page404 = () => {
     return (
@@ -32,7 +32,7 @@ const Page404 = () => {
                 </JustifyBox>
             </Base>
         </>
-    )
-}
+    );
+};
 
-export default Page404
+export default Page404;
