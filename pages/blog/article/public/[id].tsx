@@ -3,10 +3,13 @@ import Base from '../../../../components/layout/base/base';
 import RequestReadArticle from '../../../../packages/requests/article/ReadArticle';
 import RequestVerify from '../../../../packages/requests/auth/Verify';
 import ArticleBox from '../../../../components/elements/blog/article/box/box';
-import Config from '../../../../components/headinfo/headinfo';
+import HeadInfo from '../../../../components/headinfo/headinfo';
 import RequestListArticles from '../../../../packages/requests/articles/ListArticles';
 import { QueryToken } from '../../../../packages/token/token';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import MainContainer from '../../../../components/layout/container/maincontainer/maincontainer';
+import Banner from '../../../../components/elements/general/banner/banner';
 
 type Props = {
     article: any | null;
@@ -48,10 +51,19 @@ const BlogPublic = (props: Props) => {
 
     return (
         <>
-            <Config
+            <HeadInfo
                 title={props.article == null ? '' : props.article.title}
                 subtitle={props.article == null ? '' : props.article.subtitle}
             />
+            <Banner
+                image_src={props.article == null ? '' : props.article.thumbnail}
+                height={'9em'}
+                background_mode={'white'}
+            >
+                <h2>Peruki&apos;s Blog</h2>
+                <p>技術や生活に関する記事を載せています</p>
+            </Banner>
+
             <Base>
                 <ArticleBox article={props.article} auth={stateVerified} showTimestamp={true} />
             </Base>

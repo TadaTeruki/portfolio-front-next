@@ -3,11 +3,12 @@ import Timestamp from '../../timestamp/timestamp';
 import TagTable from '../../tagtable/tagtable';
 import PlainLink from '../../../../layout/link/plainlink/plainlink';
 import Image from 'next/image';
+import Panel from '../../../general/panel/panel';
 
 const Unit = (props: { article: any }) => {
     return (
         <PlainLink href={'/blog/article/' + (props.article.is_public ? 'public/' : 'private/') + props.article.id}>
-            <div className={styles.unit}>
+            <Panel>
                 {props.article.is_public ? (
                     <></>
                 ) : (
@@ -33,7 +34,7 @@ const Unit = (props: { article: any }) => {
                         />
                     </div>
                 </div>
-            </div>
+            </Panel>
         </PlainLink>
     );
 };

@@ -1,11 +1,10 @@
 import Base from '../components/layout/base/base';
-import Config from '../components/headinfo/headinfo';
+import HeadInfo from '../components/headinfo/headinfo';
 import TabLinkBox from '../components/elements/home/tablinkbox/tablinkbox';
 import FlexListBox from '../components/layout/container/flexlistbox/flexlistbox';
 import ArticleList from '../components/elements/blog/articles/list/list';
 import { GetStaticProps } from 'next';
 import RequestListArticles from '../packages/requests/articles/ListArticles';
-import BlogContainer from '../components/elements/blog/articles/container/container';
 import JustifyBox from '../components/layout/container/justifybox/justifybox';
 import PlainLink from '../components/layout/link/plainlink/plainlink';
 import IndentBox from '../components/layout/container/indentbox/indentbox';
@@ -35,7 +34,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Home = (props: Props) => {
     return (
         <>
-            <Config title="Welcome!" subtitle="ぺるきのポートフォリオ" />
+            <HeadInfo title="Welcome!" subtitle="ぺるきのポートフォリオ" />
             <Perufetch context={props.perufetch} />
             <Base>
                 <JustifyBox type="center">
@@ -98,70 +97,61 @@ const Home = (props: Props) => {
                             <h1 className={styles.category}>Activities</h1>
                         </div>
                         <IndentBox>
-                            <h2>情報表現</h2>
+                            <h2 className={styles.subcategory}>情報表現</h2>
                             <IndentBox>
                                 ・地形生成
                                 <br />
                                 ・アート活動
                                 <br />
                                 ・ゲーム開発
-                                <br />
-                                <h3></h3>
-                                <IndentBox>
-                                    <ProductBox
-                                        name="RDGL"
-                                        description="地形生成ライブラリ"
-                                        link="https://github.com/TadaTeruki/RDGL"
-                                        skills={['Go', '個人開発']}
-                                        image="https://user-images.githubusercontent.com/57752033/144703530-7a11bd6b-ef2f-4f66-bf7f-e2b42098eedc.png"
-                                        awards={[]}
-                                    />
-                                    <ProductBox
-                                        name="教科書Breakout"
-                                        description="教科書をコントローラーにする体感ゲーム"
-                                        link="https://github.com/TadaTeruki/TextBookBreakout"
-                                        skills={['Processing', '講義課題']}
-                                        image="https://user-images.githubusercontent.com/69315285/181797584-5ee26c4f-5110-453d-ae63-7e4d67915e36.png"
-                                        awards={['講義:情報表現入門 最優秀作品賞(教員・TA評価部門)']}
-                                    />
-                                    <ProductBox
-                                        name="Spell Hunter"
-                                        description="1week開発 魔法がテーマのシューティングゲーム"
-                                        link="https://tadateruki.itch.io/spell-hunter"
-                                        skills={['JavaScript', 'チーム開発']}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fspellhunter.png?alt=media&token=67b1c917-3588-4075-b09e-16e33e140f18"
-                                        awards={['いわしジャム#1 投票1位']}
-                                    />
-                                    <ProductBox
-                                        name="TransportNetworkSimulator"
-                                        description="探索アルゴリズムを用いた交通網の再現シミュレーション"
-                                        link="https://github.com/Perukii/TransportNetworkSimulator"
-                                        skills={['Go', '個人開発']}
-                                        image="https://user-images.githubusercontent.com/57752033/131674598-3f096d48-1b9f-45d2-9d17-067218a0c2a3.png"
-                                        awards={[]}
-                                    />
-                                </IndentBox>
+                                <ProductBox
+                                    name="RDGL"
+                                    description="地形生成ライブラリ"
+                                    link="https://github.com/TadaTeruki/RDGL"
+                                    skills={['Go', '個人開発']}
+                                    image="https://user-images.githubusercontent.com/57752033/144703530-7a11bd6b-ef2f-4f66-bf7f-e2b42098eedc.png"
+                                    awards={[]}
+                                />
+                                <ProductBox
+                                    name="教科書Breakout"
+                                    description="教科書をコントローラーにする体感ゲーム"
+                                    link="https://github.com/TadaTeruki/TextBookBreakout"
+                                    skills={['Processing', '講義課題']}
+                                    image="https://user-images.githubusercontent.com/69315285/181797584-5ee26c4f-5110-453d-ae63-7e4d67915e36.png"
+                                    awards={['講義:情報表現入門 最優秀作品賞(教員・TA評価部門)']}
+                                />
+                                <ProductBox
+                                    name="Spell Hunter"
+                                    description="1week開発 魔法がテーマのシューティングゲーム"
+                                    link="https://tadateruki.itch.io/spell-hunter"
+                                    skills={['JavaScript', 'チーム開発']}
+                                    image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fspellhunter.png?alt=media&token=67b1c917-3588-4075-b09e-16e33e140f18"
+                                    awards={['いわしジャム#1 投票1位']}
+                                />
+                                <ProductBox
+                                    name="TransportNetworkSimulator"
+                                    description="探索アルゴリズムを用いた交通網の再現シミュレーション"
+                                    link="https://github.com/Perukii/TransportNetworkSimulator"
+                                    skills={['Go', '個人開発']}
+                                    image="https://user-images.githubusercontent.com/57752033/131674598-3f096d48-1b9f-45d2-9d17-067218a0c2a3.png"
+                                    awards={[]}
+                                />
                             </IndentBox>
-                            <h2>GUI</h2>
+                            <h2 className={styles.subcategory}>GUI</h2>
                             <IndentBox>
                                 ・ウインドウマネージャ
                                 <br />
                                 ・ウインドウアプリケーションフレームワーク
-                                <br />
-                                <h3></h3>
-                                <IndentBox>
-                                    <ProductBox
-                                        name="MiteWM"
-                                        description="Linux向けウインドウマネージャ"
-                                        link="https://github.com/Perukii/MiteWM"
-                                        skills={['C', '個人開発']}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fmitewm.png?alt=media&token=e2f6e520-8947-492a-82d0-281e479c2009"
-                                        awards={['技育展2020 敢闘賞 (テーマ: ぼくのさいきょうの◯◯)']}
-                                    />
-                                </IndentBox>
+                                <ProductBox
+                                    name="MiteWM"
+                                    description="Linux向けウインドウマネージャ"
+                                    link="https://github.com/Perukii/MiteWM"
+                                    skills={['C', '個人開発']}
+                                    image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fmitewm.png?alt=media&token=e2f6e520-8947-492a-82d0-281e479c2009"
+                                    awards={['技育展2020 敢闘賞 (テーマ: ぼくのさいきょうの◯◯)']}
+                                />
                             </IndentBox>
-                            <h2>情報科学研究</h2>
-
+                            <h2 className={styles.subcategory}>情報科学研究</h2>
                             <IndentBox>
                                 ・空間的データ構造
                                 <br />
@@ -192,103 +182,94 @@ const Home = (props: Props) => {
                                 </IndentBox>
                             </IndentBox>
 
-                            <h2>Web開発</h2>
+                            <h2 className={styles.subcategory}>Web開発</h2>
                             <IndentBox>
                                 ・Webアプリケーション
                                 <br />
                                 ・フロントエンド
-                                <br />
-                                <h3></h3>
-                                <IndentBox>
-                                    <ProductBox
-                                        name="Peruki's Portfolio"
-                                        description="ぺるきのポートフォリオ (本サイト)"
-                                        link="https://github.com/TadaTeruki/portfolio-front-next"
-                                        skills={['TypeScript', 'Next.JS', 'Firebase', '個人開発']}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fportfolio.png?alt=media&token=71a59fca-0a75-4fcb-a2b6-aeec86c94b54"
-                                        awards={[]}
-                                    />
-                                    <ProductBox
-                                        name="Flyme"
-                                        description="学内ハッカソンp2hacks にて開発 バックエンドを担当"
-                                        link="https://github.com/p2hacks2022/pre-team03"
-                                        skills={['Go', 'echo', 'チーム開発']}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fflyme.png?alt=media&token=878b71bb-4fef-453d-b414-ac6bbe8b65df"
-                                        awards={['pixiv賞受賞']}
-                                    />
-                                    <ProductBox
-                                        name="Depotify"
-                                        description="学内ハッカソンHackathon for FUN 2022にて開発 バックエンドおよびプロダクトデザインを担当"
-                                        link="https://github.com/fung-hackathon/depotify"
-                                        skills={['Go', 'echo', 'チーム開発']}
-                                        image="https://raw.githubusercontent.com/fung-hackathon/depotify/d9010c16ef17ff9f16b0045ac4d8fa857450e6f1/image/Icon.svg"
-                                        awards={[]}
-                                    />
-                                </IndentBox>
+                                <ProductBox
+                                    name="Peruki's Portfolio"
+                                    description="ぺるきのポートフォリオ (本サイト)"
+                                    link="https://github.com/TadaTeruki/portfolio-front-next"
+                                    skills={['TypeScript', 'Next.JS', 'Firebase', '個人開発']}
+                                    image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fportfolio.png?alt=media&token=71a59fca-0a75-4fcb-a2b6-aeec86c94b54"
+                                    awards={[]}
+                                />
+                                <ProductBox
+                                    name="Flyme"
+                                    description="学内ハッカソンp2hacks にて開発 バックエンドを担当"
+                                    link="https://github.com/p2hacks2022/pre-team03"
+                                    skills={['Go', 'echo', 'チーム開発']}
+                                    image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fflyme.png?alt=media&token=878b71bb-4fef-453d-b414-ac6bbe8b65df"
+                                    awards={['pixiv賞受賞']}
+                                />
+                                <ProductBox
+                                    name="Depotify"
+                                    description="学内ハッカソンHackathon for FUN 2022にて開発 バックエンドおよびプロダクトデザインを担当"
+                                    link="https://github.com/fung-hackathon/depotify"
+                                    skills={['Go', 'echo', 'チーム開発']}
+                                    image="https://raw.githubusercontent.com/fung-hackathon/depotify/d9010c16ef17ff9f16b0045ac4d8fa857450e6f1/image/Icon.svg"
+                                    awards={[]}
+                                />
                             </IndentBox>
 
-                            <h2>基礎実装</h2>
+                            <h2 className={styles.subcategory}>基礎実装</h2>
                             <IndentBox>
                                 ・グラフィックス領域
                                 <br />
                                 ・データ構造
-                                <IndentBox>
-                                    <ProductBox
-                                        name="NoiseGo"
-                                        description="パーリンノイズのGo言語実装"
-                                        link="https://github.com/TadaTeruki/NoiseGo"
-                                        skills={['Go', 'グラフィックス', '個人開発']}
-                                        image="https://user-images.githubusercontent.com/69315285/150670142-3a5530cf-30f3-4dd7-9d34-36e9aec0c988.png"
-                                        awards={[]}
-                                    />
-                                    <ProductBox
-                                        name="priority_queue"
-                                        description="優先度つきキューの表現"
-                                        link="https://github.com/TadaTeruki/go-priority-queue"
-                                        skills={['Go', 'データ構造', '個人開発']}
-                                        image=""
-                                        awards={[]}
-                                    />
-                                    <ProductBox
-                                        name="graph"
-                                        description="隣接リスト表現によるグラフの表現"
-                                        link="https://github.com/TadaTeruki/graph"
-                                        skills={['Go', 'データ構造', '個人開発']}
-                                        image=""
-                                        awards={[]}
-                                    />
-                                </IndentBox>
+                                <ProductBox
+                                    name="NoiseGo"
+                                    description="パーリンノイズのGo言語実装"
+                                    link="https://github.com/TadaTeruki/NoiseGo"
+                                    skills={['Go', 'グラフィックス', '個人開発']}
+                                    image="https://user-images.githubusercontent.com/69315285/150670142-3a5530cf-30f3-4dd7-9d34-36e9aec0c988.png"
+                                    awards={[]}
+                                />
+                                <ProductBox
+                                    name="priority_queue"
+                                    description="優先度つきキューの表現"
+                                    link="https://github.com/TadaTeruki/go-priority-queue"
+                                    skills={['Go', 'データ構造', '個人開発']}
+                                    image=""
+                                    awards={[]}
+                                />
+                                <ProductBox
+                                    name="graph"
+                                    description="隣接リスト表現によるグラフの表現"
+                                    link="https://github.com/TadaTeruki/graph"
+                                    skills={['Go', 'データ構造', '個人開発']}
+                                    image=""
+                                    awards={[]}
+                                />
                             </IndentBox>
 
-                            <h2>コミュニティ活動</h2>
+                            <h2 className={styles.subcategory}>コミュニティ活動</h2>
                             <IndentBox>
                                 ・技術コミュニティ運営
                                 <br />
                                 ・技術イベント主催
-                                <IndentBox>
-                                    <ProductBox
-                                        name="Mariners' Conference LT '23 Spring"
-                                        description="LTイベント in 函館市亀田交流プラザ 企画・運営"
-                                        link="https://mariconf.connpass.com/event/276729/"
-                                        skills={['LT']}
-                                        image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Farticles%2F4975dc09-2020-47f6-8d1f-78b0e762a2ca%2Fmariconf.webp?alt=media&token=d214cb19-8096-46a1-a929-c0fdf9ef3cb7&_gl=1*qnywgl*_ga*NDUwOTM1NzM2LjE2Njk3Njk4NzE.*_ga_CW55HF8NVT*MTY4NTg5MDU0Ni4zNC4xLjE2ODU4OTIxMzUuMC4wLjA."
-                                        awards={[]}
-                                    />
-                                </IndentBox>
+                                <ProductBox
+                                    name="Mariners' Conference LT '23 Spring"
+                                    description="LTイベント in 函館市亀田交流プラザ 企画・運営"
+                                    link="https://mariconf.connpass.com/event/276729/"
+                                    skills={['LT']}
+                                    image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Farticles%2F4975dc09-2020-47f6-8d1f-78b0e762a2ca%2Fmariconf.webp?alt=media&token=d214cb19-8096-46a1-a929-c0fdf9ef3cb7&_gl=1*qnywgl*_ga*NDUwOTM1NzM2LjE2Njk3Njk4NzE.*_ga_CW55HF8NVT*MTY4NTg5MDU0Ni4zNC4xLjE2ODU4OTIxMzUuMC4wLjA."
+                                    awards={[]}
+                                />
                             </IndentBox>
                         </IndentBox>
+
                         <div id="blog">
                             <h1 className={styles.category}>Blog</h1>
                         </div>
-                        <BlogContainer>
-                            <h2>最新3件&emsp;</h2>
-                            <ArticleList articles={props.articles} size={3} />
-                            <JustifyBox type="center">
-                                <PlainLink href={'/blog'}>
-                                    <button>もっと見る</button>
-                                </PlainLink>
-                            </JustifyBox>
-                        </BlogContainer>
+                        <h2>最新3件&emsp;</h2>
+                        <ArticleList articles={props.articles} size={3} />
+                        <JustifyBox type="center">
+                            <PlainLink href={'/blog'}>
+                                <button>もっと見る</button>
+                            </PlainLink>
+                        </JustifyBox>
 
                         <div id="access">
                             <h1 className={styles.category}>Contact</h1>

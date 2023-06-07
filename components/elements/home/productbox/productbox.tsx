@@ -1,16 +1,9 @@
 import Image from 'next/image';
 import IndentBox from '../../../layout/container/indentbox/indentbox';
 import PlainLink from '../../../layout/link/plainlink/plainlink';
+import Panel from '../../general/panel/panel';
 import TagBox from '../../general/tagbox/tagbox';
 import styles from './productbox.module.css';
-
-const Container = (props: { children: React.ReactNode; link: string }) => {
-    return (
-        <PlainLink href={props.link}>
-            <div className={styles.main}>{props.children}</div>
-        </PlainLink>
-    );
-};
 
 const ProductBox = (props: {
     name: string;
@@ -66,26 +59,28 @@ const ProductBox = (props: {
     );
 
     return (
-        <Container link={props.link}>
-            <div className={styles.flex}>
-                <div className={styles.info}>
-                    <IndentBox>{info}</IndentBox>
-                </div>
-                {props.image == '' ? (
-                    <></>
-                ) : (
-                    <div className={styles.thumbnail_container}>
-                        <Image
-                            width={300}
-                            height={300}
-                            src={props.image}
-                            alt={props.name}
-                            className={styles.thumbnail}
-                        />
+        <PlainLink href={props.link}>
+            <Panel>
+                <div className={styles.flex}>
+                    <div className={styles.info}>
+                        <div>{info}</div>
                     </div>
-                )}
-            </div>
-        </Container>
+                    {props.image == '' ? (
+                        <></>
+                    ) : (
+                        <div className={styles.thumbnail_container}>
+                            <Image
+                                width={300}
+                                height={300}
+                                src={props.image}
+                                alt={props.name}
+                                className={styles.thumbnail}
+                            />
+                        </div>
+                    )}
+                </div>
+            </Panel>
+        </PlainLink>
     );
 };
 

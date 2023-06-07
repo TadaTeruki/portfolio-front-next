@@ -2,13 +2,13 @@ import Image from 'next/image';
 import Base from '../components/layout/base/base';
 import JustifyBox from '../components/layout/container/justifybox/justifybox';
 import PlainLink from '../components/layout/link/plainlink/plainlink';
-import Config from '../components/headinfo/headinfo';
+import HeadInfo from '../components/headinfo/headinfo';
 import styles from '../styles/404.module.css';
 
 const Page404 = () => {
     return (
         <>
-            <Config title="404 Not Found" subtitle="ページが見つかりません" />
+            <HeadInfo title="404 Not Found" subtitle="ページが見つかりません" />
             <Base>
                 <JustifyBox type="center">
                     <h1>404 Not Found</h1>

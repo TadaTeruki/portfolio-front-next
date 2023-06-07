@@ -4,7 +4,7 @@ import ArticleList from '../list/list';
 import { QueryToken } from '../../../../../packages/token/token';
 import ErrorNotify from '../../../general/error_notify/error_notify';
 import RequestPostArticle from '../../../../../packages/requests/article/PostArticle';
-import BlogContainer from '../container/container';
+import styles from './box.module.css';
 
 const BlogBox = (props: { articles: any[]; verified: boolean }) => {
     const [stateErr, setErr] = useState<string>('');
@@ -32,20 +32,10 @@ const BlogBox = (props: { articles: any[]; verified: boolean }) => {
 
     return (
         <>
-            <h1>Blog</h1>
-            <p>技術や生活に関する記事を載せています</p>
-
-            <BlogContainer>
-                {props.verified ? (
-                    <>
-                        <button onClick={createArticle}>+ 新規作成</button>
-                    </>
-                ) : (
-                    <></>
-                )}
-                <ArticleList articles={props.articles} size={-1} />
-                <ErrorNotify>{stateErr}</ErrorNotify>
-            </BlogContainer>
+            {props.verified ? <button onClick={createArticle}>+ 新規作成</button> : <></>}
+            <h2 className={styles.head}>新着順</h2>
+            <ArticleList articles={props.articles} size={-1} />
+            <ErrorNotify>{stateErr}</ErrorNotify>
         </>
     );
 };

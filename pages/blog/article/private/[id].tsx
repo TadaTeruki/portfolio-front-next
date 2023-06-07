@@ -1,7 +1,7 @@
 import Base from '../../../../components/layout/base/base';
 import RequestReadArticle from '../../../../packages/requests/article/ReadArticle';
 import ArticleBox from '../../../../components/elements/blog/article/box/box';
-import Config from '../../../../components/headinfo/headinfo';
+import HeadInfo from '../../../../components/headinfo/headinfo';
 import RequestVerify from '../../../../packages/requests/auth/Verify';
 import { QueryToken } from '../../../../packages/token/token';
 import { useEffect, useState } from 'react';
@@ -24,7 +24,7 @@ const BlogPrivate = () => {
 
     return (
         <>
-            <Config
+            <HeadInfo
                 title={stateArticle == null ? '' : stateArticle.title}
                 subtitle={stateArticle == null ? '' : stateArticle.subtitle}
             />
