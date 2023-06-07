@@ -61,7 +61,7 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
             {props.article == null ? (
                 <p>記事取得中...</p>
             ) : (
-                <ArticleView article={props.article} showTimestamp={true} />
+                <ArticleView article={props.article} showTimestamp={true} tablink={true} />
             )}
 
             <div className={styles.footer}>

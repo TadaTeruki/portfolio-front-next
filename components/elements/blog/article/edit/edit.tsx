@@ -144,6 +144,7 @@ const ArticleEdit = (props: { id: string }) => {
                             tags: stateNewTags.split(' ')
                         }}
                         showTimestamp={false}
+                        tablink={false}
                     />
                 </div>
             </div>

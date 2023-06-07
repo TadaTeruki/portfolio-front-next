@@ -11,12 +11,13 @@
 .info {
     margin-top: calc(auto-0.5em);
     margin-bottom: auto;
+    padding-right: 2em;
 }
 
 .thumbnail {
     position: relative;
     height: 150px;
-    min-width: 150px;
+    width: 150px;
     width: max-content;
     object-fit: cover;
     object-position: 25% 25%;

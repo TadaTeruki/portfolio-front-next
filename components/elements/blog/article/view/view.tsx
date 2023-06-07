@@ -3,7 +3,7 @@ import TagTable from '../../tagtable/tagtable';
 import Timestamp from '../../timestamp/timestamp';
 import styles from './view.module.css';
 
-const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
+const ArticleView = (props: { article: any; showTimestamp: boolean; tablink: boolean }) => {
     return (
         <>
             <div className={styles.header}>
@@ -22,7 +22,7 @@ const ArticleView = (props: { article: any; showTimestamp: boolean }) => {
                     <></>
                 )}
                 <br />
-                <TagTable tags={props.article.tags} />
+                <TagTable tags={props.article.tags} link={props.tablink} />
             </div>
             <Markdown body={props.article.body} />
         </>

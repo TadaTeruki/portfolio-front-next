@@ -21,7 +21,7 @@ const Unit = (props: { article: any }) => {
                         <h3>{props.article.title}</h3>
                         <p>{props.article.subtitle}</p>
                         <Timestamp raw={props.article.created_at} withTime={false} label={'記事作成日'} />
-                        <TagTable tags={props.article.tags} />
+                        <TagTable tags={props.article.tags} link={false} />
                     </div>
                     <div className={styles.thumbnail_container}>
                         <img

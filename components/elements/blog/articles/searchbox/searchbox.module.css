@@ -1,0 +1,6 @@
+.main input {
+    border-radius: 2px;
+    padding: 7px;
+    border: solid 1px rgb(210, 210, 210);
+    width: 20em;
+}

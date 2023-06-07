@@ -3,5 +3,12 @@
     padding: 4px 8px;
     font-size: small;
     border-radius: 2px;
-    margin-left: 3px;
+    margin-right: 3px;
+    width: fit-content;
+    line-height: 1.2;
+}
+
+.hoverbox:hover {
+    background: rgb(220, 220, 220);
+    transition: 0.15s;
 }
