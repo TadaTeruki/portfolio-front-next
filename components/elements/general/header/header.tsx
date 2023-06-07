@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import PlainLink from '../../../layout/link/plainlink/plainlink';
 import styles from './header.module.css';
 
@@ -22,7 +21,7 @@ const Header = () => {
                 <div className={styles.tab_container}>
                     <PlainLink href="https://twitter.com/PerukiFUN">
                         <Tab>
-                            <Image
+                            <img
                                 className={styles.twitter_logo}
                                 alt="twitter logo"
                                 height={103}
@@ -33,13 +32,13 @@ const Header = () => {
                     </PlainLink>
                     <PlainLink href="https://github.com/TadaTeruki">
                         <Tab>
-                            <Image
+                            <img
                                 className={styles.github_logo}
                                 alt="github logo"
                                 height={120}
                                 width={120}
                                 src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Flogo%2Fgithub-mark.png?alt=media&token=606de0ae-46f7-47dc-8495-31717abfbe00&_gl=1*1puj20k*_ga*NDUwOTM1NzM2LjE2Njk3Njk4NzE.*_ga_CW55HF8NVT*MTY4NTg4MDc1My4zMy4xLjE2ODU4ODA4NjguMC4wLjA."
-                            ></Image>
+                            />
                         </Tab>
                     </PlainLink>
                     <PlainLink href="/blog">

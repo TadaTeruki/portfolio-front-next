@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import MainContainer from '../../../layout/container/maincontainer/maincontainer';
 import styles from './banner.module.css';
@@ -25,7 +24,7 @@ const Banner = (props: {
     return (
         <>
             <div className={styles.image_container} style={{ height: props.height, backgroundColor: background_color }}>
-                <Image src={props.image_src} alt={'banner'} width={1500} height={250} className={styles.image} />
+                <img src={props.image_src} alt={'banner'} width={1500} height={250} className={styles.image} />
                 <div className={styles.info}>
                     <MainContainer>{props.children}</MainContainer>
                 </div>

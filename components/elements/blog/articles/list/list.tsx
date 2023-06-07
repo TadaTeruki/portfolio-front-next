@@ -2,7 +2,6 @@ import styles from './list.module.css';
 import Timestamp from '../../timestamp/timestamp';
 import TagTable from '../../tagtable/tagtable';
 import PlainLink from '../../../../layout/link/plainlink/plainlink';
-import Image from 'next/image';
 import Panel from '../../../general/panel/panel';
 
 const Unit = (props: { article: any }) => {
@@ -25,7 +24,7 @@ const Unit = (props: { article: any }) => {
                         <TagTable tags={props.article.tags} />
                     </div>
                     <div className={styles.thumbnail_container}>
-                        <Image
+                        <img
                             width={300}
                             height={300}
                             src={props.article.thumbnail}

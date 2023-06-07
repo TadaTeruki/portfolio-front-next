@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import IndentBox from '../../../layout/container/indentbox/indentbox';
 import PlainLink from '../../../layout/link/plainlink/plainlink';
 import Panel from '../../general/panel/panel';
 import TagBox from '../../general/tagbox/tagbox';
@@ -34,14 +32,14 @@ const ProductBox = (props: {
             <h3>
                 {props.name}&nbsp;&nbsp;
                 {props.link.startsWith('https://github.com') ? (
-                    <Image
+                    <img
                         alt="github logo"
                         height={16}
                         width={16}
                         src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Flogo%2Fgithub-mark.png?alt=media&token=606de0ae-46f7-47dc-8495-31717abfbe00&_gl=1*1puj20k*_ga*NDUwOTM1NzM2LjE2Njk3Njk4NzE.*_ga_CW55HF8NVT*MTY4NTg4MDc1My4zMy4xLjE2ODU4ODA4NjguMC4wLjA."
                     />
                 ) : props.link.startsWith('https://tadateruki.itch.io') ? (
-                    <Image
+                    <img
                         alt="itch.io logo"
                         height={16}
                         width={16}
@@ -69,7 +67,7 @@ const ProductBox = (props: {
                         <></>
                     ) : (
                         <div className={styles.thumbnail_container}>
-                            <Image
+                            <img
                                 width={300}
                                 height={300}
                                 src={props.image}
