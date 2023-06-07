@@ -14,7 +14,7 @@ const ProductBox = (props: {
     var skills_item: any = [];
     for (let i = 0; i < props.skills.length; i++) {
         if (props.skills[i] === '') continue;
-        skills_item.push(<TagBox key={i}>{props.skills[i]}</TagBox>);
+        skills_item.push(<TagBox key={i} hover={false}>{props.skills[i]}</TagBox>);
     }
 
     var awards_item: any = [];
