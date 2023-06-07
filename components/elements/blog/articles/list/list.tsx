@@ -7,7 +7,7 @@ import Panel from '../../../general/panel/panel';
 const Unit = (props: { article: any }) => {
     return (
         <PlainLink href={'/blog/article/' + (props.article.is_public ? 'public/' : 'private/') + props.article.id}>
-            <Panel>
+            <Panel mode="left-wide">
                 {props.article.is_public ? (
                     <></>
                 ) : (

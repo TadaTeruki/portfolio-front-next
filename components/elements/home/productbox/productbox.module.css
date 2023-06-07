@@ -22,14 +22,15 @@
 
 .thumbnail {
     position: relative;
-    height: 150px;
-    min-width: 150px;
-    width: max-content;
+    height: 120px;
+    width: 120px;
     object-fit: cover;
     object-position: 25% 25%; 
 }
 
 .thumbnail_container {
+    height: 100%;
+    width: auto;
     margin: auto 2px auto auto;
 }
 

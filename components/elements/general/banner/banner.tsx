@@ -24,7 +24,14 @@ const Banner = (props: {
     return (
         <>
             <div className={styles.image_container} style={{ height: props.height, backgroundColor: background_color }}>
-                <img fetchPriority="high" src={props.image_src} alt={'banner'} width={1500} height={250} className={styles.image} />
+                <img
+                    fetchPriority="high"
+                    src={props.image_src}
+                    alt={'banner'}
+                    width={1500}
+                    height={250}
+                    className={styles.image}
+                />
                 <div className={styles.info}>
                     <MainContainer>{props.children}</MainContainer>
                 </div>

@@ -137,7 +137,7 @@ const Home = (props: Props) => {
                                 image="https://user-images.githubusercontent.com/57752033/131674598-3f096d48-1b9f-45d2-9d17-067218a0c2a3.png"
                                 awards={[]}
                             />
-                            
+
                             <h2 className={styles.subcategory}>GUI</h2>
                             <IndentBox>
                                 ・ウインドウマネージャ
@@ -152,7 +152,7 @@ const Home = (props: Props) => {
                                 image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fmitewm.png?alt=media&token=e2f6e520-8947-492a-82d0-281e479c2009"
                                 awards={['技育展2020 敢闘賞 (テーマ: ぼくのさいきょうの◯◯)']}
                             />
-                            
+
                             <h2 className={styles.subcategory}>情報科学研究</h2>
                             <IndentBox>
                                 ・空間的データ構造
@@ -214,7 +214,6 @@ const Home = (props: Props) => {
                                 image="https://raw.githubusercontent.com/fung-hackathon/depotify/d9010c16ef17ff9f16b0045ac4d8fa857450e6f1/image/Icon.svg"
                                 awards={[]}
                             />
-                            
 
                             <h2 className={styles.subcategory}>基礎実装</h2>
                             <IndentBox>
@@ -246,7 +245,6 @@ const Home = (props: Props) => {
                                 image=""
                                 awards={[]}
                             />
-                            
 
                             <h2 className={styles.subcategory}>コミュニティ活動</h2>
                             <IndentBox>
@@ -269,24 +267,13 @@ const Home = (props: Props) => {
                         </div>
                         <h2>最新3件&emsp;</h2>
                         <ArticleList articles={props.articles} size={3} />
+                        <br />
                         <JustifyBox type="center">
                             <PlainLink href={'/blog'}>
                                 <button>もっと見る</button>
                             </PlainLink>
                         </JustifyBox>
-
-                        <div id="access">
-                            <h1 className={styles.category}>Contact</h1>
-                        </div>
-                        <IndentBox>
-                            <p>
-                                Email : tadateruki.public@gmail.com
-                                <br />
-                                Twitter : <StyledLink href="https://twitter.com/PerukiFUN">@PerukiFUN</StyledLink>
-                                <br />
-                                GitHub : <StyledLink href="https://github.com/TadaTeruki">TadaTeruki</StyledLink>
-                            </p>
-                        </IndentBox>
+                        <div id="access" />
                     </JustifyBox>
                 </JustifyBox>
             </Base>

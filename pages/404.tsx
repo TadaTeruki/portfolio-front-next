@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Base from '../components/layout/base/base';
 import JustifyBox from '../components/layout/container/justifybox/justifybox';
 import PlainLink from '../components/layout/link/plainlink/plainlink';
@@ -25,12 +24,13 @@ const Page404 = () => {
                         </PlainLink>
                         <br />
                     </p>
-                    <Image
+                    <img
                         width={680}
                         height={462}
                         alt="not found"
                         src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fperukun.jpeg?alt=media&token=971e9d7e-694f-4492-9f9d-33b847d147cf"
-                    ></Image>
+                        style={{ objectFit: 'cover' }}
+                    ></img>
                 </JustifyBox>
             </Base>
         </>

@@ -19,3 +19,9 @@
     position: absolute;
     margin: 0 3em;
 }
+
+@media screen and ((max-width: 1000px) or (orientation: portrait)) {
+    .info {
+        margin: 0 2em;
+    }
+}

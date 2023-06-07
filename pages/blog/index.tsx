@@ -44,11 +44,7 @@ const Blog = (props: Props) => {
     return (
         <>
             <HeadInfo title="Blogs" subtitle="技術や生活に関する記事" />
-            <Banner
-                background_mode={'white'}
-                height={'18em'}
-                image_src="/static/banners/hakodate_landscape.webp"
-            >
+            <Banner background_mode={'white'} height={'18em'} image_src="/static/banners/hakodate_landscape.webp">
                 <h1>Peruki&apos;s Blog</h1>
                 <p>技術や生活に関する記事を載せています</p>
             </Banner>

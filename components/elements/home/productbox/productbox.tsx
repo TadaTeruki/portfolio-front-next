@@ -58,7 +58,7 @@ const ProductBox = (props: {
 
     return (
         <PlainLink href={props.link}>
-            <Panel>
+            <Panel mode="normal">
                 <div className={styles.flex}>
                     <div className={styles.info}>
                         <div>{info}</div>
