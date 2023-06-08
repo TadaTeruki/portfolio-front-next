@@ -25,6 +25,7 @@
     position: relative;
     height: 120px;
     width: 200px;
+    min-width: 200px;
     object-fit: cover;
     object-position: 25% 25%; 
 }
