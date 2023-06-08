@@ -14,6 +14,7 @@ import Perufetch from '../components/elements/home/perufetch/perufetch';
 import RequestPerufetch from '../packages/requests/Perufetch';
 import ScrollBox from '../components/layout/container/scrollbox/scrollbox';
 import styles from '../styles/Home.module.css';
+import ButtonContainer from '../components/layout/container/buttoncontainer/buttoncontainer';
 
 type Props = {
     articles: any[];
@@ -73,8 +74,6 @@ const Home = (props: Props) => {
                                     現在 : 公立はこだて未来大学 システム情報科学部 在学中
                                     <br />
                                     2022年3月 : 京都府立清明高等学校 (昼間定時制・4年卒コース) 卒業
-                                    <br />
-                                    2021年3月 : 国立情報学研究所 情報科学の達人プログラム(第一期) 第二段階修了
                                     <br />
                                     2018年3月 : 龍谷大学付属平安中学校 卒業
                                 </IndentBox>
@@ -270,7 +269,9 @@ const Home = (props: Props) => {
                         <br />
                         <JustifyBox type="center">
                             <PlainLink href={'/blog'}>
-                                <button>もっと見る</button>
+                                <ButtonContainer size="large" color="default">
+                                    <button>もっと見る</button>
+                                </ButtonContainer>
                             </PlainLink>
                         </JustifyBox>
                         <div id="access" />

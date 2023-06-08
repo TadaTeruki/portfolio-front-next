@@ -7,6 +7,7 @@ import PlainLink from '../../../../layout/link/plainlink/plainlink';
 import { QueryToken } from '../../../../../packages/token/token';
 import RequestDeleteArticle from '../../../../../packages/requests/article/DeleteArticle';
 import ErrorNotify from '../../../general/error_notify/error_notify';
+import ButtonContainer from '../../../../layout/container/buttoncontainer/buttoncontainer';
 
 const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean }) => {
     const [stateCheckDelete, setCheckDelete] = useState<boolean>(false);
@@ -33,23 +34,29 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
             {props.auth && props.article != null ? (
                 <>
                     <PlainLink href={'/blog/article/edit/' + props.article.id}>
-                        <button>編集</button>
+                        <ButtonContainer size="normal" color="default">
+                            <button>編集</button>
+                        </ButtonContainer>
                     </PlainLink>
                     &emsp;
-                    <button className={styles.danger} onClick={() => setCheckDelete(true)}>
-                        削除
-                    </button>
+                    <ButtonContainer size="normal" color="red">
+                        <button onClick={() => setCheckDelete(true)}>削除</button>
+                    </ButtonContainer>
                     {stateCheckDelete ? (
                         <>
                             <br />
                             <br />
                             本当に削除しますか？
                             <br />
-                            <button className={styles.danger} onClick={deleteArticle}>
-                                はい
-                            </button>
+                            <ButtonContainer size="normal" color="red">
+                                <button className={styles.danger} onClick={deleteArticle}>
+                                    はい
+                                </button>
+                            </ButtonContainer>
                             &emsp;
-                            <button onClick={() => setCheckDelete(false)}>いいえ</button>
+                            <ButtonContainer size="normal" color="default">
+                                <button onClick={() => setCheckDelete(false)}>いいえ</button>
+                            </ButtonContainer>
                         </>
                     ) : (
                         <></>
@@ -79,7 +86,9 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
                 )}
             </div>
             <PlainLink href="/blog">
-                <button>リストに戻る</button>
+                <ButtonContainer size="large" color="default">
+                    <button>リストに戻る</button>
+                </ButtonContainer>
             </PlainLink>
             <ErrorNotify>{stateErr}</ErrorNotify>
         </>

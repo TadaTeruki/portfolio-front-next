@@ -1,0 +1,38 @@
+.main button{
+    font-size: 14px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 2px 2px rgb(242, 242, 242);
+}
+
+.default_color button{
+    color: rgb(30, 30, 30);
+    background: rgb(232, 232, 232);
+}
+
+.default_color button:hover{
+    background: rgb(197, 197, 197);
+}
+
+.red button{
+    color: rgb(247, 247, 247);
+    background: rgb(231, 80, 80);
+}
+
+.red button:hover{
+    background: rgb(197, 197, 197);
+}
+
+.large button{
+    padding: 0.65em 35px;
+    font-weight: 500;
+}
+
+.normal button{
+    padding: 0.25em 20px;
+    font-weight: 400;
+}
+
+.main button:hover {
+    transition: 0.15s;
+}
