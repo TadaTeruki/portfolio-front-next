@@ -1,7 +1,4 @@
-# ぺるきのポートフォリオ
-
-ぺるきのポートフォリオです。<br>
-さまざまな情報を共有しています。<br>
+# Peruki's Portfolio
 
 [peruki.portfolio.dev](https://peruki.portfolio.dev)
 
@@ -35,7 +32,9 @@ DB: [Cloud Firestore](https://firebase.google.com/products/firestore?hl=ja)<br>
 レポジトリ: GitHub (https://github.com/TadaTeruki/portfolio-server)
 
 
-### 素材について
+## 素材について
 
 サイト内で使われている素材は、すべて自身で撮影したものです。<br>
-(ブログに添付されている画像は除く)
+(ブログに添付されている一部画像は除く)
+
+素材利用には、撮影者および制作者の許可が必要です。
