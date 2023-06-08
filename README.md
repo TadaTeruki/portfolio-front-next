@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ぺるきのポートフォリオ
 
-## Getting Started
+ぺるきのポートフォリオです。<br>
+さまざまな情報を共有しています。<br>
 
-First, run the development server:
+[peruki.portfolio.dev](https://peruki.portfolio.dev)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## プレビュー
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![snapshot2023-6-8](https://github.com/TadaTeruki/portfolio-front-next/assets/69315285/74056ebb-f71a-4893-8700-70d3683c04c9)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 開発について
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+以下のnpmスクリプトが利用できます:
 
-## Learn More
+`dev`: 開発サーバーの起動 <br>
+`build`: 本番環境向けのビルド <br>
+`start`: 本番モードによる実行 <br>
+`lint`: コードの静的解析 (eslint) <br>
+`prettier`: コードのフォーマット (prettier) <br>
 
-To learn more about Next.js, take a look at the following resources:
+## 実行環境
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### フロントエンド
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+フレームワーク: [Next.js](https://nextjs.org/)<br>
+言語: Typescript<br>
 
-## Deploy on Vercel
+### バックエンド (別レポジトリ)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+フレームワーク: [axum](https://github.com/tokio-rs/axum)<br>
+DB: [Cloud Firestore](https://firebase.google.com/products/firestore?hl=ja)<br>
+言語: Rust<br>
+レポジトリ: GitHub (https://github.com/TadaTeruki/portfolio-server)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### 素材について
+
+サイト内で使われている素材は、すべて自身で撮影したものです。<br>
+(ブログに添付されている画像は除く)
