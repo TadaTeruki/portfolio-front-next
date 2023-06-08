@@ -12,8 +12,8 @@ import JustifyBox from '../../components/layout/container/justifybox/justifybox'
 import SearchBox from '../../components/elements/blog/articles/searchbox/searchbox';
 import { useRouter } from 'next/router';
 import TagBox from '../../components/elements/general/tagbox/tagbox';
-import FlexListBox from '../../components/layout/container/flexlistbox/flexlistbox';
 import InlineBox from '../../components/layout/container/inlinebox/inlinebox';
+import ButtonContainer from '../../components/layout/container/buttoncontainer/buttoncontainer';
 
 type Props = {
     articles: any[];
@@ -97,14 +97,18 @@ const Blog = (props: Props) => {
                 <h2>検索</h2>
                 <SearchBox>
                     <form onSubmit={handleSubmit}>
-                        <input
-                            type="search"
-                            ref={inputRef}
-                            placeholder="キーワード（半角空白で複数指定）"
-                            defaultValue={stateNewKeyword}
-                        />
-                        &nbsp;
-                        <button type="submit">検索</button>
+                        <InlineBox>
+                            <input
+                                type="search"
+                                ref={inputRef}
+                                placeholder="キーワード（半角空白で複数指定）"
+                                defaultValue={stateNewKeyword}
+                            />
+                            &nbsp;
+                            <ButtonContainer size="normal" color="default">
+                                <button type="submit">検索</button>
+                            </ButtonContainer>
+                        </InlineBox>
                     </form>
                 </SearchBox>
                 <div style={{ marginTop: '0.5em' }}>
@@ -121,9 +125,11 @@ const Blog = (props: Props) => {
                 <BlogBox articles={stateArticles} verified={stateVerified} keywords={stateNewKeyword.split(/;|,| /)} />
                 <br />
                 <JustifyBox type="center">
-                    <PlainLink href={'/'}>
-                        <button>トップへ戻る</button>
-                    </PlainLink>
+                    <ButtonContainer size="large" color="default">
+                        <PlainLink href={'/'}>
+                            <button>トップへ戻る</button>
+                        </PlainLink>
+                    </ButtonContainer>
                 </JustifyBox>
             </Base>
         </>

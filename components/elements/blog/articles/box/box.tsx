@@ -5,6 +5,7 @@ import { QueryToken } from '../../../../../packages/token/token';
 import ErrorNotify from '../../../general/error_notify/error_notify';
 import RequestPostArticle from '../../../../../packages/requests/article/PostArticle';
 import styles from './box.module.css';
+import ButtonContainer from '../../../../layout/container/buttoncontainer/buttoncontainer';
 
 const BlogBox = (props: { articles: any[]; verified: boolean; keywords: string[] }) => {
     const [stateErr, setErr] = useState<string>('');
@@ -114,7 +115,13 @@ const BlogBox = (props: { articles: any[]; verified: boolean; keywords: string[]
 
     return (
         <div className={stateFadeClass ? styles.fadein : ''}>
-            {props.verified ? <button onClick={createArticle}>+ 新規作成</button> : <></>}
+            {props.verified ? (
+                <ButtonContainer size="normal" color="default">
+                    <button onClick={createArticle}>+ 新規作成</button>
+                </ButtonContainer>
+            ) : (
+                <></>
+            )}
             {props.keywords.length == 1 && props.keywords[0] == '' ? (
                 <>
                     <h2 className={styles.head}>新しい順</h2>

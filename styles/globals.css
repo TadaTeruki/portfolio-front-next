@@ -9,24 +9,6 @@ body {
     color: rgb(87, 87, 87);
 }
 
-button {
-    color: rgb(30, 30, 30);
-    background: rgb(232, 232, 232);
-    font-size: normal;
-    font-weight: normal;
-    padding: 6px 12px;
-    border-radius: 3px;
-    border: 0;
-
-    box-shadow: 3px 3px rgb(242, 242, 242);
-}
-
-button:hover {
-    background: rgb(197, 197, 197);
-    transition: 0.15s;
-    box-shadow: 4px 4px rgb(242, 242, 242);
-}
-
 img {
     max-width: 100%;
 }

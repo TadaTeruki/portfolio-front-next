@@ -4,6 +4,7 @@ import RequestLogin from '../../packages/requests/auth/Login';
 import ErrorNotify from '../../components/elements/general/error_notify/error_notify';
 import { SetToken, QueryToken } from '../../packages/token/token';
 import { useRouter } from 'next/router';
+import ButtonContainer from '../../components/layout/container/buttoncontainer/buttoncontainer';
 
 const LoginEntry = () => {
     const [stateErr, setErr] = useState<string>('');
@@ -45,7 +46,9 @@ const LoginEntry = () => {
                         <br />
                         パスワード:&emsp;
                         <br />
-                        <button onClick={login}>Login</button>
+                        <ButtonContainer size="large" color="default">
+                            <button onClick={login}>Login</button>
+                        </ButtonContainer>
                         <br />
                     </div>
                     <div>

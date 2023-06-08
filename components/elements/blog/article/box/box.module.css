@@ -1,11 +1,3 @@
-.danger {
-    color: rgb(247, 247, 247);
-    background: rgb(231, 80, 80);
-}
-
-.danger:hover {
-    background: rgb(213, 56, 56);
-}
 
 .footer {
     margin: 40px 0 0 0;
