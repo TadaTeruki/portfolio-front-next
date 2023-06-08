@@ -1,6 +1,6 @@
 # Peruki's Portfolio
 
-[peruki.portfolio.dev](https://peruki.portfolio.dev)
+[portfolio.peruki.dev](https://portfolio.peruki.dev)
 
 ## プレビュー
 
@@ -29,7 +29,7 @@
 フレームワーク: [axum](https://github.com/tokio-rs/axum)<br>
 DB: [Cloud Firestore](https://firebase.google.com/products/firestore?hl=ja)<br>
 言語: Rust<br>
-レポジトリ: GitHub (https://github.com/TadaTeruki/portfolio-server)
+[レポジトリ(GitHub)](https://github.com/TadaTeruki/portfolio-server)
 
 
 ## 素材について
