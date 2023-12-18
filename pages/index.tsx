@@ -57,32 +57,43 @@ const Home = (props: Props) => {
                         <div id="profile">
                             <h1 className={styles.category}>Profile</h1>
                         </div>
-                        
+
                         <IndentBox>
                             <h2>ちょっとした自己紹介</h2>
-                                <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fwelcome.webp?alt=media&token=7ef4216f-3ecd-4108-8639-fc12070364c1" width="100%" />
-                                <IndentBox>
-                                    ▲ よく描くマイキャラクターです。「ぺるくん」といいます。
-                                    <ul>
-                                        <li>
-                                            地図が好きです。地図帳を毎年買い替えています。<br/>
-                                            <StyledLink href="https://en.wikipedia.org/wiki/Procedural_generation">手続き的生成</StyledLink>の目標になっている他、WebGIS開発にも取り組んでいます。<br/>
-                                            うんと広い架空の世界を生成することが、目標の一つです。
-                                        </li>
-                                        <li>
-                                            少し、古いものが好きです。1980年代の文化が好き。<br />
-                                            その時代のゲームを探して楽しんだり、音楽もよく聴きます。
-                                        </li>
-                                        <li>
-                                            たま〜に絵を描いています。(講義中はずっと描いてますが...)<br/>
-                                            爬虫類はじめ、動物の絵をよく描きます。デフォルメしていることが多いです。
-                                        </li>
-                                        <li>
-                                            技術好きというよりも、素敵な見た目のモノを作ることが好きです。<br/>
-                                        </li>
-                                        <br/>
-                                    </ul>
-                                </IndentBox>
+                            <img
+                                src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fwelcome.webp?alt=media&token=7ef4216f-3ecd-4108-8639-fc12070364c1"
+                                width="100%"
+                            />
+                            <IndentBox>
+                                ▲ よく描くマイキャラクターです。「ぺるくん」といいます。
+                                <ul>
+                                    <li>
+                                        地図が好きです。地図帳を毎年買い替えています。
+                                        <br />
+                                        <StyledLink href="https://en.wikipedia.org/wiki/Procedural_generation">
+                                            手続き的生成
+                                        </StyledLink>
+                                        の目標になっている他、WebGIS開発にも取り組んでいます。
+                                        <br />
+                                        うんと広い架空の世界を生成することが、目標の一つです。
+                                    </li>
+                                    <li>
+                                        少し、古いものが好きです。1980年代の文化が好き。
+                                        <br />
+                                        その時代のゲームを探して楽しんだり、音楽もよく聴きます。
+                                    </li>
+                                    <li>
+                                        たま〜に絵を描いています。(講義中はずっと描いてますが...)
+                                        <br />
+                                        爬虫類はじめ、動物の絵をよく描きます。デフォルメしていることが多いです。
+                                    </li>
+                                    <li>
+                                        技術好きというよりも、素敵な見た目のモノを作ることが好きです。
+                                        <br />
+                                    </li>
+                                    <br />
+                                </ul>
+                            </IndentBox>
                             <h2>基本情報</h2>
                             <ScrollBox>
                                 <IndentBox>
@@ -122,9 +133,10 @@ const Home = (props: Props) => {
                                     <h3>インターンシップ</h3>
                                     <IndentBox>
                                         2023年9月 : MIERUNE Inc.&nbsp;
-                                            <StyledLink href="https://note.com/mierune/n/nf03a588ec7a4">
-                                                振り返り記事
-                                            </StyledLink><br />
+                                        <StyledLink href="https://note.com/mierune/n/nf03a588ec7a4">
+                                            振り返り記事
+                                        </StyledLink>
+                                        <br />
                                         2022年3月 : 株式会社メルカリ&nbsp;
                                         <StyledLink href="https://mercan.mercari.com/articles/31914/">
                                             Online Spring Internship for Gophers 2022
@@ -358,8 +370,8 @@ const Home = (props: Props) => {
                                         <IndentBox>情報処理学会 第3回中高生情報学研究コンテストにて掲載</IndentBox>
                                         <br />
                                         論文(査読無): CurtainRail:多層の線形構造に基づいた動的空間データ構造
-                                        <br />( CurtainRail: A linear-structure-based kinetic data structure for
-                                        spatial searching )
+                                        <br />( CurtainRail: A linear-structure-based kinetic data structure for spatial
+                                        searching )
                                         <IndentBox>
                                             情報科学技術フォーラム(FIT2022)にて講演・掲載
                                             <br />
@@ -369,7 +381,6 @@ const Home = (props: Props) => {
                                 </ScrollBox>
                             </IndentBox>
                         </IndentBox>
-
 
                         <div id="blog">
                             <h1 className={styles.category}>Blog</h1>
