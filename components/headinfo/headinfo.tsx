@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-const HeadInfo = (props: { title: string; subtitle: string }) => {
-    const ogpimage = process.env.NEXT_PUBLIC_OGP_IMAGE;
+const HeadInfo = (props: { title: string; subtitle: string; ogpimage?: string }) => {
+    const ogpimage = props.ogpimage == undefined ? process.env.NEXT_PUBLIC_OGP_IMAGE : props.ogpimage;
 
     return (
         <Head>

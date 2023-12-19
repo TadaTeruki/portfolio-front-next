@@ -7,8 +7,6 @@ import HeadInfo from '../../../../components/headinfo/headinfo';
 import RequestListArticles from '../../../../packages/requests/articles/ListArticles';
 import { QueryToken } from '../../../../packages/token/token';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import MainContainer from '../../../../components/layout/container/maincontainer/maincontainer';
 import Banner from '../../../../components/elements/general/banner/banner';
 
 type Props = {
@@ -54,6 +52,7 @@ const BlogPublic = (props: Props) => {
             <HeadInfo
                 title={props.article == null ? '' : props.article.title}
                 subtitle={props.article == null ? '' : props.article.subtitle}
+                ogpimage={props.article == null ? '' : props.article.thumbnail}
             />
             <Banner
                 image_src={props.article == null ? '' : props.article.thumbnail}
