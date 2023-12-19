@@ -84,21 +84,25 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
                     </>
                 )}
             </div>
-            <PlainLink
-                href={
-                    'https://twitter.com/intent/tweet?text=「' +
-                    props.article.title +
-                    "」 - Peruki's Blog (by @PerukiFUN) &url=" +
-                    process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL +
-                    router.asPath
-                }
-            >
-                <ButtonContainer size="large" color="black">
-                    <button>
-                        <strong>X</strong>で共有
-                    </button>
-                </ButtonContainer>
-            </PlainLink>
+            {props.article == null ? (
+                <></>
+            ) : (
+                <PlainLink
+                    href={
+                        'https://twitter.com/intent/tweet?text=「' +
+                        props.article.title +
+                        "」 - Peruki's Blog (by @PerukiFUN) &url=" +
+                        process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL +
+                        router.asPath
+                    }
+                >
+                    <ButtonContainer size="large" color="black">
+                        <button>
+                            <strong>X</strong>で共有
+                        </button>
+                    </ButtonContainer>
+                </PlainLink>
+            )}
             &emsp;
             <PlainLink href="/blog">
                 <ButtonContainer size="large" color="default">
