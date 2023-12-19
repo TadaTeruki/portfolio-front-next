@@ -1,7 +1,11 @@
 import styles from './buttoncontainer.module.css';
 import React from 'react';
 
-const ButtonContainer = (props: { children: React.ReactNode; size: 'normal' | 'large'; color: 'default' | 'red' }) => {
+const ButtonContainer = (props: {
+    children: React.ReactNode;
+    size: 'normal' | 'large';
+    color: 'default' | 'red' | 'black';
+}) => {
     let pad = '';
     switch (props.size) {
         case 'normal':
@@ -22,6 +26,9 @@ const ButtonContainer = (props: { children: React.ReactNode; size: 'normal' | 'l
             break;
         case 'red':
             color = styles.red;
+            break;
+        case 'black':
+            color = styles.black;
             break;
         default:
             color = '';

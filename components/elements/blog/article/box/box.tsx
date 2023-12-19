@@ -70,7 +70,6 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
             ) : (
                 <ArticleView article={props.article} showTimestamp={true} tablink={true} />
             )}
-
             <div className={styles.footer}>
                 <h2>Peruki&apos;s Portfolio</h2>
                 <p>記事作成者: 多田 瑛貴 Teruki TADA</p>
@@ -85,6 +84,22 @@ const ArticleBox = (props: { article: any; auth: boolean; showTimestamp: boolean
                     </>
                 )}
             </div>
+            <PlainLink
+                href={
+                    'https://twitter.com/intent/tweet?text=「' +
+                    props.article.title +
+                    "」 - Peruki's Blog (by @PerukiFUN) &url=" +
+                    process.env.NEXT_PUBLIC_PORTFOLIO_BASE_URL +
+                    router.asPath
+                }
+            >
+                <ButtonContainer size="large" color="black">
+                    <button>
+                        <strong>X</strong>で共有
+                    </button>
+                </ButtonContainer>
+            </PlainLink>
+            &emsp;
             <PlainLink href="/blog">
                 <ButtonContainer size="large" color="default">
                     <button>リストに戻る</button>

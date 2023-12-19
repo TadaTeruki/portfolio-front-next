@@ -23,6 +23,15 @@
     background: rgb(197, 197, 197);
 }
 
+.black button{
+    color: rgb(247, 247, 247);
+    background: rgb(80, 80, 80);
+}
+
+.black button:hover{
+    background: rgb(197, 197, 197);
+}
+
 .large button{
     padding: 0.65em 35px;
     font-weight: 500;
