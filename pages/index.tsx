@@ -60,6 +60,7 @@ const Home = (props: Props) => {
 
                         <IndentBox>
                             <h2>ちょっとした自己紹介</h2>
+                            <IndentBox>多田 瑛貴 (ただ てるき) です。</IndentBox>
                             <img
                                 src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fwelcome.webp?alt=media&token=7ef4216f-3ecd-4108-8639-fc12070364c1"
                                 width="100%"
