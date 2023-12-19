@@ -135,7 +135,7 @@ const Home = (props: Props) => {
                                     <IndentBox>
                                         2023年9月 : MIERUNE Inc.&nbsp;
                                         <StyledLink href="https://note.com/mierune/n/nf03a588ec7a4">
-                                            振り返り記事
+                                            公式レポート
                                         </StyledLink>
                                         <br />
                                         2022年3月 : 株式会社メルカリ&nbsp;
