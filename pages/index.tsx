@@ -41,7 +41,7 @@ const Home = (props: Props) => {
                 <JustifyBox type="center">
                     <h1>
                         <div className={styles.page_title}>Peruki&apos;s Portfolio</div>
-                        <div className={styles.page_subtitle}>ぺるきのポートフォリオ</div>
+                        <div className={styles.page_subtitle}>多田 瑛貴のポートフォリオ</div>
                     </h1>
 
                     <FlexListBox>
@@ -59,42 +59,6 @@ const Home = (props: Props) => {
                         </div>
 
                         <IndentBox>
-                            <h2>ちょっとした自己紹介</h2>
-                            <IndentBox>多田 瑛貴 (ただ てるき) です。</IndentBox>
-                            <img
-                                src="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2Fwelcome.webp?alt=media&token=7ef4216f-3ecd-4108-8639-fc12070364c1"
-                                width="100%"
-                            />
-                            <IndentBox>
-                                ▲ よく描くマイキャラクターです。
-                                <ul>
-                                    <li>
-                                        地図が好きです。地図帳を毎年買い替えています。
-                                        <br />
-                                        <StyledLink href="https://en.wikipedia.org/wiki/Procedural_generation">
-                                            手続き的生成
-                                        </StyledLink>
-                                        の目標になっている他、WebGIS開発にも取り組んでいます。
-                                        <br />
-                                        架空の世界を生成することが、目標の一つです。
-                                    </li>
-                                    <li>
-                                        少し古いものが好きです。1980年代の文化が好き。
-                                        <br />
-                                        その時代のゲームを探して楽しんだり、音楽もよく聴きます。
-                                    </li>
-                                    <li>
-                                        たま〜に絵を描いています。(講義中はずっと描いてますが...)
-                                        <br />
-                                        爬虫類はじめ、動物の絵をよく描きます。
-                                    </li>
-                                    <li>
-                                        技術好きというよりも、素敵な見た目のモノを作ることが好きです。
-                                        <br />
-                                    </li>
-                                    <br />
-                                </ul>
-                            </IndentBox>
                             <h2>基本情報</h2>
                             <ScrollBox>
                                 <IndentBox>
@@ -122,8 +86,9 @@ const Home = (props: Props) => {
                                 <IndentBox>
                                     <h3>育成事業</h3>
                                     <IndentBox>
-                                        2023年9月 - 現在 : 北海道ITクリエータ発掘・育成事業 (新雪プログラム) <br />
                                         2023年6月 - 現在 : サイボウズ・ラボユース 開発コース (星野ラボ) <br />
+                                        2023年9月 - 2024年1月 : 北海道ITクリエータ発掘・育成事業 (新雪プログラム) 修了
+                                        <br />
                                         2020年4月 - 2021年3月 :&nbsp;
                                         <StyledLink href="https://www.nii.ac.jp/tatsujin/">
                                             NII 情報科学の達人 第1期生
@@ -146,7 +111,7 @@ const Home = (props: Props) => {
                                 </IndentBox>
                             </ScrollBox>
                             <br />
-                            最終更新日: 2023年12月19日
+                            最終更新日: 2024年1月29日
                         </IndentBox>
                         <div id="activity">
                             <h1 className={styles.category}>Activities</h1>
@@ -162,11 +127,11 @@ const Home = (props: Props) => {
                             </IndentBox>
                             <ProductBox
                                 name="fastlem"
-                                description="地形生成ライブラリ(開発中)"
+                                description="地形生成のための侵食作用シミュレーション"
                                 link="https://github.com/TadaTeruki/fastlem"
                                 skills={['Rust', '個人開発', '手続き的生成']}
                                 image="https://raw.githubusercontent.com/TadaTeruki/fastlem/main/sample.webp"
-                                awards={['北海道ITクリエータ発掘・育成事業 (新雪プログラム) にて開発中']}
+                                awards={['北海道ITクリエータ発掘・育成事業 (新雪プログラム) にて開発']}
                             />
                             <ProductBox
                                 name="RDGL"
@@ -178,7 +143,7 @@ const Home = (props: Props) => {
                             />
                             <ProductBox
                                 name="この世界は熱すぎる!!!"
-                                description="学内ハッカソンp2hacks 2023にて開発 ゲームロジック実装を担当"
+                                description="p2hacks 2023にて開発 素材制作とゲームロジック実装を担当"
                                 link="https://github.com/p2hacks2023/pre-06"
                                 skills={['TypeScript', 'Vite', 'チーム開発']}
                                 image="https://firebasestorage.googleapis.com/v0/b/portfolio-server-77440.appspot.com/o/images%2Fprofile%2F%E3%81%93%E3%81%AE%E4%B8%96%E7%95%8C%E3%81%AF%E7%86%B1%E9%81%8E%E3%81%8D%E3%82%99%E3%82%8B.webp?alt=media&token=151ade64-7a25-4dc0-8208-05381b3fdcd0"

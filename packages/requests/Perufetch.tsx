@@ -12,6 +12,7 @@ const RequestPerufetch = async (): Promise<string> => {
                 resolve(res.data);
             })
             .catch((err) => {
+                console.log(err);
                 reject(err.message);
             });
     });

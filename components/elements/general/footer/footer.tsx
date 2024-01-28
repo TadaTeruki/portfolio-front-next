@@ -13,14 +13,13 @@ const Footer = () => {
                     <IndentBox>
                         <p>
                             Email : tadateruki.public@gmail.com
-                            <br />
-                            Twitter : <StyledLink href="https://twitter.com/PerukiFUN">@PerukiFUN</StyledLink>
+                            <br />X : <StyledLink href="https://twitter.com/PerukiFUN">@PerukiFUN</StyledLink>
                             <br />
                             GitHub : <StyledLink href="https://github.com/TadaTeruki">TadaTeruki</StyledLink>
                         </p>
                     </IndentBox>
                 </MainContainer>
-                <p className={styles.copyright}>Copyright © 2023 Teruki TADA All Rights Reserved.</p>
+                <p className={styles.copyright}>Copyright © 2024 Teruki TADA All Rights Reserved.</p>
             </Banner>
         </footer>
     );
